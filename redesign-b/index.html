@@ -1,20 +1,130 @@
 <!doctype html>
 <html lang="es">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Jorge A. Cotera — Educación, Matemáticas y Cultura</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Sitio personal y académico de Jorge Alonso Cotera Guerra: educación, matemáticas, cultura, investigación y producción académica.">
+<title>Jorge Alonso Cotera Guerra — Educación, Matemáticas y Cultura</title>
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<header class="top"><a class="brand" href="#inicio"><span class="mark">JC</span><span>JORGE A. COTERA<small>Archivo académico vivo</small></span></a><button class="menu" aria-label="Abrir menú">☰</button><nav><a href="#produccion">Producción</a><a href="#investigacion">Investigación</a><a href="../Materiales.htm">Didáctica</a><a href="../Matematicas.htm">Matemáticas</a><a href="#archivo">Archivo</a></nav></header>
+<header class="top">
+  <a class="brand" href="#inicio" aria-label="Ir al inicio">
+    <img class="brand-logo" src="../Logo.jpg" alt="Logotipo de Jorge Alonso Cotera Guerra">
+    <span class="brand-name">JORGE A. COTERA<small>Educación · Matemáticas · Cultura</small></span>
+  </a>
+  <button class="menu" aria-label="Abrir menú" aria-expanded="false">☰</button>
+  <nav aria-label="Navegación principal">
+    <a href="#publicaciones">Publicaciones</a>
+    <a href="#investigacion">Investigación</a>
+    <a href="../Materiales.htm">Didáctica</a>
+    <a href="../Matematicas.htm">Matemáticas</a>
+    <a href="#archivo">Archivo</a>
+  </nav>
+</header>
+
 <main id="inicio">
-<section class="hero"><div class="hero-copy"><p class="eyebrow">EDUCACIÓN · MATEMÁTICAS · CULTURA</p><h1>Pensar la educación desde las matemáticas, la cultura y la sociedad.</h1><p class="lead">Docencia, investigación, reflexión pedagógica y materiales construidos a lo largo de una trayectoria académica.</p><div class="actions"><a class="primary" href="../Articulos.htm">Explorar producción</a><a href="../Hoja de Vida.htm">Perfil académico →</a></div></div><div class="hero-art"><span class="formula">∑</span><span class="circle"></span><blockquote>Una colección abierta de ideas, experiencias y recursos para pensar la educación.</blockquote></div></section>
-<section class="ticker"><span>DOCENCIA</span><b>•</b><span>INVESTIGACIÓN</span><b>•</b><span>PEDAGOGÍA</span><b>•</b><span>MATEMÁTICAS</span><b>•</b><span>CULTURA</span></section>
-<section class="editorial" id="produccion"><article class="feature"><p class="number">01 / PRODUCCIÓN</p><h2>Artículos y reflexiones</h2><p>Un archivo de textos sobre educación, pedagogía, cultura, evaluación y enseñanza de las matemáticas.</p><a href="../Articulos.htm">Entrar al archivo de artículos ↗</a></article><div class="stack"><article class="dark" id="investigacion"><p>02 / INVESTIGACIÓN</p><h3>Objetivación, semiótica y educación matemática</h3><a href="../Saber11.htm">Proyecto y documentos →</a></article><article class="yellow"><p>03 / DIDÁCTICA</p><h3>Materiales para enseñar, explorar y modelar</h3><a href="../Materiales.htm">Explorar materiales →</a></article></div></section>
-<section class="library"><header><p class="eyebrow">BIBLIOTECA PERSONAL</p><h2>Documentos para leer, estudiar y utilizar.</h2></header><div class="docs"><a href="../Una%20Escuela%20Liberadora.pdf"><span>PDF</span><strong>Una Escuela Liberadora</strong><small>Lectura destacada</small></a><a href="../Proyecto-2015-08-13.docx"><span>DOCX</span><strong>Proyecto de investigación</strong><small>Documento de trabajo</small></a><a href="../Control%20de%20Actividades.xlsx"><span>XLSX</span><strong>Control de actividades</strong><small>Herramienta académica</small></a><a href="../Bibliografia.htm"><span>WEB</span><strong>Bibliografía</strong><small>Referencias y lecturas</small></a></div></section>
-<section class="timeline" id="archivo"><div><p class="eyebrow">TRAYECTORIA</p><h2>Un archivo que crece con el tiempo.</h2></div><div class="years"><a href="../Articulos.htm">2005<small>Primeros textos</small></a><i></i><a href="../Articulos.htm">2009<small>Pedagogía</small></a><i></i><a href="../Articulos.htm">2013<small>Objetivación</small></a><i></i><a href="../Herramientas.htm">2016<small>Investigación</small></a><i></i><a href="../Novedades.htm">2026<small>Presente</small></a></div></section>
-<section class="routes"><a href="../Academia.htm"><b>01</b><span>Academia<small>Portafolio y trayectoria</small></span>↗</a><a href="../Videos.htm"><b>02</b><span>Videos<small>Recursos audiovisuales</small></span>↗</a><a href="../Entrada.htm"><b>03</b><span>Pre-ICFES<small>Material de preparación</small></span>↗</a><a href="../Direcciones.htm"><b>04</b><span>Enlaces<small>Direcciones de interés</small></span>↗</a></section>
+<section class="hero">
+  <div class="hero-copy">
+    <p class="eyebrow">EDUCACIÓN · MATEMÁTICAS · CULTURA</p>
+    <h1>Pensar la educación desde las matemáticas, la cultura y la sociedad.</h1>
+    <p class="lead">Docencia, investigación, reflexión pedagógica y producción académica construidas desde la práctica y el territorio.</p>
+    <div class="actions">
+      <a class="primary" href="#publicaciones">Leer publicaciones</a>
+      <a href="../Hoja%20de%20Vida.htm">Perfil académico →</a>
+    </div>
+  </div>
+
+  <div class="photo-stage" aria-label="Galería de bienvenida">
+    <div class="slides" id="welcome-slides"></div>
+    <div class="photo-shade"></div>
+    <div class="photo-caption">
+      <span class="photo-label">ARCHIVO VISUAL</span>
+      <strong id="slide-caption">Educación, territorio y cultura</strong>
+    </div>
+    <div class="slider-controls">
+      <button id="prev-slide" aria-label="Fotografía anterior">←</button>
+      <div id="slide-dots" class="slide-dots" aria-label="Seleccionar fotografía"></div>
+      <button id="next-slide" aria-label="Fotografía siguiente">→</button>
+    </div>
+  </div>
+</section>
+
+<section class="ticker" aria-label="Áreas de trabajo">
+  <span>DOCENCIA</span><b>•</b><span>INVESTIGACIÓN</span><b>•</b><span>PEDAGOGÍA</span><b>•</b><span>MATEMÁTICAS</span><b>•</b><span>CULTURA</span>
+</section>
+
+<section class="publications" id="publicaciones">
+  <header class="section-intro">
+    <div><p class="eyebrow">PUBLICACIONES</p><h2>Ideas que siguen entrando en conversación.</h2></div>
+    <a class="archive-link" href="../Articulos.htm">Ver archivo histórico completo ↗</a>
+  </header>
+
+  <article class="latest-article" id="latest-article"></article>
+
+  <div class="recent-heading">
+    <h3>Publicaciones recientes</h3>
+    <span>De la más reciente a la más antigua</span>
+  </div>
+  <div class="recent-grid" id="recent-articles"></div>
+</section>
+
+<section class="editorial">
+  <article class="feature" id="investigacion">
+    <p class="number">01 / INVESTIGACIÓN</p>
+    <h2>Objetivación, semiótica y educación matemática</h2>
+    <p>Investigación sobre los procesos de objetivación del concepto de perpendicularidad y una trayectoria de trabajo en educación matemática, cultura y actividad.</p>
+    <a href="../Saber11.htm">Proyecto y documentos ↗</a>
+  </article>
+  <div class="stack">
+    <article class="dark">
+      <p>02 / DIDÁCTICA</p>
+      <h3>Materiales para enseñar, explorar y modelar</h3>
+      <a href="../Materiales.htm">Explorar materiales →</a>
+    </article>
+    <article class="yellow">
+      <p>03 / MATEMÁTICAS</p>
+      <h3>Recursos, cursos y propuestas de trabajo</h3>
+      <a href="../Matematicas.htm">Entrar a Matemáticas →</a>
+    </article>
+  </div>
+</section>
+
+<section class="library">
+  <header><p class="eyebrow">BIBLIOTECA PERSONAL</p><h2>Documentos para leer, estudiar y utilizar.</h2></header>
+  <div class="docs">
+    <a href="../Una%20Escuela%20Liberadora.pdf"><span>PDF</span><strong>Una Escuela Liberadora</strong><small>Lectura destacada</small></a>
+    <a href="../Proyecto-2015-08-13.docx"><span>DOCX</span><strong>Proyecto de investigación</strong><small>Documento de trabajo</small></a>
+    <a href="../Control%20de%20Actividades.xlsx"><span>XLSX</span><strong>Control de actividades</strong><small>Herramienta académica</small></a>
+    <a href="../Bibliografia.htm"><span>WEB</span><strong>Bibliografía</strong><small>Referencias y lecturas</small></a>
+  </div>
+</section>
+
+<section class="timeline" id="archivo">
+  <div><p class="eyebrow">TRAYECTORIA</p><h2>Un archivo que crece con el tiempo.</h2></div>
+  <div class="years">
+    <a href="../Articulos.htm">2005<small>Primeros textos</small></a><i></i>
+    <a href="../Articulos.htm">2009<small>Pedagogía</small></a><i></i>
+    <a href="../Articulos.htm">2013<small>Objetivación</small></a><i></i>
+    <a href="../Herramientas.htm">2016<small>Investigación</small></a><i></i>
+    <a href="../Articulos.htm">2026<small>Publicaciones recientes</small></a>
+  </div>
+</section>
+
+<section class="routes">
+  <a href="../Academia.htm"><b>01</b><span>Academia<small>Portafolio y trayectoria</small></span>↗</a>
+  <a href="../Videos.htm"><b>02</b><span>Videos<small>Recursos audiovisuales</small></span>↗</a>
+  <a href="../Entrada.htm"><b>03</b><span>Pre-ICFES<small>Material de preparación</small></span>↗</a>
+  <a href="../Direcciones.htm"><b>04</b><span>Enlaces<small>Direcciones de interés</small></span>↗</a>
+</section>
 </main>
-<footer><strong>JORGE A. COTERA</strong><span>Educación · Matemáticas · Cultura</span><a href="#inicio">Volver arriba ↑</a></footer>
+
+<footer>
+  <div class="footer-brand"><img src="../Logo.jpg" alt="Logotipo"><strong>JORGE A. COTERA</strong></div>
+  <span>Educación · Matemáticas · Cultura</span>
+  <a href="#inicio">Volver arriba ↑</a>
+</footer>
+<script src="content.js"></script>
 <script src="app.js"></script>
-</body></html>
+</body>
+</html>
