@@ -1,0 +1,28 @@
+window.siteSearchStatic = [
+  {type:"Sección",title:"Inicio",description:"Portada del sitio académico.",href:"index.html",keywords:"inicio portada educación matemáticas cultura"},
+  {type:"Sección",title:"Perfil académico",description:"Formación, trayectoria y perspectiva académica.",href:"perfil.html",keywords:"perfil hoja de vida formación trayectoria"},
+  {type:"Sección",title:"Publicaciones",description:"Archivo cronológico de textos, ensayos y reflexiones.",href:"articulos.html",keywords:"artículos textos ensayos publicaciones"},
+  {type:"Sección",title:"Investigación",description:"Proyecto, metodología, categorías de análisis y herramientas.",href:"investigacion.html",keywords:"investigación objetivación perpendicularidad metodología categorías"},
+  {type:"Sección",title:"Didáctica",description:"Materiales para enseñar, explorar y modelar.",href:"didactica.html",keywords:"didáctica recursos modelación enseñanza"},
+  {type:"Sección",title:"Matemáticas",description:"Cálculo, funciones y recursos de consulta.",href:"matematicas.html",keywords:"matemáticas cálculo funciones"},
+  {type:"Sección",title:"Biblioteca",description:"Documentos de consulta, lineamientos y materiales de estudio.",href:"biblioteca.html",keywords:"biblioteca bibliografía documentos lineamientos estándares"},
+  {type:"Sección",title:"Academia",description:"Portafolio, proyectos, planes y experiencias educativas.",href:"academia.html",keywords:"academia portafolio PEI planes evaluación experiencias"},
+  {type:"Sección",title:"Videos",description:"Archivo audiovisual sobre educación matemática y pedagogía.",href:"videos.html",keywords:"videos audiovisual radford pedagogía"},
+  {type:"Sección",title:"Pre-ICFES",description:"Simulacros y materiales históricos de preparación.",href:"preicfes.html",keywords:"icfes saber 11 simulacros biología lectura crítica"},
+  {type:"Sección",title:"Enlaces y radar académico",description:"Lecturas recientes y directorio temático externo.",href:"enlaces.html",keywords:"enlaces radar revistas publicaciones externas"},
+  {type:"Sección",title:"Archivo general",description:"Mapa de las secciones modernas y accesos históricos.",href:"archivo.html",keywords:"archivo mapa sitio histórico"},
+  {type:"Sección",title:"Contacto",description:"Canales de contacto y acceso al formulario histórico.",href:"contacto.html",keywords:"contacto formulario"},
+
+  {type:"Recurso",title:"Cubo de la suma",description:"Exploración didáctica de una identidad algebraica.",href:"../Cubo_de_suma.htm",keywords:"álgebra identidad cubo suma"},
+  {type:"Recurso",title:"Parábola",description:"Exploración de propiedades y comportamiento de la parábola.",href:"../Parabola.htm",keywords:"geometría analítica parábola"},
+  {type:"Recurso",title:"Elipse",description:"Representación y estudio gráfico de la elipse.",href:"../Elipse.htm",keywords:"geometría analítica elipse"},
+  {type:"Recurso",title:"Función exponencial",description:"Exploración gráfica y conceptual del comportamiento exponencial.",href:"../Exponencial.htm",keywords:"funciones exponencial"},
+  {type:"Recurso",title:"Coordenadas polares",description:"Exploración de sistemas de coordenadas polares.",href:"../Polares.htm",keywords:"coordenadas polares"},
+  {type:"Recurso",title:"Límites laterales",description:"Apoyo visual para aproximaciones por izquierda y derecha.",href:"../Limites_Laterales.htm",keywords:"cálculo límites laterales"},
+  {type:"Recurso",title:"Continuidad de una función",description:"Representaciones para analizar continuidad y comportamiento local.",href:"../Continuidad.htm",keywords:"cálculo continuidad funciones"},
+  {type:"Recurso",title:"Varias funciones",description:"Colección de representaciones de familias de funciones.",href:"../Funciones_Varias.htm",keywords:"funciones gráficas"},
+  {type:"Recurso",title:"Distribución normal",description:"Representación de la función de densidad normal.",href:"../Curva%20Normal.htm",keywords:"estadística distribución normal"},
+  {type:"Recurso",title:"Crecimiento de los pollos",description:"Situación aplicada de modelación matemática.",href:"../Pollo.htm",keywords:"modelación crecimiento pollos"},
+  {type:"Recurso",title:"Construcción de viviendas",description:"Situación aplicada de modelación.",href:"../Vivienda.htm",keywords:"modelación vivienda terrenos"},
+  {type:"Recurso",title:"Números reales",description:"Documento de consulta del curso de cálculo.",href:"../Reales.pdf",keywords:"números reales cálculo pdf"}
+];
