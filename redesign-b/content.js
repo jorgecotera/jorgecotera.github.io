@@ -1,5 +1,6 @@
 window.siteContent = {
   slides: [
+    // Las dos primeras imágenes corresponden al par dinámico de la portada histórica.
     { src: "../Central2.jpg", alt: "Imagen destacada del archivo académico", caption: "Educación, territorio y cultura" },
     { src: "../Central3.jpg", alt: "Imagen destacada de actividades académicas", caption: "Pensar, enseñar e investigar" },
     { src: "../1.jpg", alt: "Fotografía del archivo personal", caption: "Una trayectoria construida desde la práctica" },
@@ -7,7 +8,9 @@ window.siteContent = {
   ],
   articles: [
     {
-      date: "2026-05-20",
+      sortKey: "2026-05",
+      sourceOrder: 3,
+      year: 2026,
       displayDate: "Mayo de 2026",
       category: "Ética · Colonialidad · Política",
       title: "Revolución ética y colonialidad",
@@ -17,7 +20,9 @@ window.siteContent = {
       image: "../Central3.jpg"
     },
     {
-      date: "2026-05-10",
+      sortKey: "2026-05",
+      sourceOrder: 2,
+      year: 2026,
       displayDate: "Mayo de 2026",
       category: "Filosofía · Educación",
       title: "Eudaimonía (εὐδαιμονία)",
@@ -27,7 +32,9 @@ window.siteContent = {
       image: "../1.jpg"
     },
     {
-      date: "2026-02-01",
+      sortKey: "2026-02",
+      sourceOrder: 1,
+      year: 2026,
       displayDate: "Febrero de 2026",
       category: "Educación · Sociedad",
       title: "La escuela de Gustavo Petro",
@@ -37,7 +44,9 @@ window.siteContent = {
       image: "../Una%20escuela%20liberadora.jpg"
     },
     {
-      date: "2016-01-08",
+      sortKey: "2016-01-08",
+      sourceOrder: 1,
+      year: 2016,
       displayDate: "8 de enero de 2016",
       category: "Territorio · Memoria",
       title: "A río-viejo",
@@ -47,7 +56,9 @@ window.siteContent = {
       image: "../Central2.jpg"
     },
     {
-      date: "2013-11-01",
+      sortKey: "2013-11",
+      sourceOrder: 1,
+      year: 2013,
       displayDate: "Noviembre de 2013",
       category: "Educación matemática",
       title: "La Teoría Cultural de la Objetivación en la Provincia",
