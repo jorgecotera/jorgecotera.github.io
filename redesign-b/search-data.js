@@ -6,6 +6,7 @@ window.siteSearchStatic = [
   {type:"Sección",title:"Didáctica",description:"Materiales para enseñar, explorar y modelar.",href:"didactica.html",keywords:"didáctica recursos modelación enseñanza"},
   {type:"Sección",title:"Matemáticas",description:"Cálculo, funciones y recursos de consulta.",href:"matematicas.html",keywords:"matemáticas cálculo funciones"},
   {type:"Sección",title:"Biblioteca",description:"Documentos de consulta, lineamientos y materiales de estudio.",href:"biblioteca.html",keywords:"biblioteca bibliografía documentos lineamientos estándares"},
+  {type:"Sección",title:"Comunidad de aprendizaje",description:"Materiales de aula, planeaciones, secuencias y talleres organizados por año y grado.",href:"comunidad.html",keywords:"comunidad aula planeación secuencias talleres grados estudiantes"},
   {type:"Sección",title:"Academia",description:"Portafolio, proyectos, planes y experiencias educativas.",href:"academia.html",keywords:"academia portafolio PEI planes evaluación experiencias"},
   {type:"Sección",title:"Videos",description:"Archivo audiovisual sobre educación matemática y pedagogía.",href:"videos.html",keywords:"videos audiovisual radford pedagogía"},
   {type:"Sección",title:"Pre-ICFES",description:"Simulacros y materiales históricos de preparación.",href:"preicfes.html",keywords:"icfes saber 11 simulacros biología lectura crítica"},
