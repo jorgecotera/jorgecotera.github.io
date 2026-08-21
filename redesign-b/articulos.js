@@ -5,11 +5,18 @@ menuButton?.addEventListener('click',()=>{
   menuButton.setAttribute('aria-expanded',String(open));
 });
 
+function compareChronology(a,b){
+  const keyA=a.sortKey||a.date||'0000';
+  const keyB=b.sortKey||b.date||'0000';
+  const byKey=keyB.localeCompare(keyA,'en');
+  return byKey||((b.sourceOrder||0)-(a.sourceOrder||0));
+}
+
 const structured=[...(window.siteContent?.articles||[])];
 const historical=[...(window.archiveLegacy||[])];
 const allArticles=[...structured,...historical]
-  .map(item=>({...item,year:new Date(item.date).getFullYear()}))
-  .sort((a,b)=>new Date(b.date)-new Date(a.date));
+  .map(item=>({...item,year:item.year??null}))
+  .sort(compareChronology);
 
 const list=document.querySelector('#archive-list');
 const search=document.querySelector('#archive-search');
@@ -18,8 +25,9 @@ const categorySelect=document.querySelector('#archive-category');
 const empty=document.querySelector('#archive-empty');
 const count=document.querySelector('#archive-count');
 
-const years=[...new Set(allArticles.map(a=>a.year))].sort((a,b)=>b-a);
+const years=[...new Set(allArticles.map(a=>a.year).filter(Boolean))].sort((a,b)=>b-a);
 years.forEach(year=>yearSelect?.insertAdjacentHTML('beforeend',`<option value="${year}">${year}</option>`));
+if(allArticles.some(a=>!a.year))yearSelect?.insertAdjacentHTML('beforeend','<option value="undated">Sin fecha indicada</option>');
 
 const categories=[...new Set(allArticles.flatMap(a=>a.category.split('·').map(v=>v.trim())).filter(Boolean))]
   .sort((a,b)=>a.localeCompare(b,'es'));
@@ -37,7 +45,7 @@ function render(){
   const filtered=allArticles.filter(article=>{
     const haystack=normalize(`${article.title} ${article.subtitle||''} ${article.category} ${article.displayDate}`);
     const matchesText=!q||haystack.includes(q);
-    const matchesYear=year==='all'||String(article.year)===year;
+    const matchesYear=year==='all'||(year==='undated'?!article.year:String(article.year)===year);
     const matchesCategory=category==='all'||article.category.split('·').map(v=>v.trim()).includes(category);
     return matchesText&&matchesYear&&matchesCategory;
   });
