@@ -78,8 +78,15 @@ photoStage?.addEventListener('focusout',event=>{
   if(!photoStage.contains(event.relatedTarget))startSlides();
 });
 
-// Publicaciones: el orden depende de la fecha, no de la posición escrita en el HTML.
-const articles=[...content.articles].sort((a,b)=>new Date(b.date)-new Date(a.date));
+function compareChronology(a,b){
+  const keyA=a.sortKey||a.date||'0000';
+  const keyB=b.sortKey||b.date||'0000';
+  const byKey=keyB.localeCompare(keyA,'en');
+  return byKey||((b.sourceOrder||0)-(a.sourceOrder||0));
+}
+
+// El orden utiliza claves de clasificación. Las fechas visibles conservan únicamente la precisión presente en la fuente.
+const articles=[...content.articles].sort(compareChronology);
 const latest=articles[0];
 const latestRoot=document.querySelector('#latest-article');
 if(latestRoot&&latest){
