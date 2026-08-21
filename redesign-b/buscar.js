@@ -13,6 +13,14 @@ const libraryItems=[...(window.libraryContent||[])].map(item=>({
   href:item.href,
   keywords:`${item.category} ${item.type}`
 }));
+const communityItems=[...(window.communityContent||[])].map(item=>({
+  type:"Comunidad",
+  title:item.title,
+  description:`${item.year} · ${item.grade} · ${item.area}`,
+  href:item.href,
+  keywords:`${item.year} ${item.grade} ${item.area} ${item.type} ${item.description||''}`,
+  external:item.external===true
+}));
 const radarItems=[...(window.radarContent||[])].map(item=>({
   type:"Radar",
   title:item.title,
@@ -22,7 +30,7 @@ const radarItems=[...(window.radarContent||[])].map(item=>({
   external:true
 }));
 
-const allItems=[...staticItems,...ownArticles,...libraryItems,...radarItems];
+const allItems=[...staticItems,...ownArticles,...libraryItems,...communityItems,...radarItems];
 const form=document.querySelector('#site-search-form');
 const input=document.querySelector('#site-search-input');
 const typeSelect=document.querySelector('#site-search-type');
@@ -30,7 +38,7 @@ const results=document.querySelector('#site-search-results');
 const count=document.querySelector('#site-search-count');
 const empty=document.querySelector('#site-search-empty');
 
-const typeOrder=['Sección','Publicación','Biblioteca','Recurso','Radar'];
+const typeOrder=['Sección','Publicación','Biblioteca','Comunidad','Recurso','Radar'];
 const availableTypes=[...new Set(allItems.map(item=>item.type))].sort((a,b)=>typeOrder.indexOf(a)-typeOrder.indexOf(b));
 availableTypes.forEach(type=>typeSelect?.insertAdjacentHTML('beforeend',`<option value="${type}">${type}</option>`));
 
