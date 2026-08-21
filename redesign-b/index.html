@@ -6,6 +6,7 @@
 <meta name="description" content="Sitio personal y académico de Jorge Alonso Cotera Guerra: educación, matemáticas, cultura, investigación y producción académica.">
 <title>Jorge Alonso Cotera Guerra — Educación, Matemáticas y Cultura</title>
 <link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="enhancements.css">
 </head>
 <body>
 <header class="top">
@@ -16,6 +17,7 @@
   <button class="menu" aria-label="Abrir menú" aria-expanded="false">☰</button>
   <nav aria-label="Navegación principal">
     <a href="#publicaciones">Publicaciones</a>
+    <a href="#radar">Radar académico</a>
     <a href="#investigacion">Investigación</a>
     <a href="../Materiales.htm">Didáctica</a>
     <a href="../Matematicas.htm">Matemáticas</a>
@@ -67,6 +69,18 @@
     <span>De la más reciente a la más antigua</span>
   </div>
   <div class="recent-grid" id="recent-articles"></div>
+</section>
+
+<section class="radar" id="radar">
+  <header class="section-intro">
+    <div>
+      <p class="eyebrow">RADAR ACADÉMICO</p>
+      <h2>Lecturas, debates y publicaciones que vale la pena seguir.</h2>
+    </div>
+    <p class="radar-note"><strong>Selección externa.</strong> Este espacio enlaza contenidos publicados por revistas, universidades y otros sitios académicos relacionados con educación, matemáticas, cultura e investigación.</p>
+  </header>
+  <div class="radar-grid" id="radar-grid"></div>
+  <p class="radar-legal"><strong>Sobre derechos de autor:</strong> aquí se publica únicamente una referencia breve, una descripción propia y el enlace hacia el sitio de origen. Los artículos permanecen alojados en la plataforma de sus autores o editores. Las imágenes del módulo se cargarán localmente cuando sean propias, autorizadas o cuenten con una licencia que permita su uso.</p>
 </section>
 
 <section class="editorial">
@@ -126,5 +140,7 @@
 </footer>
 <script src="content.js"></script>
 <script src="app.js"></script>
+<script src="radar-content.js"></script>
+<script src="radar.js"></script>
 </body>
 </html>
