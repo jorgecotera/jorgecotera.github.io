@@ -3,6 +3,7 @@ window.siteSearchStatic = [
   {type:"Sección",title:"Perfil académico",description:"Formación, trayectoria y perspectiva académica.",href:"perfil.html",keywords:"perfil hoja de vida formación trayectoria"},
   {type:"Sección",title:"Publicaciones",description:"Archivo cronológico de textos, ensayos y reflexiones.",href:"articulos.html",keywords:"artículos textos ensayos publicaciones"},
   {type:"Sección",title:"Investigación",description:"Proyecto, metodología, categorías de análisis y herramientas.",href:"investigacion.html",keywords:"investigación objetivación perpendicularidad metodología categorías"},
+  {type:"Sección",title:"Pensamiento crítico",description:"Seminario taller, proyecto, evaluación y memoria pedagógica desarrollada en Montelíbano.",href:"pensamiento-critico.html",keywords:"pensamiento crítico Montelíbano formación docente deliberación democracia territorio Freire Dussel Fals Borda Radford colonialidad"},
   {type:"Sección",title:"Didáctica",description:"Materiales para enseñar, explorar y modelar.",href:"didactica.html",keywords:"didáctica recursos modelación enseñanza"},
   {type:"Sección",title:"Matemáticas",description:"Cálculo, funciones y recursos de consulta.",href:"matematicas.html",keywords:"matemáticas cálculo funciones"},
   {type:"Sección",title:"Biblioteca",description:"Documentos de consulta, lineamientos y materiales de estudio.",href:"biblioteca.html",keywords:"biblioteca bibliografía documentos lineamientos estándares"},
@@ -14,6 +15,9 @@ window.siteSearchStatic = [
   {type:"Sección",title:"Archivo general",description:"Mapa de las secciones modernas y accesos históricos.",href:"archivo.html",keywords:"archivo mapa sitio histórico"},
   {type:"Sección",title:"Contacto",description:"Canales de contacto y acceso al formulario histórico.",href:"contacto.html",keywords:"contacto formulario"},
 
+  {type:"Recurso",title:"Proyecto del Seminario sobre Pensamiento Crítico",description:"Documento base del seminario taller desarrollado en Montelíbano.",href:"../Porta1%20Pensamiento%20Critico.pdf",keywords:"pensamiento crítico proyecto seminario Montelíbano formación docente"},
+  {type:"Recurso",title:"Evaluación del Seminario sobre Pensamiento Crítico",description:"Informe de evaluación de la experiencia formativa.",href:"../Informe%20-%20Pensamiento%20Critico.pdf",keywords:"pensamiento crítico evaluación 111 instrumentos 36 horas"},
+  {type:"Recurso",title:"Políticas públicas en educación - Perspectiva crítica",description:"Documento asociado a la experiencia pedagógica del seminario.",href:"../Politicas%20Publicas%20en%20Educacion%20-%20Prespectiva%20Critica.pdf",keywords:"políticas públicas educación perspectiva crítica experiencia pedagógica"},
   {type:"Recurso",title:"Cubo de la suma",description:"Exploración didáctica de una identidad algebraica.",href:"../Cubo_de_suma.htm",keywords:"álgebra identidad cubo suma"},
   {type:"Recurso",title:"Parábola",description:"Exploración de propiedades y comportamiento de la parábola.",href:"../Parabola.htm",keywords:"geometría analítica parábola"},
   {type:"Recurso",title:"Elipse",description:"Representación y estudio gráfico de la elipse.",href:"../Elipse.htm",keywords:"geometría analítica elipse"},
