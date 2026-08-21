@@ -1,4 +1,6 @@
 window.archiveLegacy = [
+  {date:"2015-10-01",displayDate:"Octubre de 2015",category:"Educación · Pedagogía",title:"Una Escuela Liberadora",subtitle:"Reflexión sobre educación, escuela y transformación",href:"../Una%20Escuela%20Liberadora.pdf"},
+  {date:"2015-09-12",displayDate:"12 de septiembre de 2015",category:"Territorio · Sociedad",title:"La región no se muere",subtitle:"Territorio, memoria y vida regional",href:"../La%20region%20no%20se%20muere.pdf"},
   {date:"2013-07-01",displayDate:"Julio de 2013",category:"Territorio · Sociedad",title:"Pueblo de Mina, pueblo fantasma",subtitle:"Territorio, transformación social y memoria",href:"../Pueblo%20de%20mina.pdf"},
   {date:"2012-04-01",displayDate:"Abril de 2012",category:"Educación · Filosofía",title:"La Eu-ducación",subtitle:"¿La práctica de la Buena Educación?",href:"../La%20Eu-ducacion%20-%20La%20practica%20de%20la%20Buena%20Educacion%20o%20la%20Doctrina%20de%20los%20Aprendizajes.pdf"},
   {date:"2012-03-15",displayDate:"Marzo de 2012",category:"Preescolar · Grafismo",title:"Pre-escolar: arqueología del grafismo",subtitle:"Reflexiones sobre representación y aprendizaje",href:"../Analisis.pdf"},
