@@ -1,13 +1,40 @@
 const menuButton=document.querySelector('.menu');
 const nav=document.querySelector('.top nav');
+const topBar=document.querySelector('.top');
+
 menuButton?.addEventListener('click',()=>{
   const open=nav.classList.toggle('open');
   menuButton.setAttribute('aria-expanded',String(open));
 });
 nav?.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{
   nav.classList.remove('open');
-  menuButton.setAttribute('aria-expanded','false');
+  menuButton?.setAttribute('aria-expanded','false');
 }));
+
+// Acceso global al buscador sin recargar ni duplicar la navegación de cada sección.
+const onSearchPage=/buscar\.html$/i.test(location.pathname);
+if(topBar&&!onSearchPage&&!topBar.querySelector('.header-search')){
+  const searchLink=document.createElement('a');
+  searchLink.className='header-search';
+  searchLink.href='buscar.html';
+  searchLink.textContent='Buscar';
+  searchLink.setAttribute('aria-label','Buscar en todo el sitio');
+  topBar.classList.add('has-search');
+  if(menuButton)topBar.insertBefore(searchLink,menuButton);
+  else if(nav)topBar.insertBefore(searchLink,nav);
+  else topBar.appendChild(searchLink);
+}
+
+// Atajo de teclado: / o Ctrl/Cmd + K abre la búsqueda. En la propia página, enfoca el campo.
+document.addEventListener('keydown',event=>{
+  const target=event.target;
+  const typing=target instanceof HTMLInputElement||target instanceof HTMLTextAreaElement||target instanceof HTMLSelectElement||target?.isContentEditable;
+  const shortcut=(!typing&&event.key==='/')||((event.ctrlKey||event.metaKey)&&event.key.toLowerCase()==='k');
+  if(!shortcut)return;
+  event.preventDefault();
+  if(onSearchPage)document.querySelector('#site-search-input')?.focus();
+  else location.href='buscar.html';
+});
 
 const content=window.siteContent||{slides:[],articles:[]};
 
@@ -78,15 +105,15 @@ photoStage?.addEventListener('focusout',event=>{
   if(!photoStage.contains(event.relatedTarget))startSlides();
 });
 
-function compareChronology(a,b){
+// Publicaciones: el orden utiliza la precisión real disponible en la fuente.
+function compareArticles(a,b){
   const keyA=a.sortKey||a.date||'0000';
   const keyB=b.sortKey||b.date||'0000';
   const byKey=keyB.localeCompare(keyA,'en');
   return byKey||((b.sourceOrder||0)-(a.sourceOrder||0));
 }
 
-// El orden utiliza claves de clasificación. Las fechas visibles conservan únicamente la precisión presente en la fuente.
-const articles=[...content.articles].sort(compareChronology);
+const articles=[...content.articles].sort(compareArticles);
 const latest=articles[0];
 const latestRoot=document.querySelector('#latest-article');
 if(latestRoot&&latest){
