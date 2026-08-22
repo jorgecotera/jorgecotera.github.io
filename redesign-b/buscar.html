@@ -25,7 +25,7 @@
   </nav>
 </header>
 
-<main class="search-page">
+<main class="search-page" id="contenido-principal">
 <section class="search-hero">
   <div>
     <p class="eyebrow">BÚSQUEDA GLOBAL</p>
@@ -40,26 +40,26 @@
 </section>
 
 <section class="search-tools">
-  <form id="site-search-form" role="search">
+  <form id="site-search-form" role="search" aria-label="Buscar contenidos del sitio">
     <label>
       <span>Buscar</span>
-      <input id="site-search-input" type="search" autocomplete="off" placeholder="Ej. objetivación, evaluación, vectores, currículo...">
+      <input id="site-search-input" type="search" autocomplete="off" aria-describedby="search-help" aria-controls="site-search-results" placeholder="Ej. objetivación, evaluación, vectores, currículo...">
     </label>
     <label>
       <span>Tipo de contenido</span>
-      <select id="site-search-type"><option value="all">Todos los tipos</option></select>
+      <select id="site-search-type" aria-controls="site-search-results"><option value="all">Todos los tipos</option></select>
     </label>
     <button type="submit">Buscar</button>
   </form>
 </section>
 
-<section class="search-results-wrap" aria-live="polite">
+<section class="search-results-wrap" aria-labelledby="site-search-count">
   <div class="search-status">
-    <strong id="site-search-count">0 resultados</strong>
-    <small>Ignora tildes y mayúsculas; admite varias palabras en cualquier orden.</small>
+    <strong id="site-search-count" role="status" aria-live="polite" aria-atomic="true">0 resultados</strong>
+    <small id="search-help">Ignora tildes y mayúsculas; admite varias palabras en cualquier orden.</small>
   </div>
   <div class="search-results" id="site-search-results"></div>
-  <div class="search-empty" id="site-search-empty" hidden>No se encontraron contenidos con esos criterios.</div>
+  <div class="search-empty" id="site-search-empty" role="status" hidden>No se encontraron contenidos con esos criterios.</div>
 </section>
 
 <p class="search-note"><strong>Alcance:</strong> el índice se alimenta de los datos que ya usan publicaciones, biblioteca, Comunidad y radar. Cuando esos módulos se actualizan, sus nuevos contenidos pasan también a formar parte de la búsqueda.</p>
