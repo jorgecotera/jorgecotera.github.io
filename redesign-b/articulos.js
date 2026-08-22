@@ -109,13 +109,14 @@ function render(){
   if(!list)return;
   list.innerHTML=filtered.map(article=>{
     const external=/^https?:\/\//i.test(article.href);
+    const detail=article.subtitle||article.excerpt||'';
     return `
     <article class="archive-item">
       <div class="archive-date">${article.displayDate}</div>
       <div class="archive-main">
         <div class="archive-category">${article.category}</div>
         <h2>${article.title}</h2>
-        <p>${article.subtitle||article.excerpt||''}</p>
+        ${detail?`<p>${detail}</p>`:''}
       </div>
       <a class="archive-action" href="${article.href}" ${external?'target="_blank" rel="noopener noreferrer"':''}>${external?'Abrir referencia':'Leer documento'} ↗</a>
     </article>`;
