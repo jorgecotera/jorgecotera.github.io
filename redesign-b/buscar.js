@@ -1,11 +1,20 @@
 const staticItems=[...(window.siteSearchStatic||[])];
-const ownArticles=[...(window.siteContent?.articles||[]),...(window.archiveLegacy||[])].map(item=>({
+const articleSources=[...(window.siteContent?.articles||[]),...(window.archiveLegacy||[])];
+const ownArticles=articleSources.map(item=>({
   type:"Publicación",
   title:item.title,
   description:item.subtitle||item.excerpt||item.displayDate||"Publicación del archivo",
   href:item.href,
   keywords:`${item.category||''} ${item.displayDate||''}`
 }));
+const relatedArticleItems=articleSources.flatMap(article=>(article.related||[]).map(resource=>({
+  type:"Recurso",
+  title:resource.label||`Recurso asociado · ${article.title}`,
+  description:`Recurso asociado a «${article.title}»`,
+  href:resource.href,
+  keywords:`${article.title} ${article.category||''} ${article.displayDate||''} recurso asociado plegable Calaméo`,
+  external:/^https?:\/\//i.test(resource.href||'')
+})));
 const libraryItems=[...(window.libraryContent||[])].map(item=>({
   type:"Biblioteca",
   title:item.title,
@@ -40,7 +49,7 @@ function queryTerms(value=''){
 
 // El índice reúne varias fuentes. Solo se elimina una coincidencia cuando título y ruta son iguales,
 // de modo que un mismo documento pueda conservar contextos distintos si aparece con otro título.
-const rawItems=[...staticItems,...ownArticles,...libraryItems,...communityItems,...radarItems];
+const rawItems=[...staticItems,...ownArticles,...relatedArticleItems,...libraryItems,...communityItems,...radarItems];
 const seenItems=new Set();
 const allItems=rawItems.filter(item=>{
   const key=`${String(item.href||'').toLocaleLowerCase('es')}|${normalize(item.title||'')}`;
