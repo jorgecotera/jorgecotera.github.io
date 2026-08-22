@@ -2,14 +2,40 @@ const menuButton=document.querySelector('.menu');
 const nav=document.querySelector('.top nav');
 const topBar=document.querySelector('.top');
 
-menuButton?.addEventListener('click',()=>{
-  const open=nav.classList.toggle('open');
-  menuButton.setAttribute('aria-expanded',String(open));
-});
-nav?.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{
+function closeMenu({restoreFocus=false}={}){
+  if(!nav)return;
+  const wasOpen=nav.classList.contains('open');
   nav.classList.remove('open');
   menuButton?.setAttribute('aria-expanded','false');
-}));
+  if(restoreFocus&&wasOpen)menuButton?.focus();
+}
+
+if(menuButton&&nav){
+  if(!nav.id)nav.id='site-navigation';
+  menuButton.setAttribute('aria-controls',nav.id);
+  menuButton.addEventListener('click',()=>{
+    const open=nav.classList.toggle('open');
+    menuButton.setAttribute('aria-expanded',String(open));
+  });
+  nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>closeMenu()));
+
+  document.addEventListener('keydown',event=>{
+    if(event.key==='Escape'&&nav.classList.contains('open')){
+      event.preventDefault();
+      closeMenu({restoreFocus:true});
+    }
+  });
+
+  document.addEventListener('pointerdown',event=>{
+    if(!nav.classList.contains('open'))return;
+    if(topBar?.contains(event.target))return;
+    closeMenu();
+  });
+
+  window.addEventListener('resize',()=>{
+    if(window.innerWidth>800)closeMenu();
+  });
+}
 
 // Acceso global al buscador sin recargar ni duplicar la navegación de cada sección.
 const onSearchPage=/buscar\.html$/i.test(location.pathname);
@@ -19,6 +45,7 @@ if(topBar&&!onSearchPage&&!topBar.querySelector('.header-search')){
   searchLink.href='buscar.html';
   searchLink.textContent='Buscar';
   searchLink.setAttribute('aria-label','Buscar en todo el sitio');
+  searchLink.title='Buscar en todo el sitio (/ o Ctrl+K)';
   topBar.classList.add('has-search');
   if(menuButton)topBar.insertBefore(searchLink,menuButton);
   else if(nav)topBar.insertBefore(searchLink,nav);
@@ -29,7 +56,7 @@ if(topBar&&!onSearchPage&&!topBar.querySelector('.header-search')){
 document.addEventListener('keydown',event=>{
   const target=event.target;
   const typing=target instanceof HTMLInputElement||target instanceof HTMLTextAreaElement||target instanceof HTMLSelectElement||target?.isContentEditable;
-  const shortcut=(!typing&&event.key==='/')||((event.ctrlKey||event.metaKey)&&event.key.toLowerCase()==='k');
+  const shortcut=(!typing&&!event.altKey&&!event.ctrlKey&&!event.metaKey&&event.key==='/')||((event.ctrlKey||event.metaKey)&&!event.altKey&&event.key.toLowerCase()==='k');
   if(!shortcut)return;
   event.preventDefault();
   if(onSearchPage)document.querySelector('#site-search-input')?.focus();
@@ -46,6 +73,10 @@ const photoStage=document.querySelector('.photo-stage');
 const reducedMotion=window.matchMedia?.('(prefers-reduced-motion: reduce)').matches===true;
 let slideIndex=0;
 let slideTimer=null;
+let touchStartX=null;
+let touchStartY=null;
+
+if(caption)caption.setAttribute('aria-live','polite');
 
 if(slidesRoot&&content.slides.length){
   content.slides.forEach((item,index)=>{
@@ -56,12 +87,14 @@ if(slidesRoot&&content.slides.length){
     slidesRoot.appendChild(slide);
 
     const dot=document.createElement('button');
+    dot.type='button';
     dot.className=`slide-dot${index===0?' active':''}`;
-    dot.setAttribute('aria-label',`Ver fotografía ${index+1}`);
+    dot.setAttribute('aria-label',`Ver fotografía ${index+1} de ${content.slides.length}`);
     dot.setAttribute('aria-current',index===0?'true':'false');
     dot.addEventListener('click',()=>showSlide(index,true));
     dotsRoot?.appendChild(dot);
   });
+  showSlide(0);
   startSlides();
 }
 
@@ -91,6 +124,7 @@ function stopSlides(){
 
 function startSlides(){
   stopSlides();
+  if(document.hidden)return;
   if(!reducedMotion&&content.slides.length>1){
     slideTimer=setInterval(()=>showSlide(slideIndex+1),5500);
   }
@@ -103,6 +137,33 @@ photoStage?.addEventListener('mouseleave',startSlides);
 photoStage?.addEventListener('focusin',stopSlides);
 photoStage?.addEventListener('focusout',event=>{
   if(!photoStage.contains(event.relatedTarget))startSlides();
+});
+
+// Deslizamiento táctil horizontal sin interferir con el desplazamiento vertical de la página.
+photoStage?.addEventListener('touchstart',event=>{
+  const point=event.touches[0];
+  if(!point)return;
+  touchStartX=point.clientX;
+  touchStartY=point.clientY;
+  stopSlides();
+},{passive:true});
+photoStage?.addEventListener('touchend',event=>{
+  if(touchStartX===null||touchStartY===null)return;
+  const point=event.changedTouches[0];
+  const dx=point.clientX-touchStartX;
+  const dy=point.clientY-touchStartY;
+  touchStartX=null;
+  touchStartY=null;
+  if(Math.abs(dx)>=45&&Math.abs(dx)>Math.abs(dy)*1.2){
+    showSlide(slideIndex+(dx<0?1:-1),true);
+  }else{
+    startSlides();
+  }
+},{passive:true});
+
+document.addEventListener('visibilitychange',()=>{
+  if(document.hidden)stopSlides();
+  else startSlides();
 });
 
 // Publicaciones: el orden utiliza la precisión real disponible en la fuente.
@@ -118,7 +179,7 @@ const latest=articles[0];
 const latestRoot=document.querySelector('#latest-article');
 if(latestRoot&&latest){
   latestRoot.innerHTML=`
-    <div class="latest-image"><img src="${latest.image}" alt="Imagen de portada de ${latest.title}"><span class="latest-badge">ÚLTIMA PUBLICACIÓN</span></div>
+    <div class="latest-image"><img src="${latest.image}" alt="Imagen asociada a ${latest.title}"><span class="latest-badge">ÚLTIMA PUBLICACIÓN</span></div>
     <div class="latest-copy">
       <div class="article-meta">${latest.displayDate} · ${latest.category}</div>
       <h3>${latest.title}</h3>
