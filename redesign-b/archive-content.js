@@ -18,7 +18,7 @@ window.archiveLegacy = [
   {sortKey:"2011-08",year:2011,displayDate:"Agosto de 2011",category:"Literatura y Política",title:"Quiero decirte Rebeca",href:"../Quiero%20decirte%20rebeca.pdf"},
   {sortKey:"2011-03",year:2011,displayDate:"Marzo de 2011",category:"Pedagogía y Didáctica",title:"El Aporte de los que No CREM",href:"../EL%20Aporte%20de%20los%20que%20NO%20CREM.pdf"},
   {sortKey:"2011-02",sourceOrder:2,year:2011,displayDate:"Febrero de 2011",category:"Pedagogía y Didáctica",title:"De la Letra a la Realidad",href:"../DE%20LA%20LETRA%20A%20LA%20REALIDAD.pdf"},
-  {sortKey:"2011-02",sourceOrder:1,year:2011,displayDate:"Febrero de 2011",category:"Literatura y Política",title:"El último de mis seres imaginarios",href:"http://www.letralia.com/247/especial02.htm"},
+  {sortKey:"2011-02",sourceOrder:1,year:2011,displayDate:"Febrero de 2011",category:"Literatura y Política",title:"El último de mis seres imaginarios",href:"https://www.letralia.com/247/especial02.htm"},
   {sortKey:"2009-12",year:2009,displayDate:"Diciembre de 2009",category:"Pedagogía y Didáctica",title:"Para una clase de ciencias",href:"../Para%20una%20clase%20de%20ciencias.pdf"},
   {sortKey:"2009-10",year:2009,displayDate:"Octubre de 2009",category:"Pedagogía y Didáctica",title:"El Maestro Obrero",href:"../El_Maestro%20Obrero.pdf"},
   {sortKey:"2008-01",year:2008,displayDate:"Enero de 2008",category:"Pedagogía y Didáctica",title:"En un principio era la palabra",subtitle:"Semiótica",href:"../En%20un%20principio%20era%20la%20palabra%20-%20Semiotica.pdf"},
@@ -29,7 +29,7 @@ window.archiveLegacy = [
   {sortKey:"2006-02",year:2006,displayDate:"Febrero de 2006",category:"Literatura y Política",title:"Qué tan artificial es la inteligencia",href:"../Que%20tan%20artificial%20es%20la%20inteligencia.pdf"},
   {sortKey:"2005-03",year:2005,displayDate:"Marzo de 2005",category:"Pedagogía y Didáctica",title:"La Clase",subtitle:"Una aproximación desde el enfoque sistémico",href:"../La%20Clase.pdf"},
 
-  {sortKey:"0000",year:null,displayDate:"Sin fecha indicada",category:"Pedagogía y Didáctica",title:"Representaciones Semióticas en la Aprehensión y Comprensión de los Objetos",href:"https://en.calameo.com/read/002752003818976a3adfc"},
+  {sortKey:"0000",year:null,displayDate:"Sin fecha indicada",category:"Pedagogía y Didáctica",title:"Representaciones Semióticas en la Aprehensión y Comprensión de los Objetos",href:"https://www.calameo.com/books/002752003818976a3adfc"},
   {sortKey:"0000",year:null,displayDate:"Sin fecha indicada",category:"Pedagogía y Didáctica · Literatura y Política",title:"Calidad educativa o Buena Educación",subtitle:"También aparece en la sección Literatura y Política como «El Culebrón de la Calidad Educativa»",href:"../Calidad%20Educativa%20o%20Buena%20Educacion.pdf"},
   {sortKey:"0000",year:null,displayDate:"Sin fecha indicada",category:"Pedagogía y Didáctica",title:"Yo Maestro/Investigador",subtitle:"Notas",href:"../Tarea.pdf"},
   {sortKey:"0000",year:null,displayDate:"Sin fecha indicada",category:"Pedagogía y Didáctica",title:"Modelación",href:"../Modelacion.pdf"},
