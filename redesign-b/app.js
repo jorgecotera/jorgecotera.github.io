@@ -237,3 +237,27 @@ if(recentRoot){
     recentRoot.appendChild(card);
   });
 }
+
+// Archivo general: hace visibles páginas históricas auxiliares que antes solo eran alcanzables por rutas internas.
+const archivePreserveNote=/archivo\.html$/i.test(location.pathname)?document.querySelector('.preserve-note'):null;
+if(archivePreserveNote&&!document.querySelector('#legacy-aux-pages')){
+  const section=document.createElement('section');
+  section.className='utility-section';
+  section.id='legacy-aux-pages';
+  section.innerHTML=`
+    <header>
+      <div><p class="eyebrow">PÁGINAS AUXILIARES HISTÓRICAS</p><h2>Materiales conservados fuera de la navegación principal.</h2></div>
+      <p>Estas páginas forman parte del archivo original y ahora también pueden localizarse desde el mapa general y el buscador.</p>
+    </header>
+    <div class="utility-grid">
+      <a class="utility-card" href="../E.htm"><small>Evaluación y política educativa</small><strong>Día E e Índice Sintético</strong><span>Reflexión histórica sobre evaluación externa y calidad educativa.</span><b>Abrir ↗</b></a>
+      <a class="utility-card" href="../Pica%20Pica.htm"><small>Experiencia institucional</small><strong>Pica-Pica Nuevo</strong><span>Ruta de la Calidad, caracterización y trabajo institucional en Montelíbano.</span><b>Abrir ↗</b></a>
+      <a class="utility-card" href="../Matematicas%202.htm"><small>Curso histórico</small><strong>Matemáticas 2020</strong><span>Números reales, documentos de consulta, taller y videos de apoyo.</span><b>Abrir ↗</b></a>
+      <a class="utility-card" href="../Porta1%20Exposiciones.htm"><small>P.E.I.</small><strong>Exposiciones P.E.I.</strong><span>Pensamiento crítico latinoamericano, bases epistemológicas y modelos pedagógicos.</span><b>Abrir ↗</b></a>
+      <a class="utility-card" href="../Porta3%20Acompa%C3%B1amiento.htm"><small>Evaluación</small><strong>Acompañamiento de evaluación</strong><span>Sistema institucional, diseño de pruebas e información histórica de Wayra System.</span><b>Abrir ↗</b></a>
+      <a class="utility-card" href="../Porta3%20Exposiciones.htm"><small>Evaluación</small><strong>Exposiciones sobre evaluación</strong><span>El Cuerpo de la Evaluación, competencias y otros materiales expositivos.</span><b>Abrir ↗</b></a>
+      <a class="utility-card" href="../Instruciones.htm"><small>Pruebas 2021</small><strong>Instrucciones de pruebas</strong><span>Láminas e indicaciones históricas de los tipos de prueba aplicados en abril de 2021.</span><b>Abrir ↗</b></a>
+      <a class="utility-card" href="../Saber11%20-%20Respaldo.htm"><small>Preparación</small><strong>Saber 11 · respaldo</strong><span>Versión de respaldo de la antigua orientación con clases, actividades y documentos.</span><b>Abrir ↗</b></a>
+    </div>`;
+  archivePreserveNote.before(section);
+}
