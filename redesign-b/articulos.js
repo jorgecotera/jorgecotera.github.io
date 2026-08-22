@@ -79,7 +79,9 @@ function render(){
   if(count)count.textContent=`${filtered.length} ${filtered.length===1?'publicación':'publicaciones'}`;
   if(empty)empty.hidden=filtered.length!==0;
   if(!list)return;
-  list.innerHTML=filtered.map(article=>`
+  list.innerHTML=filtered.map(article=>{
+    const external=/^https?:\/\//i.test(article.href);
+    return `
     <article class="archive-item">
       <div class="archive-date">${article.displayDate}</div>
       <div class="archive-main">
@@ -87,8 +89,9 @@ function render(){
         <h2>${article.title}</h2>
         <p>${article.subtitle||article.excerpt||''}</p>
       </div>
-      <a class="archive-action" href="${article.href}">Leer documento ↗</a>
-    </article>`).join('');
+      <a class="archive-action" href="${article.href}" ${external?'target="_blank" rel="noopener noreferrer"':''}>${external?'Abrir referencia':'Leer documento'} ↗</a>
+    </article>`;
+  }).join('');
 }
 
 search?.addEventListener('input',render);
