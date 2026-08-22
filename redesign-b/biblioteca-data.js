@@ -46,5 +46,5 @@ window.libraryContent = [
   {category:"Pensamiento crítico",title:"Puntos",href:"../Puntos.pdf",type:"PDF"},
   {category:"Pensamiento crítico",title:"Foro",href:"../Foro.pdf",type:"PDF"},
   {category:"Pensamiento crítico",title:"Políticas Públicas en el contexto Sanjorgino",href:"../Politicas%20Publicas%20en%20Educacion%20-%20Prespectiva%20Critica.pdf",type:"PDF"},
-  {category:"Pensamiento crítico",title:"¿Por qué hoy no es posible la revolución?",href:"http://elpais.com/elpais/2014/09/22/opinion/1411396771_691913.html",type:"WEB",external:true}
+  {category:"Pensamiento crítico",title:"¿Por qué hoy no es posible la revolución?",href:"https://elpais.com/elpais/2014/09/22/opinion/1411396771_691913.html",type:"WEB",external:true}
 ];
