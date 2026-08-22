@@ -1,7 +1,7 @@
 window.archiveLegacy = [
   // Fechas, títulos y clasificación temática conservados según Articulos.htm.
   {sortKey:"2020",year:2020,displayDate:"2020",category:"Literatura y Política",title:"Ponencias - Foro Visión Montelíbano",href:"../Ponencia.pdf"},
-  {sortKey:"2015-10",year:2015,displayDate:"Octubre de 2015",category:"Pedagogía y Didáctica",title:"Una Escuela Liberadora",href:"../Una%20Escuela%20Liberadora.pdf"},
+  {sortKey:"2015-10",year:2015,displayDate:"Octubre de 2015",category:"Pedagogía y Didáctica",title:"Una Escuela Liberadora",href:"../Una%20Escuela%20Liberadora.pdf",related:[{label:"Plegable en Calaméo",href:"https://en.calameo.com/read/002752003a1a01a61e0e8"}]},
   {sortKey:"2015-09-12",year:2015,displayDate:"12 de septiembre de 2015",category:"Literatura y Política",title:"La región no se muere",href:"../La%20region%20no%20se%20muere.pdf"},
   {sortKey:"2013-10",year:2013,displayDate:"Octubre de 2013",category:"Pedagogía y Didáctica",title:"Buenas Prácticas Educativas",subtitle:"Entrevista",href:"../Calidad%20-%20Entrevistas.pdf"},
   {sortKey:"2013-07",year:2013,displayDate:"Julio de 2013",category:"Pedagogía y Didáctica",title:"Pueblo de Mina, pueblo fantasma",href:"../Pueblo%20de%20mina.pdf"},
@@ -36,7 +36,7 @@ window.archiveLegacy = [
   {sortKey:"0000",year:null,displayDate:"Sin fecha indicada",category:"Pedagogía y Didáctica",title:"Enseñanza y Pensamiento Espacial",href:"../Ensenanza%20y%20pensamiento.pdf"},
   {sortKey:"0000",year:null,displayDate:"Sin fecha indicada",category:"Literatura y Política",title:"Diomedes Díaz",href:"../Diomedes%20Diaz.pdf"},
   {sortKey:"0000",year:null,displayDate:"Sin fecha indicada",category:"Literatura y Política",title:"Formato Único de Hoja de Vida",href:"../Hoja%20de%20Vida%20Formato%20unico-%20Jorge%20Cotera.pdf"},
-  {sortKey:"0000",year:null,displayDate:"Sin fecha indicada",category:"Literatura y Política",title:"Cómo pensar en alternativas para un nuevo orden social",href:"../Como%20pensar%20en%20alternativas%20para%20un%20nuevo%20orden%20social%20en%20medio%20de%20Conflictos%20de%20Intereses.pdf"},
+  {sortKey:"0000",year:null,displayDate:"Sin fecha indicada",category:"Literatura y Política",title:"Cómo pensar en alternativas para un nuevo orden social",href:"../Como%20pensar%20en%20alternativas%20para%20un%20nuevo%20orden%20social%20en%20medio%20de%20Conflictos%20de%20Intereses.pdf",related:[{label:"Plegable en Calaméo",href:"https://en.calameo.com/read/002752003e0deafa6c82e"}]},
   {sortKey:"0000",year:null,displayDate:"Sin fecha indicada",category:"Literatura y Política",title:"Tres Símbolos",href:"../Tres%20Simbolos.pdf"},
   {sortKey:"0000",year:null,displayDate:"Sin fecha indicada",category:"Literatura y Política",title:"Bases para el Foro Educativo",href:"../Euducacion.pdf"}
 ];
