@@ -93,6 +93,67 @@ const community2021 = [
   {year:2021,grade:"8°",area:"Matemáticas · GeoGebra",type:"WEB",title:"Grupo de GeoGebra",href:"https://www.geogebra.org/groups",external:true}
 ];
 
+const community2020Grade6 = [
+  ["Sistema Numérico Posicional","../1%20-%20Sistema%20Numérico%20Posicional%20-%206.pdf"],
+  ["Relaciones","../2%20-%20Relaciones%20-%206.pdf"],
+  ["Interpretación de las Fracciones","../3%20-%20Interpretación%20de%20las%20Fracciones%20-%206.pdf"],
+  ["Proporcionalidad","../4%20-%20Proporcionalidad%20-%206.pdf"],
+  ["Cuerpos Geométricos","../5%20-%20Cuerpos%20Geométricos%20-%206.pdf"],
+  ["Figuras Geométricas","../6%20-%20Figuras%20Geométricas%20-%206.pdf"],
+  ["Proyecto 1 · Modelación de planos y cuerpos","../7%20-%20Proyecto%201%20-%20Modelación%20de%20planos%20y%20cuerpos%20-%206.pdf"],
+  ["Proyecto 2 · Construcción y modelación","../8%20-%20Proyecto%202%20-%20Construcción%20y%20modelación%20-%206.pdf"],
+  ["Ver y ser con los otros","../Ver%20y%20ser%20con%20los%20otros%20-%20Yuliana.pdf"]
+].map(([title,href])=>({year:2020,grade:"6°",area:"Matemáticas · Acompañamiento en pandemia",type:"PDF",title,href}));
+
+const community2020Grade7 = [
+  ["Sistema Numérico Posicional","../1%20-%20Sistema%20Numerico%20Posicional.pdf"],
+  ["Interpretación de las Fracciones","../2%20-%20Interpretacion%20de%20las%20Fracciones.pdf"],
+  ["Ecuaciones","../3%20-%20Ecuaciones.pdf"],
+  ["Más ecuaciones","../4%20-%20Mas%20ecuaciones.pdf"],
+  ["Proporcionalidad y aplicación","../5%20-%20Proporcionalidad%20y%20aplicacion.pdf"],
+  ["Enteros","../6%20-%20%20Enteros.pdf"],
+  ["Proyecto 1 · Modelación de planos y cuerpos","../7%20-%20Proyecto%201%20-%20Modelacion%20de%20planos%20y%20cuerpos%20-.pdf"],
+  ["Proyecto 2 · Construcción y modelación","../8%20-%20Proyecto%202%20-%20Construccion%20y%20modelacion%20-.pdf"]
+].map(([title,href])=>({year:2020,grade:"7°",area:"Matemáticas · Acompañamiento en pandemia",type:"PDF",title,href}));
+
+const community2020Media = [
+  {year:2020,grade:"General",area:"Territorio · Ambiente",type:"VIDEO",title:"Día de la Madre Tierra · 22 de abril",href:"https://youtu.be/XGxhdTJwliE",external:true},
+  {year:2020,grade:"General",area:"Matemáticas",type:"VIDEO",title:"Sistema Numérico Posicional",href:"https://www.youtube.com/watch?v=bTZuwjZlVjU",external:true},
+  {year:2020,grade:"General",area:"Matemáticas",type:"VIDEO",title:"Más sobre potencias",href:"https://www.youtube.com/watch?v=vJTdcCnFVAM",external:true},
+  {year:2020,grade:"General",area:"Pedagogía · Sociedad",type:"VIDEO",title:"Mensaje pedagógico · Sustantivamente político",href:"https://youtu.be/XBdPg9G5BB4",external:true},
+  {year:2020,grade:"General",area:"Acompañamiento en pandemia",type:"VIDEO",title:"Mensaje complementario · Guías 7 y 8",href:"https://youtu.be/Y3N2R38QuGk",external:true},
+  {year:2020,grade:"General",area:"Matemáticas · Probabilidad",type:"VIDEO",title:"Probabilidad · Guía 9",href:"https://youtu.be/W6tC4X5i5Is",external:true},
+  {year:2020,grade:"General",area:"Comunidad · Encuentro",type:"VIDEO",title:"Encuentro Mat-Bio I",href:"https://www.youtube.com/watch?v=vgv1IbteH0U",external:true},
+  {year:2020,grade:"General",area:"Comunidad · Encuentro",type:"VIDEO",title:"Encuentro Mat-Bio II",href:"https://www.youtube.com/watch?v=aLplCsV2cSs",external:true},
+  {year:2020,grade:"General",area:"Ciencia · Sociedad",type:"PDF",title:"El Coronavirus",href:"../LCE.pdf"}
+];
+
+const community2016to2019 = [
+  {year:"2016–2019",sortYear:2019,grade:"9°",area:"Matemáticas",type:"PDF",title:"Plan · Período I",href:"../Matematica%20-%20Noveno%20-%20Periodo%20I.pdf"},
+  {year:"2016–2019",sortYear:2019,grade:"9°",area:"Matemáticas · Evaluación",type:"PDF",title:"Rúbrica · Exposiciones",href:"../Rubrica.pdf"},
+  {year:"2016–2019",sortYear:2019,grade:"9°",area:"Matemáticas · Cultura",type:"PDF",title:"Canción · El Retiro",href:"../EL%20RETIRO.pdf"},
+  {year:"2016–2019",sortYear:2019,grade:"9°",area:"Matemáticas · Cultura",type:"PDF",title:"Canción · Dios no me deja",href:"../DIOS%20NO%20ME%20DEJA.pdf"},
+  {year:"2016–2019",sortYear:2019,grade:"9°",area:"Geometría",type:"VIDEO",title:"Relación Pitagórica",href:"https://www.youtube.com/watch?v=NxQuQqr0qG0",external:true},
+  {year:"2016–2019",sortYear:2019,grade:"9°",area:"Matemáticas",type:"PDF",title:"Taller en Casa",href:"../TALLER%20EN%20CASA.pdf"},
+  {year:"2016–2019",sortYear:2019,grade:"9°",area:"Geometría · Interactivo",type:"HTML",title:"Solución Pitagórica I",href:"../Pitagoras%201.htm"},
+  {year:"2016–2019",sortYear:2019,grade:"9°",area:"Geometría · Interactivo",type:"HTML",title:"Solución Pitagórica II",href:"../Pitagoras%202.htm"},
+  {year:"2016–2019",sortYear:2019,grade:"9°",area:"Geometría · Interactivo",type:"HTML",title:"Solución Pitagórica III",href:"../Pitagoras%203.htm"},
+  {year:"2016–2019",sortYear:2019,grade:"9°",area:"Geometría · Interactivo",type:"HTML",title:"Solución Pitagórica IV",href:"../Pitagoras%204.htm"},
+  {year:"2016–2019",sortYear:2019,grade:"Física",area:"Ciencia",type:"PDF",title:"Plan · Período I",href:"../Fisica%20-%20Noveno%20-%20Periodo%20I.pdf"},
+  {year:"2016–2019",sortYear:2019,grade:"Física",area:"Ciencia",type:"PDF",title:"El Concepto de Ciencia",href:"../El%20Concepto%20de%20Ciencia.pdf"},
+  {year:"2016–2019",sortYear:2019,grade:"Física",area:"Ciencia",type:"PDF",title:"Laboratorio",href:"../Laboratorio.pdf"},
+  {year:"2016–2019",sortYear:2019,grade:"Física",area:"Ciencia",type:"VIDEO",title:"El Concepto de Ciencia · Audio",href:"https://www.youtube.com/watch?v=be5m3cfGz1c",external:true},
+  {year:"2016–2019",sortYear:2019,grade:"10°",area:"Matemáticas",type:"PDF",title:"Plan · Período I",href:"../Matematica%20-%20Decimo%20-%20Periodo%20I.pdf"},
+  {year:"2016–2019",sortYear:2019,grade:"10°",area:"Matemáticas",type:"PDF",title:"Proporción áurea",href:"../Aurea.pdf"},
+  {year:"2016–2019",sortYear:2019,grade:"10°",area:"Modelación",type:"PDF",title:"Universo a escala",href:"../Universo.pdf"},
+  {year:"2016–2019",sortYear:2019,grade:"10°",area:"Modelación",type:"PDF",title:"Universo a escala 2",href:"../Universo%202.pdf"},
+  {year:"2016–2019",sortYear:2019,grade:"10°",area:"Modelación",type:"PDF",title:"Conversión Sistema Solar",href:"../Conversion%20Sistema%20Solar.pdf"},
+  {year:"2016–2019",sortYear:2019,grade:"11°",area:"Matemáticas",type:"PDF",title:"Plan · Período I",href:"../Matematicas%20-%20Undecimo%20-%20Periodo%20I.pdf"},
+  {year:"2016–2019",sortYear:2019,grade:"11°",area:"Matemáticas",type:"PDF",title:"Axiomatización de los Reales",href:"../Axiomatizacion%20de%20los%20numeros%20reales.pdf"},
+  {year:"2016–2019",sortYear:2019,grade:"11°",area:"Matemáticas",type:"PDF",title:"Exposiciones sobre Axiomatización de Reales",href:"../Exposiciones%20sobre%20Axiomatizacion%20de%20Reales.pdf"},
+  {year:"2016–2019",sortYear:2019,grade:"General",area:"Evaluación",type:"PDF",title:"Resultados de la Evaluación I",href:"../Resultados%20de%20la%20Evaluacion%20I.pdf"}
+];
+
 window.communityContent = [
   {year:2026,grade:"General",area:"Comunidad · Blog",type:"WEB",title:"Aula Mat Bio",description:"Blog enlazado desde la Comunidad de aprendizaje.",href:"https://aulamatbio.blogspot.com/",external:true},
   {year:2026,grade:"General",area:"Educación · Sociedad",type:"PDF",title:"La escuela de Gustavo Petro",href:"../La%20escuela%20de%20Gustavo%20Petro.pdf"},
@@ -107,7 +168,6 @@ window.communityContent = [
   {year:2024,grade:"8°",area:"Matemáticas",type:"PDF",title:"Taller · La relación",href:"../Taller%20Fracciones.pdf"},
 
   {year:2023,grade:"8°",area:"Matemáticas",type:"PDF",title:"Los números racionales · Taller 1",href:"../Los%20números%20racionales%20-%20Q.pdf"},
-
   {year:2023,grade:"9°",area:"Matemáticas",type:"PDF",title:"Los números irracionales · Taller 1",href:"../Los%20números%20irracionales%20-%20I.pdf"},
   {year:2023,grade:"9°",area:"Ciencia",type:"PDF",title:"El Concepto de Ciencia",href:"../El%20Concepto%20de%20Ciencia.pdf"},
   {year:2023,grade:"9°",area:"Ciencia",type:"VIDEO",title:"El Concepto de Ciencia · Audio",href:"https://www.youtube.com/watch?v=be5m3cfGz1c",external:true},
@@ -116,7 +176,6 @@ window.communityContent = [
   {year:2023,grade:"9°",area:"Ciencia",type:"LECTURA",title:"Ciencia, política y cientificismo",href:"http://docs.politicascti.net/documents/Teoricos/Varsavsky_CPC.pdf",external:true},
   {year:2023,grade:"9°",area:"Ciencia",type:"LECTURA",title:"La ciencia, su método y filosofía",href:"https://users.dcc.uchile.cl/~cgutierr/cursos/INV/bunge_ciencia.pdf",external:true},
   {year:2023,grade:"9°",area:"Física",type:"PDF",title:"Vectores",href:"../Vectores.pdf"},
-
   {year:2023,grade:"10°",area:"Física",type:"PDF",title:"Qué es el movimiento",href:"../Qué%20el%20movimiento.pdf"},
   {year:2023,grade:"10°",area:"Física",type:"PDF",title:"Movimiento y sistemas de referencia",href:"../Movimiento%20y%20sistemas%20de%20referencia.pdf"},
   {year:2023,grade:"10°",area:"Ciencia",type:"LECTURA",title:"La historia del tiempo",href:"https://antroposmoderno.com/word/Stephen_Hawking_Historia_del_Tiempo.pdf",external:true},
@@ -127,5 +186,9 @@ window.communityContent = [
   {year:2023,grade:"10°",area:"Educación para la sexualidad",type:"PDF",title:"Proyecto de Educación Sexual 2023",href:"../Proyecto%20de%20Educación%20Sexual%202023.pdf"},
 
   ...community2022,
-  ...community2021
+  ...community2021,
+  ...community2020Grade6,
+  ...community2020Grade7,
+  ...community2020Media,
+  ...community2016to2019
 ];
