@@ -179,12 +179,12 @@ const latest=articles[0];
 const latestRoot=document.querySelector('#latest-article');
 if(latestRoot&&latest){
   latestRoot.innerHTML=`
-    <div class="latest-image"><img src="${latest.image}" alt="Imagen asociada a ${latest.title}"><span class="latest-badge">ÚLTIMA PUBLICACIÓN</span></div>
+    <div class="latest-image"><img src="${latest.image}" alt="Imagen del archivo visual del sitio"><span class="latest-badge">ÚLTIMA PUBLICACIÓN</span></div>
     <div class="latest-copy">
       <div class="article-meta">${latest.displayDate} · ${latest.category}</div>
       <h3>${latest.title}</h3>
-      <p class="subtitle">${latest.subtitle}</p>
-      <p class="excerpt">${latest.excerpt}</p>
+      ${latest.subtitle?`<p class="subtitle">${latest.subtitle}</p>`:''}
+      ${latest.excerpt?`<p class="excerpt">${latest.excerpt}</p>`:''}
       <a class="read-link" href="${latest.href}">Leer artículo completo ↗</a>
     </div>`;
 }
@@ -198,7 +198,7 @@ if(recentRoot){
       <span class="article-number">0${index+2}</span>
       <div class="article-meta">${article.displayDate}</div>
       <h4>${article.title}</h4>
-      <p>${article.subtitle}</p>
+      ${article.subtitle?`<p>${article.subtitle}</p>`:''}
       <a class="read-link" href="${article.href}">Leer →</a>`;
     recentRoot.appendChild(card);
   });
