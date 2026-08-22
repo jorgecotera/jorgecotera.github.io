@@ -1,21 +1,44 @@
 const menuButton=document.querySelector('.menu');
 const nav=document.querySelector('.top nav');
 const topBar=document.querySelector('.top');
+const mainContent=document.querySelector('main');
+
+// Acceso directo al contenido principal para navegación por teclado.
+if(mainContent){
+  if(!mainContent.id)mainContent.id='contenido-principal';
+  if(!mainContent.hasAttribute('tabindex'))mainContent.setAttribute('tabindex','-1');
+  if(!document.querySelector('.skip-link')){
+    const skipLink=document.createElement('a');
+    skipLink.className='skip-link';
+    skipLink.href=`#${mainContent.id}`;
+    skipLink.textContent='Saltar al contenido';
+    skipLink.addEventListener('click',()=>{
+      requestAnimationFrame(()=>mainContent.focus({preventScroll:true}));
+    });
+    document.body.insertBefore(skipLink,document.body.firstChild);
+  }
+}
+
+function setMenuState(open){
+  menuButton?.setAttribute('aria-expanded',String(open));
+  menuButton?.setAttribute('aria-label',open?'Cerrar menú':'Abrir menú');
+}
 
 function closeMenu({restoreFocus=false}={}){
   if(!nav)return;
   const wasOpen=nav.classList.contains('open');
   nav.classList.remove('open');
-  menuButton?.setAttribute('aria-expanded','false');
+  setMenuState(false);
   if(restoreFocus&&wasOpen)menuButton?.focus();
 }
 
 if(menuButton&&nav){
   if(!nav.id)nav.id='site-navigation';
   menuButton.setAttribute('aria-controls',nav.id);
+  setMenuState(false);
   menuButton.addEventListener('click',()=>{
     const open=nav.classList.toggle('open');
-    menuButton.setAttribute('aria-expanded',String(open));
+    setMenuState(open);
   });
   nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>closeMenu()));
 
