@@ -1,14 +1,38 @@
 const menuButton=document.querySelector('.menu');
 const nav=document.querySelector('.top nav');
 const topBar=document.querySelector('.top');
-menuButton?.addEventListener('click',()=>{
-  const open=nav.classList.toggle('open');
-  menuButton.setAttribute('aria-expanded',String(open));
-});
-nav?.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{
+
+function closeMenu({restoreFocus=false}={}){
+  if(!nav)return;
+  const wasOpen=nav.classList.contains('open');
   nav.classList.remove('open');
   menuButton?.setAttribute('aria-expanded','false');
-}));
+  if(restoreFocus&&wasOpen)menuButton?.focus();
+}
+
+if(menuButton&&nav){
+  if(!nav.id)nav.id='site-navigation';
+  menuButton.setAttribute('aria-controls',nav.id);
+  menuButton.addEventListener('click',()=>{
+    const open=nav.classList.toggle('open');
+    menuButton.setAttribute('aria-expanded',String(open));
+  });
+  nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>closeMenu()));
+  document.addEventListener('keydown',event=>{
+    if(event.key==='Escape'&&nav.classList.contains('open')){
+      event.preventDefault();
+      closeMenu({restoreFocus:true});
+    }
+  });
+  document.addEventListener('pointerdown',event=>{
+    if(!nav.classList.contains('open'))return;
+    if(topBar?.contains(event.target))return;
+    closeMenu();
+  });
+  window.addEventListener('resize',()=>{
+    if(window.innerWidth>800)closeMenu();
+  });
+}
 
 if(topBar&&!topBar.querySelector('.header-search')){
   const searchLink=document.createElement('a');
@@ -16,6 +40,7 @@ if(topBar&&!topBar.querySelector('.header-search')){
   searchLink.href='buscar.html';
   searchLink.textContent='Buscar';
   searchLink.setAttribute('aria-label','Buscar en todo el sitio');
+  searchLink.title='Buscar en todo el sitio (/ o Ctrl+K)';
   topBar.classList.add('has-search');
   if(menuButton)topBar.insertBefore(searchLink,menuButton);
   else if(nav)topBar.insertBefore(searchLink,nav);
@@ -25,7 +50,7 @@ if(topBar&&!topBar.querySelector('.header-search')){
 document.addEventListener('keydown',event=>{
   const target=event.target;
   const typing=target instanceof HTMLInputElement||target instanceof HTMLTextAreaElement||target instanceof HTMLSelectElement||target?.isContentEditable;
-  const shortcut=(!typing&&event.key==='/')||((event.ctrlKey||event.metaKey)&&event.key.toLowerCase()==='k');
+  const shortcut=(!typing&&!event.altKey&&!event.ctrlKey&&!event.metaKey&&event.key==='/')||((event.ctrlKey||event.metaKey)&&!event.altKey&&event.key.toLowerCase()==='k');
   if(!shortcut)return;
   event.preventDefault();
   location.href='buscar.html';
@@ -76,7 +101,10 @@ function render(){
     return matchesText&&matchesYear&&matchesCategory;
   });
 
-  if(count)count.textContent=`${filtered.length} ${filtered.length===1?'publicación':'publicaciones'}`;
+  if(count){
+    count.textContent=`${filtered.length} ${filtered.length===1?'publicación':'publicaciones'}`;
+    count.setAttribute('aria-live','polite');
+  }
   if(empty)empty.hidden=filtered.length!==0;
   if(!list)return;
   list.innerHTML=filtered.map(article=>{
