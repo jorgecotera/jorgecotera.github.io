@@ -25,7 +25,7 @@ function renderLibrary(){
   if(empty)empty.hidden=filtered.length!==0;
   if(!list)return;
   list.innerHTML=filtered.map(item=>`
-    <a class="library-item" href="${item.href}" target="_blank" rel="noopener">
+    <a class="library-item" href="${item.href}" target="_blank" rel="noopener noreferrer">
       <span class="library-type">${item.type}</span>
       <span class="library-copy"><small>${item.category}</small><strong>${item.title}</strong></span>
       <b aria-hidden="true">↗</b>
