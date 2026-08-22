@@ -30,7 +30,25 @@ const radarItems=[...(window.radarContent||[])].map(item=>({
   external:true
 }));
 
-const allItems=[...staticItems,...ownArticles,...libraryItems,...communityItems,...radarItems];
+function normalize(value=''){
+  return value.toLocaleLowerCase('es').normalize('NFD').replace(/[\u0300-\u036f]/g,'');
+}
+
+function queryTerms(value=''){
+  return normalize(value).split(/[^a-z0-9]+/).filter(Boolean);
+}
+
+// El índice reúne varias fuentes. Solo se elimina una coincidencia cuando título y ruta son iguales,
+// de modo que un mismo documento pueda conservar contextos distintos si aparece con otro título.
+const rawItems=[...staticItems,...ownArticles,...libraryItems,...communityItems,...radarItems];
+const seenItems=new Set();
+const allItems=rawItems.filter(item=>{
+  const key=`${String(item.href||'').toLocaleLowerCase('es')}|${normalize(item.title||'')}`;
+  if(seenItems.has(key))return false;
+  seenItems.add(key);
+  return true;
+});
+
 const form=document.querySelector('#site-search-form');
 const input=document.querySelector('#site-search-input');
 const typeSelect=document.querySelector('#site-search-type');
@@ -39,7 +57,11 @@ const count=document.querySelector('#site-search-count');
 const empty=document.querySelector('#site-search-empty');
 
 const typeOrder=['Sección','Publicación','Biblioteca','Comunidad','Recurso','Radar'];
-const availableTypes=[...new Set(allItems.map(item=>item.type))].sort((a,b)=>typeOrder.indexOf(a)-typeOrder.indexOf(b));
+const typeRank=type=>{
+  const index=typeOrder.indexOf(type);
+  return index===-1?typeOrder.length:index;
+};
+const availableTypes=[...new Set(allItems.map(item=>item.type))].sort((a,b)=>typeRank(a)-typeRank(b)||a.localeCompare(b,'es'));
 availableTypes.forEach(type=>typeSelect?.insertAdjacentHTML('beforeend',`<option value="${type}">${type}</option>`));
 
 // Recupera una búsqueda compartida o previamente copiada desde la barra de direcciones.
@@ -49,21 +71,29 @@ const initialType=initialParams.get('type')||'all';
 if(input)input.value=initialQuery;
 if(typeSelect&&availableTypes.includes(initialType))typeSelect.value=initialType;
 
-function normalize(value=''){
-  return value.toLocaleLowerCase('es').normalize('NFD').replace(/[\u0300-\u036f]/g,'');
-}
-
 function score(item,q){
   if(!q)return item.type==='Sección'?20:0;
   const title=normalize(item.title);
   const description=normalize(item.description||'');
   const keywords=normalize(item.keywords||'');
-  let value=0;
-  if(title===q)value+=100;
-  if(title.startsWith(q))value+=60;
-  if(title.includes(q))value+=40;
-  if(description.includes(q))value+=18;
-  if(keywords.includes(q))value+=14;
+  const haystack=`${title} ${description} ${keywords}`;
+  const terms=queryTerms(q);
+  if(!terms.length)return item.type==='Sección'?20:0;
+  if(!terms.every(term=>haystack.includes(term)))return 0;
+
+  let value=terms.length*8;
+  if(title===q)value+=120;
+  if(title.startsWith(q))value+=65;
+  if(title.includes(q))value+=42;
+  if(description.includes(q))value+=20;
+  if(keywords.includes(q))value+=16;
+
+  terms.forEach(term=>{
+    if(title.startsWith(term))value+=14;
+    else if(title.includes(term))value+=10;
+    if(description.includes(term))value+=5;
+    if(keywords.includes(term))value+=4;
+  });
   return value;
 }
 
@@ -87,7 +117,7 @@ function render(updateUrl=false){
       const matchesQuery=q?item._score>0:(selectedType==='all'?item.type==='Sección':true);
       return matchesType&&matchesQuery;
     })
-    .sort((a,b)=>b._score-a._score||typeOrder.indexOf(a.type)-typeOrder.indexOf(b.type)||a.title.localeCompare(b.title,'es'));
+    .sort((a,b)=>b._score-a._score||typeRank(a.type)-typeRank(b.type)||a.title.localeCompare(b.title,'es'));
 
   if(count){
     count.textContent=q||selectedType!=='all'
