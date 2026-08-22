@@ -2,6 +2,7 @@ const menuButton=document.querySelector('.menu');
 const nav=document.querySelector('.top nav');
 const topBar=document.querySelector('.top');
 const mainContent=document.querySelector('main');
+const MOBILE_NAV_MAX=900;
 
 // Acceso directo al contenido principal para navegación por teclado.
 if(mainContent){
@@ -17,6 +18,16 @@ if(mainContent){
     });
     document.body.insertBefore(skipLink,document.body.firstChild);
   }
+}
+
+// Marca visual y semánticamente la sección actual cuando la página no lo trae ya definido.
+if(nav&&!nav.querySelector('[aria-current="page"]')){
+  const currentPage=location.pathname.split('/').pop()||'index.html';
+  nav.querySelectorAll('a[href]').forEach(link=>{
+    const url=new URL(link.getAttribute('href'),location.href);
+    const linkedPage=url.pathname.split('/').pop()||'index.html';
+    if(!url.hash&&linkedPage===currentPage)link.setAttribute('aria-current','page');
+  });
 }
 
 function setMenuState(open){
@@ -56,7 +67,7 @@ if(menuButton&&nav){
   });
 
   window.addEventListener('resize',()=>{
-    if(window.innerWidth>800)closeMenu();
+    if(window.innerWidth>MOBILE_NAV_MAX)closeMenu();
   });
 }
 
