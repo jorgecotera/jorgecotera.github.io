@@ -30,13 +30,24 @@ function normalize(value=''){
   return value.toLocaleLowerCase('es').normalize('NFD').replace(/[\u0300-\u036f]/g,'');
 }
 
+function renderRelated(article){
+  if(!Array.isArray(article.related)||!article.related.length)return '';
+  return `<div class="archive-related" aria-label="Recursos asociados">
+    ${article.related.map(resource=>{
+      const external=/^https?:\/\//i.test(resource.href);
+      return `<a href="${resource.href}" ${external?'target="_blank" rel="noopener noreferrer"':''}>${resource.label}${external?' ↗':' →'}</a>`;
+    }).join('')}
+  </div>`;
+}
+
 function render(){
   const q=normalize(search?.value||'');
   const year=yearSelect?.value||'all';
   const category=categorySelect?.value||'all';
 
   const filtered=allArticles.filter(article=>{
-    const haystack=normalize(`${article.title} ${article.subtitle||''} ${article.category} ${article.displayDate}`);
+    const relatedText=(article.related||[]).map(resource=>resource.label).join(' ');
+    const haystack=normalize(`${article.title} ${article.subtitle||''} ${article.category} ${article.displayDate} ${relatedText}`);
     const matchesText=!q||haystack.includes(q);
     const matchesYear=year==='all'||(year==='undated'?!article.year:String(article.year)===year);
     const matchesCategory=category==='all'||article.category.split('·').map(v=>v.trim()).includes(category);
@@ -59,6 +70,7 @@ function render(){
         <div class="archive-category">${article.category}</div>
         <h2>${article.title}</h2>
         ${detail?`<p>${detail}</p>`:''}
+        ${renderRelated(article)}
       </div>
       <a class="archive-action" href="${article.href}" ${external?'target="_blank" rel="noopener noreferrer"':''}>${external?'Abrir referencia':'Leer documento'} ↗</a>
     </article>`;
