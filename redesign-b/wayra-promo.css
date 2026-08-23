@@ -1,31 +1,33 @@
 .wayra-promo{
   margin-top:14px;
-  min-height:94px;
+  min-height:98px;
   display:grid;
-  grid-template-columns:62px minmax(0,1fr) auto;
-  gap:12px;
+  grid-template-columns:78px minmax(0,1fr) auto;
+  gap:14px;
   align-items:center;
-  padding:11px 12px;
+  padding:10px 13px;
   background:#171717;
   color:#fff;
   border-left:5px solid #f3c400;
   box-shadow:0 5px 16px rgba(0,0,0,.12);
 }
+
 .wayra-promo__mark{
-  width:58px;
-  height:72px;
+  width:72px;
+  height:78px;
   display:flex;
   align-items:center;
   justify-content:center;
   overflow:hidden;
-  border:1px solid rgba(255,255,255,.38);
-  border-radius:3px;
+  border:1px solid rgba(255,255,255,.6);
+  border-radius:4px;
   background:#fff url('wayra-logo-white.svg') center/contain no-repeat;
-  box-shadow:0 1px 4px rgba(0,0,0,.18);
+  box-shadow:0 2px 6px rgba(0,0,0,.22);
 }
 .wayra-promo__mark span{display:none}
 .wayra-promo__mark img{display:none!important}
-.wayra-promo__copy{min-width:0}
+
+.wayra-promo__copy{min-width:0;overflow:hidden}
 .wayra-promo__kicker{
   margin:0 0 4px;
   color:#f3c400;
@@ -38,24 +40,71 @@
   font:900 8px/1 Arial,sans-serif;
   letter-spacing:.15em;
 }
+
 .wayra-promo__copy strong{
   display:block;
-  margin-bottom:4px;
+  margin-bottom:5px;
   font-size:0;
   line-height:1;
 }
 .wayra-promo__copy strong::after{
   content:"WAYRA SYSTEM 2007";
   color:#fff;
-  font:800 16px/1 Arial,sans-serif;
+  font:800 17px/1 Arial,sans-serif;
   letter-spacing:.045em;
 }
+
+/* Mensaje comercial dinámico. El texto original permanece en el HTML para accesibilidad. */
 .wayra-promo__copy>span{
+  position:relative;
   display:block;
-  max-width:470px;
+  max-width:500px;
+  min-height:31px;
+  overflow:hidden;
   color:rgba(255,255,255,.82);
-  font:400 10.5px/1.35 Arial,sans-serif;
+  font-size:0;
+  line-height:1.3;
 }
+.wayra-promo__copy>span::before{
+  content:"Evaluación educativa en un solo lugar.";
+  display:block;
+  margin-bottom:3px;
+  color:rgba(255,255,255,.76);
+  font:400 10.5px/1.25 Arial,sans-serif;
+}
+.wayra-promo__copy>span::after{
+  content:"Crea pruebas con agilidad.";
+  display:block;
+  color:#f3c400;
+  font:700 11px/1.25 Arial,sans-serif;
+  letter-spacing:.01em;
+  opacity:0;
+  transform:translateX(-10px);
+  animation:wayraBenefit 16s ease-in-out infinite;
+  will-change:opacity,transform;
+}
+.wayra-promo:hover .wayra-promo__copy>span::after{
+  animation-play-state:paused;
+}
+
+@keyframes wayraBenefit{
+  0%{content:"Crea pruebas con agilidad.";opacity:0;transform:translateX(-10px)}
+  3%,20%{content:"Crea pruebas con agilidad.";opacity:1;transform:translateX(0)}
+  24%{content:"Crea pruebas con agilidad.";opacity:0;transform:translateX(10px)}
+
+  25%{content:"Organiza respuestas con facilidad.";opacity:0;transform:translateX(-10px)}
+  28%,45%{content:"Organiza respuestas con facilidad.";opacity:1;transform:translateX(0)}
+  49%{content:"Organiza respuestas con facilidad.";opacity:0;transform:translateX(10px)}
+
+  50%{content:"Analiza resultados con claridad.";opacity:0;transform:translateX(-10px)}
+  53%,70%{content:"Analiza resultados con claridad.";opacity:1;transform:translateX(0)}
+  74%{content:"Analiza resultados con claridad.";opacity:0;transform:translateX(10px)}
+
+  75%{content:"Genera informes para tomar mejores decisiones.";opacity:0;transform:translateX(-10px)}
+  78%,95%{content:"Genera informes para tomar mejores decisiones.";opacity:1;transform:translateX(0)}
+  100%{content:"Genera informes para tomar mejores decisiones.";opacity:0;transform:translateX(10px)}
+}
+
 .wayra-promo__cta{
   display:inline-flex;
   align-items:center;
@@ -79,16 +128,26 @@
 }
 
 @media(max-width:1100px){
-  .wayra-promo{grid-template-columns:56px minmax(0,1fr) auto;gap:9px;padding:9px 10px;min-height:88px}
-  .wayra-promo__mark{width:52px;height:64px}
-  .wayra-promo__copy>span{font-size:9.8px}
+  .wayra-promo{grid-template-columns:68px minmax(0,1fr) auto;gap:10px;padding:9px 10px;min-height:92px}
+  .wayra-promo__mark{width:62px;height:70px}
   .wayra-promo__copy strong::after{font-size:15px}
+  .wayra-promo__copy>span::before{font-size:9.8px}
+  .wayra-promo__copy>span::after{font-size:10.2px}
   .wayra-promo__cta{padding:0 9px;font-size:9px}
 }
 
 @media(max-width:800px){
-  .wayra-promo{margin-top:16px;grid-template-columns:52px minmax(0,1fr);min-height:0}
-  .wayra-promo__mark{width:48px;height:60px}
-  .wayra-promo__cta{grid-column:1/-1;justify-self:start;margin-left:61px;min-height:34px}
-  .wayra-promo__copy>span{max-width:none}
+  .wayra-promo{margin-top:16px;grid-template-columns:62px minmax(0,1fr);min-height:0}
+  .wayra-promo__mark{width:58px;height:66px}
+  .wayra-promo__cta{grid-column:1/-1;justify-self:start;margin-left:72px;min-height:34px}
+  .wayra-promo__copy>span{max-width:none;min-height:34px}
+}
+
+@media(prefers-reduced-motion:reduce){
+  .wayra-promo__copy>span::after{
+    content:"Crea pruebas · organiza respuestas · analiza resultados · genera informes.";
+    animation:none;
+    opacity:1;
+    transform:none;
+  }
 }
