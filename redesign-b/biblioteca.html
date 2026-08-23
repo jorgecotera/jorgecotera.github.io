@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Biblioteca personal y documentos de referencia de Jorge Alonso Cotera Guerra.">
+<title>Biblioteca — Jorge Alonso Cotera Guerra</title>
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="enhancements.css">
+<link rel="stylesheet" href="biblioteca.css">
+</head>
+<body>
+<header class="top">
+  <a class="brand" href="index.html" aria-label="Volver al inicio">
+    <img class="brand-logo" src="../Logo.jpg" alt="Logotipo de Jorge Alonso Cotera Guerra">
+    <span class="brand-name">JORGE A. COTERA<small>Educación · Matemáticas · Cultura</small></span>
+  </a>
+  <button class="menu" aria-label="Abrir menú" aria-expanded="false">☰</button>
+  <nav aria-label="Navegación principal">
+    <a href="index.html">Inicio</a>
+    <a href="perfil.html">Perfil</a>
+    <a href="articulos.html">Publicaciones</a>
+    <a href="biblioteca.html" aria-current="page">Biblioteca</a>
+    <a href="archivo.html">Archivo</a>
+  </nav>
+</header>
+
+<main class="library-page">
+<section class="library-hero">
+  <div>
+    <p class="eyebrow">BIBLIOTECA PERSONAL</p>
+    <h1>Documentos de consulta, lineamientos y materiales de estudio.</h1>
+    <p>Una entrada organizada al archivo bibliográfico y documental conservado en el sitio. Los documentos siguen alojados en sus rutas históricas; esta interfaz facilita su búsqueda por título y tema sin modificar el archivo original.</p>
+  </div>
+  <aside>
+    <strong id="library-count" aria-live="polite">0 documentos</strong>
+    <a href="../Bibliografia.htm">Abrir bibliografía histórica original ↗</a>
+  </aside>
+</section>
+
+<section class="library-tools" aria-label="Herramientas de búsqueda">
+  <label>
+    <span>Buscar</span>
+    <input id="library-search" type="search" placeholder="Título, tema o palabra clave">
+  </label>
+  <label>
+    <span>Tema</span>
+    <select id="library-category"><option value="all">Todos los temas</option></select>
+  </label>
+</section>
+
+<section class="library-list-wrap">
+  <div class="library-list" id="library-list"></div>
+  <div class="library-empty" id="library-empty" hidden>No se encontraron documentos con esos criterios.</div>
+</section>
+
+<p class="library-note"><strong>Conservación del archivo:</strong> el índice moderno incorpora ya los recursos enlazados desde la bibliografía histórica, incluidos lineamientos curriculares, documentos del ICFES, materiales de evaluación, planeación, didáctica y pensamiento crítico. La página original permanece disponible como registro histórico.</p>
+</main>
+
+<footer>
+  <div class="footer-brand"><img src="../Logo.jpg" alt="Logotipo"><strong>JORGE A. COTERA</strong></div>
+  <span>Biblioteca personal y documentos de referencia</span>
+  <a href="index.html">Volver a la portada →</a>
+</footer>
+<script src="app.js"></script>
+<script src="biblioteca-data.js"></script>
+<script src="biblioteca.js"></script>
+</body>
+</html>

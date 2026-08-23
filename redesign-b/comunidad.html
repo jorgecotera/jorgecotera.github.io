@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Comunidad de aprendizaje: materiales, planeaciones y recursos de aula de Jorge Alonso Cotera Guerra.">
+<title>Comunidad de aprendizaje — Jorge Alonso Cotera Guerra</title>
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="enhancements.css">
+<link rel="stylesheet" href="comunidad.css">
+</head>
+<body>
+<header class="top">
+  <a class="brand" href="index.html" aria-label="Volver al inicio">
+    <img class="brand-logo" src="../Logo.jpg" alt="Logotipo de Jorge Alonso Cotera Guerra">
+    <span class="brand-name">JORGE A. COTERA<small>Educación · Matemáticas · Cultura</small></span>
+  </a>
+  <button class="menu" aria-label="Abrir menú" aria-expanded="false">☰</button>
+  <nav aria-label="Navegación principal">
+    <a href="index.html">Inicio</a>
+    <a href="articulos.html">Publicaciones</a>
+    <a href="academia.html">Academia</a>
+    <a href="comunidad.html" aria-current="page">Comunidad</a>
+    <a href="archivo.html">Archivo</a>
+  </nav>
+</header>
+
+<main class="community-page">
+<section class="community-hero">
+  <div>
+    <p class="eyebrow">COMUNIDAD DE APRENDIZAJE</p>
+    <h1>Materiales de aula organizados por año y grado.</h1>
+    <p>Este espacio recupera la función de la antigua Comunidad de aprendizaje: reunir planeaciones, secuencias, talleres, lecturas y recursos utilizados en distintos cursos. La capa moderna incorpora materiales recientes, el acompañamiento desarrollado durante la pandemia y un bloque histórico de recursos de 2016–2019, sin alterar las rutas originales de los documentos.</p>
+  </div>
+  <aside>
+    <span class="eyebrow">RECURSO EXTERNO</span>
+    <strong>Aula Mat Bio</strong>
+    <p>El blog enlazado desde la Comunidad histórica sigue disponible como espacio complementario.</p>
+    <a href="https://aulamatbio.blogspot.com/" target="_blank" rel="noopener noreferrer">Abrir blog ↗</a>
+  </aside>
+</section>
+
+<section class="community-tools" aria-label="Herramientas de búsqueda">
+  <label>
+    <span>Buscar</span>
+    <input id="community-search" type="search" placeholder="Ej. vectores, secuencia, ciencia, inglés...">
+  </label>
+  <label>
+    <span>Año o período</span>
+    <select id="community-year"><option value="all">Todos los años y períodos</option></select>
+  </label>
+  <label>
+    <span>Grado</span>
+    <select id="community-grade"><option value="all">Todos los grados</option></select>
+  </label>
+</section>
+
+<section class="community-content">
+  <div class="community-status">
+    <strong id="community-count">0 recursos</strong>
+    <small>Archivo organizado · 2016–2026</small>
+  </div>
+  <div id="community-groups"></div>
+  <div class="community-empty" id="community-empty" hidden>No se encontraron recursos con esos criterios.</div>
+</section>
+
+<p class="community-note"><strong>Conservación:</strong> el índice moderno cubre ahora recursos desde el bloque 2016–2019 hasta 2026. La versión histórica completa continúa disponible para consultar enlaces antiguos, formularios y otros materiales que se conservan únicamente como referencia documental.</p>
+
+<section class="routes">
+  <a href="../Comunidad.htm"><b>01</b><span>Comunidad histórica<small>Archivo original completo</small></span>↗</a>
+  <a href="buscar.html"><b>02</b><span>Buscar en todo el sitio<small>Publicaciones, biblioteca y recursos</small></span>↗</a>
+</section>
+</main>
+
+<footer>
+  <div class="footer-brand"><img src="../Logo.jpg" alt="Logotipo"><strong>JORGE A. COTERA</strong></div>
+  <span>Comunidad de aprendizaje</span>
+  <a href="index.html">Volver a la portada →</a>
+</footer>
+<script src="app.js"></script>
+<script src="comunidad-data.js"></script>
+<script src="comunidad-fidelity.js"></script>
+<script src="comunidad.js"></script>
+</body>
+</html>

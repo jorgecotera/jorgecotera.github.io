@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Archivo cronológico de publicaciones de Jorge Alonso Cotera Guerra.">
+<title>Publicaciones — Jorge Alonso Cotera Guerra</title>
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="enhancements.css">
+<link rel="stylesheet" href="articulos.css">
+</head>
+<body>
+<header class="top">
+  <a class="brand" href="index.html" aria-label="Volver al inicio">
+    <img class="brand-logo" src="../Logo.jpg" alt="Logotipo de Jorge Alonso Cotera Guerra">
+    <span class="brand-name">JORGE A. COTERA<small>Educación · Matemáticas · Cultura</small></span>
+  </a>
+  <button class="menu" aria-label="Abrir menú" aria-expanded="false">☰</button>
+  <nav aria-label="Navegación principal">
+    <a href="index.html">Inicio</a>
+    <a href="perfil.html">Perfil</a>
+    <a href="articulos.html" aria-current="page">Publicaciones</a>
+    <a href="academia.html">Academia</a>
+    <a href="archivo.html">Archivo</a>
+  </nav>
+</header>
+
+<main>
+  <section class="archive-hero">
+    <div>
+      <p class="eyebrow">ARCHIVO DE PUBLICACIONES</p>
+      <h1>Textos, ensayos y reflexiones.</h1>
+      <p>Una lectura cronológica de la producción disponible en el sitio, desde las publicaciones más recientes hacia el archivo histórico.</p>
+    </div>
+    <aside>
+      <strong id="archive-count">0 publicaciones</strong>
+      <a href="../Articulos.htm">Abrir archivo histórico original ↗</a>
+    </aside>
+  </section>
+
+  <section class="archive-tools" aria-label="Herramientas de búsqueda">
+    <label>
+      <span>Buscar</span>
+      <input id="archive-search" type="search" placeholder="Título, tema o palabra clave">
+    </label>
+    <label>
+      <span>Año</span>
+      <select id="archive-year"><option value="all">Todos los años</option></select>
+    </label>
+    <label>
+      <span>Tema</span>
+      <select id="archive-category"><option value="all">Todos los temas</option></select>
+    </label>
+  </section>
+
+  <section class="archive-list-wrap">
+    <div class="archive-list" id="archive-list"></div>
+    <div class="archive-empty" id="archive-empty" hidden>No se encontraron publicaciones con esos criterios.</div>
+  </section>
+</main>
+
+<footer>
+  <div class="footer-brand"><img src="../Logo.jpg" alt="Logotipo"><strong>JORGE A. COTERA</strong></div>
+  <span>Archivo académico y producción escrita</span>
+  <a href="index.html">Volver a la portada →</a>
+</footer>
+<script src="content.js"></script>
+<script src="archive-content.js"></script>
+<script src="app.js"></script>
+<script src="articulos.js"></script>
+</body>
+</html>

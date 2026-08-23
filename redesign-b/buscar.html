@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Búsqueda global del sitio académico de Jorge Alonso Cotera Guerra.">
+<title>Buscar — Jorge Alonso Cotera Guerra</title>
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="enhancements.css">
+<link rel="stylesheet" href="buscar.css">
+</head>
+<body>
+<header class="top">
+  <a class="brand" href="index.html" aria-label="Volver al inicio">
+    <img class="brand-logo" src="../Logo.jpg" alt="Logotipo de Jorge Alonso Cotera Guerra">
+    <span class="brand-name">JORGE A. COTERA<small>Educación · Matemáticas · Cultura</small></span>
+  </a>
+  <button class="menu" aria-label="Abrir menú" aria-expanded="false">☰</button>
+  <nav aria-label="Navegación principal">
+    <a href="index.html">Inicio</a>
+    <a href="perfil.html">Perfil</a>
+    <a href="articulos.html">Publicaciones</a>
+    <a href="archivo.html">Archivo</a>
+    <a href="buscar.html" aria-current="page">Buscar</a>
+  </nav>
+</header>
+
+<main class="search-page" id="contenido-principal">
+<section class="search-hero">
+  <div>
+    <p class="eyebrow">BÚSQUEDA GLOBAL</p>
+    <h1>Encontrar contenidos sin recorrer toda la estructura del sitio.</h1>
+    <p>La búsqueda integra secciones modernas, publicaciones propias, documentos de biblioteca, materiales de la Comunidad de aprendizaje, recursos didácticos y referencias del radar académico.</p>
+  </div>
+  <aside>
+    <span>Índice integrado</span>
+    <strong>Un solo punto de entrada.</strong>
+    <p>Los documentos históricos permanecen en sus rutas originales; este buscador facilita llegar a ellos.</p>
+  </aside>
+</section>
+
+<section class="search-tools">
+  <form id="site-search-form" role="search" aria-label="Buscar contenidos del sitio">
+    <label>
+      <span>Buscar</span>
+      <input id="site-search-input" type="search" autocomplete="off" aria-describedby="search-help" aria-controls="site-search-results" placeholder="Ej. objetivación, evaluación, vectores, currículo...">
+    </label>
+    <label>
+      <span>Tipo de contenido</span>
+      <select id="site-search-type" aria-controls="site-search-results"><option value="all">Todos los tipos</option></select>
+    </label>
+    <button type="submit">Buscar</button>
+  </form>
+</section>
+
+<section class="search-results-wrap" aria-labelledby="site-search-count">
+  <div class="search-status">
+    <strong id="site-search-count" role="status" aria-live="polite" aria-atomic="true">0 resultados</strong>
+    <small id="search-help">Ignora tildes y mayúsculas; admite varias palabras en cualquier orden.</small>
+  </div>
+  <div class="search-results" id="site-search-results"></div>
+  <div class="search-empty" id="site-search-empty" role="status" hidden>No se encontraron contenidos con esos criterios.</div>
+</section>
+
+<p class="search-note"><strong>Alcance:</strong> el índice se alimenta de los datos que ya usan publicaciones, biblioteca, Comunidad y radar. Cuando esos módulos se actualizan, sus nuevos contenidos pasan también a formar parte de la búsqueda.</p>
+</main>
+
+<footer>
+  <div class="footer-brand"><img src="../Logo.jpg" alt="Logotipo"><strong>JORGE A. COTERA</strong></div>
+  <span>Búsqueda global del sitio</span>
+  <a href="index.html">Volver a la portada →</a>
+</footer>
+<script src="content.js"></script>
+<script src="archive-content.js"></script>
+<script src="biblioteca-data.js"></script>
+<script src="comunidad-data.js"></script>
+<script src="comunidad-fidelity.js"></script>
+<script src="radar-content.js"></script>
+<script src="search-data.js"></script>
+<script src="institutional-search.js"></script>
+<script src="legacy-aux-search.js"></script>
+<script src="app.js"></script>
+<script src="buscar.js"></script>
+</body>
+</html>
