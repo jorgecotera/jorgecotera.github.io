@@ -261,3 +261,9 @@ if(archivePreserveNote&&!document.querySelector('#legacy-aux-pages')){
     </div>`;
   archivePreserveNote.before(section);
 }
+
+// Tras publicar el rediseño, el archivo conserva un acceso real a la portada original.
+if(/archivo\.html$/i.test(location.pathname)){
+  const historicalHome=document.querySelector('a.utility-card[href="../index.htm"]');
+  if(historicalHome)historicalHome.href='../index-historico.htm';
+}
