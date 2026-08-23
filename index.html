@@ -10,6 +10,7 @@
 <link rel="stylesheet" href="styles.css">
 <link rel="stylesheet" href="enhancements.css">
 <link rel="stylesheet" href="homepage-tools.css">
+<link rel="stylesheet" href="qr.css">
 </head>
 <body>
 <header class="top">
@@ -66,7 +67,45 @@
       <a href="comunidad.html" title="Comunidad de aprendizaje"><img src="../button-9.gif" alt="Comunidad"></a>
     </div>
   </div>
-  <a class="qr-shortcut" href="qr.html"><strong>QR</strong><span>Crear código QR</span></a>
+  <a class="qr-shortcut" href="../#generador-qr"><strong>QR</strong><span>Crear código QR</span></a>
+</section>
+
+<section class="qr-page" id="generador-qr" aria-labelledby="titulo-generador-qr">
+  <header class="section-intro">
+    <div>
+      <p class="eyebrow">HERRAMIENTA</p>
+      <h2 id="titulo-generador-qr">Generador de códigos QR</h2>
+    </div>
+    <p class="radar-note">Escribe una dirección web o cualquier texto. El código se genera directamente en tu navegador y puedes descargarlo en PNG.</p>
+  </header>
+
+  <div class="qr-hero">
+    <div class="qr-card">
+      <form class="qr-form" id="qr-form">
+        <label for="qr-url">Dirección o texto</label>
+        <input id="qr-url" name="qr-url" type="text" inputmode="url" autocomplete="url" placeholder="https://ejemplo.com" aria-describedby="qr-status">
+
+        <label for="qr-size">Tamaño</label>
+        <select id="qr-size" name="qr-size">
+          <option value="256">256 × 256 px</option>
+          <option value="384" selected>384 × 384 px</option>
+          <option value="512">512 × 512 px</option>
+        </select>
+
+        <div class="qr-actions">
+          <button class="qr-generate" type="submit">Generar QR</button>
+          <button class="qr-download" id="qr-download" type="button" disabled>Descargar PNG</button>
+          <button class="qr-clear" id="qr-clear" type="button">Limpiar</button>
+        </div>
+        <p class="qr-status" id="qr-status" role="status" aria-live="polite"></p>
+      </form>
+      <p class="qr-note"><strong>Privacidad:</strong> la dirección o el texto se procesa en este dispositivo para construir el QR.</p>
+    </div>
+
+    <div class="qr-result" aria-label="Vista previa del código QR">
+      <div id="qr-output"></div>
+    </div>
+  </div>
 </section>
 
 <section class="ticker" aria-label="Áreas de trabajo">
@@ -152,7 +191,7 @@
   <a href="comunidad.html"><b>06</b><span>Comunidad<small>Materiales de aula por año y grado</small></span>↗</a>
   <a href="archivo.html"><b>07</b><span>Archivo general<small>Mapa completo y rutas históricas</small></span>↗</a>
   <a href="buscar.html"><b>08</b><span>Buscar<small>Publicaciones, documentos y recursos</small></span>↗</a>
-  <a href="qr.html"><b>09</b><span>Generador QR<small>Crear códigos QR desde una dirección o texto</small></span>↗</a>
+  <a href="../#generador-qr"><b>09</b><span>Generador QR<small>Crear códigos QR desde una dirección o texto</small></span>↗</a>
 </section>
 </main>
 
@@ -165,5 +204,7 @@
 <script src="app.js"></script>
 <script src="radar-content.js"></script>
 <script src="radar.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js" integrity="sha512-CNgIRecGo7nphbeZ04Sc13ka07DqSe6A1nU/p50OonG1UR6Q4QEYQ8U23RjS9DLVKr8RrDg7UAaCzQbS5n4Fqw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="qr.js"></script>
 </body>
 </html>
