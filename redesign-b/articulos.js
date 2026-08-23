@@ -41,14 +41,14 @@ function renderRelated(article){
 }
 
 function render(){
-  const q=normalize(search?.value||'');
+  const queryTerms=normalize(search?.value||'').split(/\s+/).filter(Boolean);
   const year=yearSelect?.value||'all';
   const category=categorySelect?.value||'all';
 
   const filtered=allArticles.filter(article=>{
     const relatedText=(article.related||[]).map(resource=>resource.label).join(' ');
     const haystack=normalize(`${article.title} ${article.subtitle||''} ${article.category} ${article.displayDate} ${relatedText}`);
-    const matchesText=!q||haystack.includes(q);
+    const matchesText=!queryTerms.length||queryTerms.every(term=>haystack.includes(term));
     const matchesYear=year==='all'||(year==='undated'?!article.year:String(article.year)===year);
     const matchesCategory=category==='all'||article.category.split('·').map(v=>v.trim()).includes(category);
     return matchesText&&matchesYear&&matchesCategory;
