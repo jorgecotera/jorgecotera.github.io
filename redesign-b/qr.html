@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Herramienta para crear códigos QR a partir de una dirección web o texto.">
+<title>Generador QR — Jorge Alonso Cotera Guerra</title>
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="enhancements.css">
+<link rel="stylesheet" href="qr.css">
+</head>
+<body>
+<header class="top">
+  <a class="brand" href="../" aria-label="Volver al inicio">
+    <img class="brand-logo" src="../Logo.jpg" alt="Logotipo de Jorge Alonso Cotera Guerra">
+    <span class="brand-name">JORGE A. COTERA<small>Educación · Matemáticas · Cultura</small></span>
+  </a>
+  <button class="menu" aria-label="Abrir menú" aria-expanded="false">☰</button>
+  <nav aria-label="Navegación principal">
+    <a href="../">Inicio</a>
+    <a href="articulos.html">Publicaciones</a>
+    <a href="biblioteca.html">Biblioteca</a>
+    <a href="comunidad.html">Comunidad</a>
+    <a href="qr.html" aria-current="page">Generador QR</a>
+  </nav>
+</header>
+
+<main class="qr-page" id="contenido-principal">
+  <section class="qr-hero">
+    <div>
+      <p class="eyebrow">HERRAMIENTA</p>
+      <h1>Generador de códigos QR</h1>
+      <p class="lead">Escribe una dirección web —o cualquier texto— y genera un código QR listo para usar en guías, evaluaciones, presentaciones o material de aula.</p>
+
+      <div class="qr-card">
+        <form class="qr-form" id="qr-form">
+          <label for="qr-url">Dirección o texto</label>
+          <input id="qr-url" name="qr-url" type="text" inputmode="url" autocomplete="url" placeholder="https://ejemplo.com" aria-describedby="qr-status" autofocus>
+
+          <label for="qr-size">Tamaño</label>
+          <select id="qr-size" name="qr-size">
+            <option value="256">256 × 256 px</option>
+            <option value="384" selected>384 × 384 px</option>
+            <option value="512">512 × 512 px</option>
+          </select>
+
+          <div class="qr-actions">
+            <button class="qr-generate" type="submit">Generar QR</button>
+            <button class="qr-download" id="qr-download" type="button" disabled>Descargar PNG</button>
+            <button class="qr-clear" id="qr-clear" type="button">Limpiar</button>
+          </div>
+          <p class="qr-status" id="qr-status" role="status" aria-live="polite"></p>
+        </form>
+        <p class="qr-note"><strong>Privacidad:</strong> el contenido del QR se procesa en el navegador. La dirección que escribas no se envía a un servicio externo para generar la imagen.</p>
+      </div>
+    </div>
+
+    <div class="qr-result" aria-label="Vista previa del código QR">
+      <div id="qr-output"></div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="footer-brand"><img src="../Logo.jpg" alt="Logotipo"><strong>JORGE A. COTERA</strong></div>
+  <span>Educación · Matemáticas · Cultura</span>
+  <a href="../">Volver al inicio ↑</a>
+</footer>
+<script src="app.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js" integrity="sha512-CNgIRecGo7nphbeZ04Sc13ka07DqSe6A1nU/p50OonG1UR6Q4QEYQ8U23RjS9DLVKr8RrDg7UAaCzQbS5n4Fqw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="qr.js"></script>
+</body>
+</html>
