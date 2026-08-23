@@ -30,12 +30,12 @@ function normalize(value=''){
 }
 
 function renderCommunity(){
-  const q=normalize(search?.value||'');
+  const queryTerms=normalize(search?.value||'').split(/\s+/).filter(Boolean);
   const selectedYear=year?.value||'all';
   const selectedGrade=grade?.value||'all';
   const filtered=communityItems.filter(item=>{
     const haystack=normalize(`${item.title} ${item.description||''} ${item.area} ${item.grade} ${item.year}`);
-    return (!q||haystack.includes(q))
+    return (!queryTerms.length||queryTerms.every(term=>haystack.includes(term)))
       &&(selectedYear==='all'||String(item.year)===selectedYear)
       &&(selectedGrade==='all'||item.grade===selectedGrade);
   }).sort((a,b)=>chronologyValue(b)-chronologyValue(a)||a.grade.localeCompare(b.grade,'es',{numeric:true})||a.title.localeCompare(b.title,'es'));
