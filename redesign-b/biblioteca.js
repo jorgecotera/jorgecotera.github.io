@@ -13,10 +13,11 @@ function normalize(value=''){
 }
 
 function renderLibrary(){
-  const q=normalize(search?.value||'');
+  const queryTerms=normalize(search?.value||'').split(/\s+/).filter(Boolean);
   const selected=category?.value||'all';
   const filtered=libraryItems.filter(item=>{
-    const matchesText=!q||normalize(`${item.title} ${item.category} ${item.type}`).includes(q);
+    const haystack=normalize(`${item.title} ${item.category} ${item.type}`);
+    const matchesText=!queryTerms.length||queryTerms.every(term=>haystack.includes(term));
     const matchesCategory=selected==='all'||item.category===selected;
     return matchesText&&matchesCategory;
   });
