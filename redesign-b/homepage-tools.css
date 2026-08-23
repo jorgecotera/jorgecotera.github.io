@@ -15,11 +15,11 @@
 .hero .primary{padding:9px 14px}
 
 /* La fotografía queda completa, algo más amplia y sin marco/fondo oscuro. */
-.photo-stage{height:356px;min-height:0;background:transparent}
-.photo-stage:before{width:9px;height:62px}
+.photo-stage{height:382px;min-height:0;background:transparent}
+.photo-stage:before{width:9px;height:66px}
 .photo-shade{display:none}
-.slide{background:transparent;padding:6px 8px 50px;display:flex;align-items:center;justify-content:center;box-sizing:border-box}
-.slide img{width:auto!important;height:auto!important;max-width:96%!important;max-height:100%!important;object-fit:contain!important;object-position:center!important}
+.slide{background:transparent;padding:5px 6px 50px;display:flex;align-items:center;justify-content:center;box-sizing:border-box}
+.slide img{width:auto!important;height:auto!important;max-width:98%!important;max-height:100%!important;object-fit:contain!important;object-position:center!important}
 .photo-caption{left:18px;right:18px;bottom:31px;color:#171717;pointer-events:none}
 .photo-label{font-size:8px;color:#c81920;margin-bottom:3px;letter-spacing:.14em}
 .photo-caption strong{font-size:15px;line-height:1.1;max-width:350px;font-weight:500}
@@ -106,7 +106,7 @@
 @media(max-width:1000px){
   .hero-copy{padding-left:4vw;padding-right:4vw}
   .hero h1{font-size:clamp(29px,3.8vw,40px)}
-  .photo-stage{height:336px}
+  .photo-stage{height:358px}
   .quick-access-copy{gap:7px}
   .quick-links{gap:4px}
   .quick-links a{padding-right:8px;font-size:9px}
@@ -129,9 +129,9 @@
   .hero h1{font-size:clamp(28px,7.6vw,35px);margin:10px 0}
   .hero .lead{font-size:13.5px}
   .hero .actions{margin-top:14px}
-  .photo-stage{height:270px;min-height:270px}
-  .slide{padding:5px 6px 48px}
-  .slide img{max-width:97%!important}
+  .photo-stage{height:286px;min-height:286px}
+  .slide{padding:4px 5px 48px}
+  .slide img{max-width:98%!important}
   .photo-caption{left:14px;right:14px;bottom:28px}
   .photo-caption strong{font-size:13px}
   .slider-controls{left:12px;right:12px;bottom:3px}
