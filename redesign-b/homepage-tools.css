@@ -14,12 +14,12 @@
 .hero .actions{margin-top:16px;gap:18px;font-size:12px}
 .hero .primary{padding:9px 14px}
 
-/* La fotografía queda completa y el área se integra visualmente con el fondo de la página. */
-.photo-stage{height:326px;min-height:0;background:#f4f1e9}
-.photo-stage:before{width:9px;height:56px}
+/* La fotografía queda completa, algo más amplia y sin marco/fondo oscuro. */
+.photo-stage{height:356px;min-height:0;background:transparent}
+.photo-stage:before{width:9px;height:62px}
 .photo-shade{display:none}
-.slide{background:transparent;padding:8px 12px 52px;display:flex;align-items:center;justify-content:center;box-sizing:border-box}
-.slide img{width:auto!important;height:auto!important;max-width:92%!important;max-height:100%!important;object-fit:contain!important;object-position:center!important}
+.slide{background:transparent;padding:6px 8px 50px;display:flex;align-items:center;justify-content:center;box-sizing:border-box}
+.slide img{width:auto!important;height:auto!important;max-width:96%!important;max-height:100%!important;object-fit:contain!important;object-position:center!important}
 .photo-caption{left:18px;right:18px;bottom:31px;color:#171717;pointer-events:none}
 .photo-label{font-size:8px;color:#c81920;margin-bottom:3px;letter-spacing:.14em}
 .photo-caption strong{font-size:15px;line-height:1.1;max-width:350px;font-weight:500}
@@ -30,35 +30,57 @@
 .slide-dot{width:20px!important;height:3px!important;background:rgba(23,23,23,.24)!important}
 .slide-dot.active{background:#c81920!important}
 
-/* Accesos rápidos: botones actuales, densos y coherentes con la identidad del sitio. */
+/* Accesos rápidos: una sola familia visual, cada servicio con su color emblemático. */
 .quick-access{
   width:min(1180px,calc(100% - 36px));
-  margin:5px auto 4px;
+  margin:3px auto 0;
   display:grid;
   grid-template-columns:minmax(0,1fr) auto;
-  gap:10px;
+  gap:7px;
   align-items:center;
-  padding:7px 0;
-  border-top:1px solid rgba(23,23,23,.18);
-  border-bottom:1px solid rgba(23,23,23,.18);
+  padding:5px 0 9px;
+  border-top:0;
+  border-bottom:1px solid rgba(23,23,23,.24);
 }
 .quick-access-copy{display:flex;align-items:center;gap:10px;min-width:0}
 .quick-access-copy .eyebrow{margin:0;white-space:nowrap;font-size:8px;letter-spacing:.13em}
 .quick-links{display:flex;align-items:center;flex-wrap:nowrap;gap:6px;min-width:0}
-.quick-links a{position:relative;display:inline-flex;align-items:center;justify-content:center;gap:6px;height:29px;padding:0 9px 0 6px;border:1px solid rgba(23,23,23,.35);background:rgba(255,253,248,.72);color:#171717;text-decoration:none;font:800 10px/1 Arial,sans-serif;letter-spacing:.02em;white-space:nowrap;transition:background .16s ease,color .16s ease,border-color .16s ease}
-.quick-links a:hover{background:#171717;color:#fff;border-color:#171717}
+.quick-links a,.qr-shortcut{height:30px;border-radius:999px;box-shadow:0 1px 2px rgba(0,0,0,.12);transition:transform .16s ease,filter .16s ease,box-shadow .16s ease}
+.quick-links a{position:relative;display:inline-flex;align-items:center;justify-content:center;gap:6px;padding:0 11px 0 6px;border:1px solid transparent;color:#fff;text-decoration:none;font:800 10px/1 Arial,sans-serif;letter-spacing:.02em;white-space:nowrap}
+.quick-links a:hover,.qr-shortcut:hover{transform:translateY(-1px);filter:brightness(.92);box-shadow:0 3px 8px rgba(0,0,0,.16)}
 .quick-links img{position:absolute!important;width:1px!important;height:1px!important;margin:-1px!important;padding:0!important;border:0!important;overflow:hidden!important;clip:rect(0 0 0 0)!important;white-space:nowrap!important;clip-path:inset(50%)!important}
-.quick-links a:before{display:inline-flex;align-items:center;justify-content:center;width:19px;height:19px;background:#c81920;color:#fff;font:900 10px/1 Arial,sans-serif}
+.quick-links a:before{display:inline-flex;align-items:center;justify-content:center;width:20px;height:20px;border-radius:50%;background:rgba(255,255,255,.94);font:900 10px/1 Arial,sans-serif}
 .quick-links a:after{display:inline-block}
-.quick-links a:nth-child(1):before{content:"R"}.quick-links a:nth-child(1):after{content:"RAE"}
-.quick-links a:nth-child(2):before{content:"U";background:#f3c400;color:#171717}.quick-links a:nth-child(2):after{content:"UdeA"}
-.quick-links a:nth-child(3):before{content:"G";background:#171717;color:#fff}.quick-links a:nth-child(3):after{content:"Google"}
-.quick-links a:nth-child(4):before{content:"W"}.quick-links a:nth-child(4):after{content:"WhatsApp"}
-.quick-links a:nth-child(5):before{content:"C";background:#f3c400;color:#171717}.quick-links a:nth-child(5):after{content:"Comunidad"}
-.quick-links a:hover:before{background:#f3c400;color:#171717}
-.qr-shortcut{height:29px;display:inline-flex;align-items:center;gap:7px;padding:0 10px;border:1px solid #171717;background:#f3c400;color:#171717;text-decoration:none;font:800 10px/1 Arial,sans-serif;letter-spacing:.03em;white-space:nowrap;transition:.16s}
-.qr-shortcut strong{font:700 14px/1 Georgia,serif}
-.qr-shortcut:hover{background:#171717;color:#fff}
+
+/* RAE */
+.quick-links a:nth-child(1){background:#1769aa;border-color:#1769aa}
+.quick-links a:nth-child(1):before{content:"R";color:#1769aa}
+.quick-links a:nth-child(1):after{content:"RAE"}
+
+/* Universidad de Antioquia */
+.quick-links a:nth-child(2){background:#08783e;border-color:#08783e}
+.quick-links a:nth-child(2):before{content:"U";color:#08783e}
+.quick-links a:nth-child(2):after{content:"UdeA"}
+
+/* Google */
+.quick-links a:nth-child(3){background:#4285f4;border-color:#4285f4}
+.quick-links a:nth-child(3):before{content:"G";color:#4285f4;background:#fff}
+.quick-links a:nth-child(3):after{content:"Google"}
+
+/* WhatsApp */
+.quick-links a:nth-child(4){background:#25d366;border-color:#1ebc59;color:#0f3d20}
+.quick-links a:nth-child(4):before{content:"☎";color:#25b85a;background:#fff;font-size:11px}
+.quick-links a:nth-child(4):after{content:"WhatsApp"}
+
+/* Comunidad */
+.quick-links a:nth-child(5){background:#ee7b32;border-color:#df6c24}
+.quick-links a:nth-child(5):before{content:"C";color:#d9641b}
+.quick-links a:nth-child(5):after{content:"Comunidad"}
+
+/* El generador QR pertenece a la misma fila y resalta con la identidad del sitio. */
+.qr-shortcut{display:inline-flex;align-items:center;justify-content:center;gap:7px;padding:0 12px 0 6px;border:1px solid #171717;background:#171717;color:#fff;text-decoration:none;font:800 10px/1 Arial,sans-serif;letter-spacing:.02em;white-space:nowrap}
+.qr-shortcut strong{display:inline-flex;align-items:center;justify-content:center;width:20px;height:20px;border-radius:50%;background:#f3c400;color:#171717;font:900 9px/1 Arial,sans-serif}
+.qr-shortcut span{line-height:1}
 
 .ticker{height:36px;font-size:9px}
 
@@ -84,10 +106,11 @@
 @media(max-width:1000px){
   .hero-copy{padding-left:4vw;padding-right:4vw}
   .hero h1{font-size:clamp(29px,3.8vw,40px)}
-  .photo-stage{height:305px}
+  .photo-stage{height:336px}
   .quick-access-copy{gap:7px}
   .quick-links{gap:4px}
-  .quick-links a{padding-right:7px;font-size:9px}
+  .quick-links a{padding-right:8px;font-size:9px}
+  .qr-shortcut{padding-right:9px;font-size:9px}
 }
 
 @media(max-width:900px){
@@ -106,17 +129,17 @@
   .hero h1{font-size:clamp(28px,7.6vw,35px);margin:10px 0}
   .hero .lead{font-size:13.5px}
   .hero .actions{margin-top:14px}
-  .photo-stage{height:245px;min-height:245px}
-  .slide{padding:6px 8px 48px}
-  .slide img{max-width:94%!important}
+  .photo-stage{height:270px;min-height:270px}
+  .slide{padding:5px 6px 48px}
+  .slide img{max-width:97%!important}
   .photo-caption{left:14px;right:14px;bottom:28px}
   .photo-caption strong{font-size:13px}
   .slider-controls{left:12px;right:12px;bottom:3px}
-  .quick-access{width:min(100% - 20px,1180px);grid-template-columns:1fr;margin-top:4px;padding:7px 0}
+  .quick-access{width:min(100% - 20px,1180px);grid-template-columns:1fr;margin-top:3px;padding:6px 0 9px}
   .quick-access-copy{gap:6px}
   .quick-links{gap:5px}
-  .quick-links a{height:28px;padding:0 7px 0 5px;font-size:9px}
-  .qr-shortcut{justify-self:start;height:28px}
+  .quick-links a{height:29px;padding:0 8px 0 5px;font-size:9px}
+  .qr-shortcut{justify-self:start;height:29px}
   #generador-qr.qr-page{width:min(100% - 20px,1080px);padding:16px 0 22px}
   #generador-qr .section-intro{gap:8px}
   #generador-qr .qr-hero{grid-template-columns:1fr}
