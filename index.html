@@ -3,12 +3,151 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta http-equiv="refresh" content="0; url=redesign-b/index.html">
-<title>Jorge A. Cotera — Sitio académico</title>
-<link rel="canonical" href="redesign-b/index.html">
-<script>location.replace('redesign-b/index.html');</script>
+<meta name="description" content="Sitio personal y académico de Jorge Alonso Cotera Guerra: educación, matemáticas, cultura, investigación y producción académica.">
+<title>Jorge Alonso Cotera Guerra — Educación, Matemáticas y Cultura</title>
+<link rel="canonical" href="https://jorgecotera.github.io/com/">
+<base href="redesign-b/">
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="enhancements.css">
 </head>
 <body>
-<p>La página principal se ha renovado. <a href="redesign-b/index.html">Abrir el nuevo sitio</a>.</p>
+<header class="top">
+  <a class="brand" href="../#inicio" aria-label="Ir al inicio">
+    <img class="brand-logo" src="../Logo.jpg" alt="Logotipo de Jorge Alonso Cotera Guerra">
+    <span class="brand-name">JORGE A. COTERA<small>Educación · Matemáticas · Cultura</small></span>
+  </a>
+  <button class="menu" aria-label="Abrir menú" aria-expanded="false">☰</button>
+  <nav aria-label="Navegación principal">
+    <a href="perfil.html">Perfil</a>
+    <a href="../#publicaciones">Publicaciones</a>
+    <a href="investigacion.html">Investigación</a>
+    <a href="didactica.html">Didáctica</a>
+    <a href="matematicas.html">Matemáticas</a>
+    <a href="enlaces.html">Enlaces</a>
+  </nav>
+</header>
+
+<main id="inicio">
+<section class="hero">
+  <div class="hero-copy">
+    <p class="eyebrow">EDUCACIÓN · MATEMÁTICAS · CULTURA</p>
+    <h1>Pensar la educación desde las matemáticas, la cultura y la sociedad.</h1>
+    <p class="lead">Docencia, investigación, reflexión pedagógica y producción académica construidas desde la práctica y el territorio.</p>
+    <div class="actions">
+      <a class="primary" href="../#publicaciones">Leer publicaciones</a>
+      <a href="perfil.html">Perfil académico →</a>
+    </div>
+  </div>
+
+  <div class="photo-stage" role="region" aria-roledescription="carrusel" aria-label="Galería de bienvenida">
+    <div class="slides" id="welcome-slides"></div>
+    <div class="photo-shade"></div>
+    <div class="photo-caption">
+      <span class="photo-label">ARCHIVO VISUAL</span>
+      <strong id="slide-caption" aria-live="polite">Educación, territorio y cultura</strong>
+    </div>
+    <div class="slider-controls">
+      <button id="prev-slide" aria-label="Fotografía anterior">←</button>
+      <div id="slide-dots" class="slide-dots" role="group" aria-label="Seleccionar fotografía"></div>
+      <button id="next-slide" aria-label="Fotografía siguiente">→</button>
+    </div>
+  </div>
+</section>
+
+<section class="ticker" aria-label="Áreas de trabajo">
+  <span>DOCENCIA</span><b>•</b><span>INVESTIGACIÓN</span><b>•</b><span>PEDAGOGÍA</span><b>•</b><span>MATEMÁTICAS</span><b>•</b><span>CULTURA</span>
+</section>
+
+<section class="publications" id="publicaciones">
+  <header class="section-intro">
+    <div><p class="eyebrow">PUBLICACIONES</p><h2>Ideas que siguen entrando en conversación.</h2></div>
+    <a class="archive-link" href="articulos.html">Ver todas las publicaciones ↗</a>
+  </header>
+
+  <article class="latest-article" id="latest-article"></article>
+
+  <div class="recent-heading">
+    <h3>Publicaciones recientes</h3>
+    <span>De la más reciente a la más antigua</span>
+  </div>
+  <div class="recent-grid" id="recent-articles"></div>
+</section>
+
+<section class="radar" id="radar">
+  <header class="section-intro">
+    <div>
+      <p class="eyebrow">RADAR ACADÉMICO</p>
+      <h2>Lecturas, debates y publicaciones que vale la pena seguir.</h2>
+    </div>
+    <p class="radar-note"><strong>Selección externa.</strong> Este espacio enlaza contenidos publicados por revistas, universidades y otros sitios académicos relacionados con educación, matemáticas, cultura e investigación.</p>
+  </header>
+  <div class="radar-grid" id="radar-grid"></div>
+  <p class="radar-legal"><strong>Sobre derechos de autor:</strong> aquí se publica únicamente una referencia breve, una descripción propia y el enlace hacia el sitio de origen. Los artículos permanecen alojados en la plataforma de sus autores o editores. Las imágenes del módulo se cargarán localmente cuando sean propias, autorizadas o cuenten con una licencia que permita su uso.</p>
+  <a class="archive-link radar-more" href="enlaces.html">Abrir radar y directorio académico ↗</a>
+</section>
+
+<section class="editorial">
+  <article class="feature" id="investigacion">
+    <p class="number">01 / INVESTIGACIÓN</p>
+    <h2>Objetivación, semiótica y educación matemática</h2>
+    <p>Investigación sobre los procesos de objetivación del concepto de perpendicularidad y una trayectoria de trabajo en educación matemática, cultura y actividad.</p>
+    <a href="investigacion.html">Proyecto y documentos ↗</a>
+  </article>
+  <div class="stack">
+    <article class="dark">
+      <p>02 / DIDÁCTICA</p>
+      <h3>Materiales para enseñar, explorar y modelar</h3>
+      <a href="didactica.html">Explorar materiales →</a>
+    </article>
+    <article class="yellow">
+      <p>03 / MATEMÁTICAS</p>
+      <h3>Recursos, cursos y propuestas de trabajo</h3>
+      <a href="matematicas.html">Entrar a Matemáticas →</a>
+    </article>
+  </div>
+</section>
+
+<section class="library">
+  <header><p class="eyebrow">BIBLIOTECA PERSONAL</p><h2>Documentos para leer, estudiar y utilizar.</h2></header>
+  <div class="docs">
+    <a href="../Una%20Escuela%20Liberadora.pdf"><span>PDF</span><strong>Una Escuela Liberadora</strong><small>Lectura destacada</small></a>
+    <a href="pensamiento-critico.html"><span>WEB</span><strong>Seminario sobre pensamiento crítico</strong><small>Experiencia pedagógica en Montelíbano</small></a>
+    <a href="../Proyecto-2015-08-13.docx"><span>DOCX</span><strong>Proyecto de investigación</strong><small>Documento de trabajo</small></a>
+    <a href="biblioteca.html"><span>WEB</span><strong>Bibliografía</strong><small>Referencias y lecturas</small></a>
+  </div>
+</section>
+
+<section class="timeline" id="archivo">
+  <div><p class="eyebrow">TRAYECTORIA</p><h2>Un archivo que crece con el tiempo.</h2></div>
+  <div class="years">
+    <a href="articulos.html">2005<small>Primeros textos</small></a><i></i>
+    <a href="articulos.html">2009<small>Pedagogía</small></a><i></i>
+    <a href="../Una%20Escuela%20Liberadora.pdf">2015<small>Una Escuela Liberadora</small></a><i></i>
+    <a href="investigacion.html">2016<small>Investigación</small></a><i></i>
+    <a href="articulos.html">2026<small>Publicaciones recientes</small></a>
+  </div>
+</section>
+
+<section class="routes">
+  <a href="academia.html"><b>01</b><span>Academia<small>Portafolio y experiencias educativas</small></span>↗</a>
+  <a href="pensamiento-critico.html"><b>02</b><span>Pensamiento crítico<small>Seminario, proyecto y evaluación</small></span>↗</a>
+  <a href="videos.html"><b>03</b><span>Videos<small>Educación matemática y pedagogía</small></span>↗</a>
+  <a href="preicfes.html"><b>04</b><span>Pre-ICFES<small>Simulacros y materiales de preparación</small></span>↗</a>
+  <a href="enlaces.html"><b>05</b><span>Enlaces<small>Radar y direcciones de interés</small></span>↗</a>
+  <a href="comunidad.html"><b>06</b><span>Comunidad<small>Materiales de aula por año y grado</small></span>↗</a>
+  <a href="archivo.html"><b>07</b><span>Archivo general<small>Mapa completo y rutas históricas</small></span>↗</a>
+  <a href="buscar.html"><b>08</b><span>Buscar<small>Publicaciones, documentos y recursos</small></span>↗</a>
+</section>
+</main>
+
+<footer>
+  <div class="footer-brand"><img src="../Logo.jpg" alt="Logotipo"><strong>JORGE A. COTERA</strong></div>
+  <span>Educación · Matemáticas · Cultura · <a href="contacto.html">Contacto</a></span>
+  <a href="../#inicio">Volver arriba ↑</a>
+</footer>
+<script src="content.js"></script>
+<script src="app.js"></script>
+<script src="radar-content.js"></script>
+<script src="radar.js"></script>
 </body>
 </html>
