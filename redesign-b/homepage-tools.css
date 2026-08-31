@@ -192,3 +192,22 @@
     height:29px;
   }
 }
+
+
+/* Corrección final: todos los accesos toman el ancho necesario para el botón QR */
+.quick-links a,
+.qr-shortcut{
+  width:140px;
+  min-width:140px;
+  height:30px;
+  box-sizing:border-box;
+}
+
+@media(max-width:800px){
+  .quick-links a,
+  .qr-shortcut{
+    width:140px;
+    min-width:140px;
+    height:29px;
+  }
+}
