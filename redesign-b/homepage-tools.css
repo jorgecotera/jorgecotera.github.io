@@ -147,3 +147,48 @@
   #generador-qr .qr-form label:nth-of-type(2),#generador-qr .qr-form input,#generador-qr .qr-form select,#generador-qr .qr-actions,#generador-qr .qr-status{grid-column:1}
   #generador-qr .qr-result{min-height:155px}
 }
+
+
+/* Accesos rápidos uniformes: todos los botones comparten tamaño y el QR queda junto al resto. */
+.quick-access{
+  display:flex;
+  align-items:center;
+  justify-content:flex-start;
+  flex-wrap:wrap;
+  gap:6px;
+}
+
+.quick-access-copy,
+.quick-links{
+  display:contents;
+}
+
+.quick-access-copy .eyebrow{
+  margin-right:4px;
+}
+
+.quick-links a,
+.qr-shortcut{
+  width:118px;
+  min-width:118px;
+  height:30px;
+  box-sizing:border-box;
+}
+
+@media(max-width:800px){
+  .quick-access{
+    gap:5px;
+  }
+
+  .quick-access-copy .eyebrow{
+    flex-basis:100%;
+    margin:0 0 1px;
+  }
+
+  .quick-links a,
+  .qr-shortcut{
+    width:112px;
+    min-width:112px;
+    height:29px;
+  }
+}
