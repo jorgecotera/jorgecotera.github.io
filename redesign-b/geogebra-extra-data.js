@@ -23,6 +23,5 @@ window.geogebraExtraMaterials = [
   {id:"yQKY8pHN",title:"Recta y=ax+b",category:"Funciones lineales"},
   {id:"kbMFtWe4",title:"Función a Trozo 2",category:"Funciones"},
   {id:"BCCe35bj",title:"La Elipse con centro (h,k)",category:"Geometría analítica"},
-  {id:"VydFfksg",title:"Pendiente de una Recta a partir de Puntos",category:"Geometría analítica"},
-  {id:"B8xN4dX6",title:"Situaciones de variación lineal y cuadrática",category:"Modelación"}
+  {id:"VydFfksg",title:"Pendiente de una Recta a partir de Puntos",category:"Geometría analítica"}
 ];
