@@ -4,7 +4,7 @@
 .brand-name{font-size:12px}
 .brand-name small{font-size:8px;margin-top:3px}
 .top nav{gap:16px;font-size:11px}
-.top.has-search .header-search{padding:7px 9px;font-size:9px;border-radius:999px}
+.top.has-search .header-search{padding:7px 11px;font-size:9px;border-radius:999px}
 
 .hero{grid-template-columns:1.14fr .86fr;min-height:0}
 .hero-copy{padding:27px 4.5vw 25px 5.5vw}
@@ -12,7 +12,7 @@
 .hero h1{font-size:clamp(30px,3.05vw,46px);line-height:1.03;margin:11px 0 12px;max-width:690px}
 .hero .lead{font-size:14px;line-height:1.42;max-width:590px}
 .hero .actions{margin-top:16px;gap:18px;font-size:12px}
-.hero .primary{padding:9px 14px;border-radius:10px}
+.hero .primary{padding:9px 15px;border-radius:999px}
 
 /* La fotografía queda completa, algo más amplia y sin marco/fondo oscuro. */
 .photo-stage{height:406px;min-height:0;background:transparent;border-radius:18px;overflow:hidden;margin:10px 12px 10px 0}
@@ -73,8 +73,8 @@
 #radar .radar-card p{font-size:12px;line-height:1.42;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
 #radar .radar-more{display:inline-block;margin-top:18px}
 
-/* Botones y contenedores principales con radios suaves. */
-.sena-cta,.primary,.archive-link,.read-link,.footer-top{border-radius:10px}
+/* Acciones principales: forma redondeada tipo cápsula. */
+.sena-cta,.primary,.archive-link,.read-link,.footer-top{border-radius:999px}
 .latest-article,.recent-card,.feature,.stack article,.library,.routes>a{border-radius:14px;overflow:hidden}
 
 @media(max-width:1000px){
@@ -106,7 +106,7 @@
   .quick-access-copy .eyebrow{flex-basis:100%;margin:0 0 1px}
   .quick-links a,.autosinai-shortcut,.qr-shortcut{width:140px;min-width:140px;height:29px}
 }
-.sena-cta{display:inline-flex;align-items:center;justify-content:center;background:#f3c400;color:#171717;padding:16px 22px;border:2px solid #171717;font-weight:900;letter-spacing:.02em;white-space:nowrap;border-radius:10px}
+.sena-cta{display:inline-flex;align-items:center;justify-content:center;background:#f3c400;color:#171717;padding:16px 22px;border:2px solid #171717;font-weight:900;letter-spacing:.02em;white-space:nowrap;border-radius:999px}
 .sena-cta:hover{background:#c81920;color:#fff;border-color:#c81920}
 @media(max-width:800px){
   .hero .actions{flex-wrap:wrap}
