@@ -1,0 +1,21 @@
+window.geogebraExtraMaterials = [
+  {id:"WZ4m3XGt",title:"Punto 1 - Grado 9° - Sistema 2x2",category:"Sistemas de ecuaciones"},
+  {id:"dUzspCnH",title:"Punto 2 - Grado 9° - Sistema 2x2",category:"Sistemas de ecuaciones"},
+  {id:"nDZURTtJ",title:"Punto 3 - Grado 9° - Sistema 2x2",category:"Sistemas de ecuaciones"},
+  {id:"guxWKXys",title:"Punto 4 - Grado 9° - Sistema 2x2",category:"Sistemas de ecuaciones"},
+  {id:"AJ97eksj",title:"Punto 5 - Grado 9° - Sistema 2x2",category:"Sistemas de ecuaciones"},
+  {id:"CP93CWAa",title:"Punto 6 - Grado 9° - Sistema 2x2",category:"Sistemas de ecuaciones"},
+  {id:"HMv533bH",title:"Punto 7 - Grado 9° - Sistema 2x2",category:"Sistemas de ecuaciones"},
+  {id:"hSG8WpbH",title:"Punto 8 - Grado 9° - Sistema 2x2",category:"Sistemas de ecuaciones"},
+  {id:"QAyDEhME",title:"Punto 9 - Grado 9° - Sistema 2x2",category:"Sistemas de ecuaciones"},
+  {id:"k3kEernq",title:"Punto 10 - Grado 9° - Sistema 2x2",category:"Sistemas de ecuaciones"},
+  {id:"erGdnvkq",title:"Paramétrica I",category:"Curvas paramétricas"},
+  {id:"RCFDUHGX",title:"Paramétrica II",category:"Curvas paramétricas"},
+  {id:"heugJzbG",title:"Paramétrica III",category:"Curvas paramétricas"},
+  {id:"RprWJpfM",title:"Paramétrica IV",category:"Curvas paramétricas"},
+  {id:"PpzkRDwm",title:"Paramétrica E",category:"Curvas paramétricas"},
+  {id:"bdfVmpnq",title:"Curva Paramétrica",category:"Curvas paramétricas"},
+  {id:"TNnbxByG",title:"M.A.S Movimiento Armónico Simple",category:"Modelación y movimiento"},
+  {id:"xQ5JqPnN",title:"Funciones cuadráticas y cúbicas 11° B",category:"Funciones"},
+  {id:"dfPd8E2e",title:"Función a trozos redefinida",category:"Funciones"}
+];
