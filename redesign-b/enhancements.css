@@ -144,3 +144,90 @@ main a:hover img,main figure:hover img,main article:hover img{transform:none!imp
   .radar-card,.radar-card:last-child{grid-column:auto;min-height:350px}
   .radar-image{height:145px}
 }
+
+/* Densidad de escritorio. Solo actúa por encima del corte de tablet y no altera móvil/tablet. */
+@media(min-width:1081px){
+  .top{height:64px!important;padding:0 3.5vw!important}
+  .brand{gap:11px!important}
+  .brand-logo{width:44px!important;height:44px!important}
+  .brand-name{font-size:12.5px!important}
+  .brand-name small{font-size:9px!important;margin-top:3px!important}
+  .top nav{font-size:11px!important;gap:16px!important}
+  .top.has-search .header-search{min-height:30px!important;padding:0 12px!important;border-radius:7px!important;font-size:9.5px!important}
+  .top.has-search nav{margin-left:14px!important}
+
+  /* Portada: menos altura estructural, manteniendo texto legible. */
+  .hero-copy{padding:20px 5vw 18px!important}
+  .hero h1{font-size:clamp(32px,2.75vw,42px)!important;line-height:1.02!important;margin:9px 0 10px!important;max-width:700px!important}
+  .hero .lead,.lead{font-size:14px!important;line-height:1.4!important}
+  .hero .actions,.actions{margin-top:12px!important;gap:16px!important;font-size:12px!important}
+  .hero .primary,.primary{padding:8px 14px!important;border-radius:7px!important}
+  .sena-cta{padding:10px 18px!important;border-width:1px!important;border-radius:10px!important}
+  .photo-stage{height:340px!important;min-height:0!important;margin-top:8px!important;margin-bottom:8px!important}
+  .slide{padding-bottom:42px!important}
+  .photo-caption{bottom:25px!important}
+  .photo-caption strong{font-size:16px!important;line-height:1.1!important}
+  .slider-controls{bottom:2px!important}
+  .quick-access{margin-top:2px!important;padding-top:4px!important;padding-bottom:6px!important;gap:5px!important}
+  .quick-links a,.autosinai-shortcut,.qr-shortcut{height:27px!important;min-height:27px!important}
+  .ticker{height:32px!important;font-size:9.5px!important}
+
+  /* Wayra en portada: conserva legibilidad, pero deja de forzar la altura del primer pantallazo. */
+  .wayra-promo{margin-top:9px!important;min-height:82px!important;grid-template-columns:64px minmax(0,1fr) auto!important;gap:10px!important;padding:8px 10px!important}
+  .wayra-promo__mark{width:60px!important;height:64px!important}
+  .wayra-promo__copy strong::after{font-size:16px!important}
+  .wayra-promo__copy>span{min-height:29px!important}
+  .wayra-promo__copy>span::before{font-size:10px!important}
+  .wayra-promo__copy>span::after{font-size:10.5px!important}
+  .wayra-promo__cta{min-height:32px!important;padding:0 11px!important;font-size:9.5px!important}
+
+  /* Páginas de secciones: imagen principal y tarjetas más compactas al 100 %. */
+  .section-hero{min-height:260px!important;grid-template-columns:1.25fr .75fr!important}
+  .section-hero-copy{padding:30px 5vw 26px!important}
+  .section-hero h1{font-size:clamp(30px,3vw,42px)!important;line-height:1.03!important;margin:10px 0 12px!important}
+  .section-hero p{font-size:14px!important;line-height:1.42!important}
+  .section-visual{min-height:260px!important}
+  .section-visual-caption{left:22px!important;right:22px!important;bottom:16px!important;font-size:19px!important}
+  .section-body{padding:34px 5vw 46px!important}
+  .section-heading{gap:30px!important;margin-bottom:18px!important}
+  .section-heading h2{font-size:clamp(27px,2.45vw,35px)!important;line-height:1.05!important;margin-top:6px!important}
+  .section-heading p{font-size:12.5px!important;line-height:1.4!important}
+  .resource-grid{gap:10px!important}
+  .resource-card{min-height:128px!important;padding:14px 16px!important}
+  .resource-type{font-size:9.5px!important}
+  .resource-card h3{font-size:19px!important;line-height:1.08!important;margin:10px 0 6px!important}
+  .resource-card p{font-size:12.5px!important;line-height:1.35!important;margin:0 0 10px!important}
+  .resource-card span:last-child{font-size:11.5px!important}
+  .section-strip{padding:32px 5vw!important}
+  .section-strip h2{font-size:27px!important;margin-bottom:14px!important}
+  .strip-links a{min-height:76px!important;padding:15px!important}
+  .strip-links strong{font-size:17px!important}
+  .archive-callout>div{padding:32px 5vw!important}
+  .archive-callout h2{font-size:27px!important;margin:8px 0 11px!important}
+  .archive-callout p{font-size:13px!important;line-height:1.45!important}
+  .course-block{padding:40px 5vw!important}
+  .course-image{min-height:280px!important}
+  .course-copy{padding:28px!important}
+
+  /* Resto de la web editorial: menos espacio muerto vertical en escritorio. */
+  .publications{padding:48px 5vw!important}
+  .section-intro{margin-bottom:26px!important;gap:30px!important}
+  .latest-article{min-height:330px!important}
+  .latest-image{min-height:330px!important}
+  .latest-copy{padding:28px 4vw!important}
+  .recent-heading{margin:38px 0 16px!important}
+  .recent-card{min-height:220px!important;padding:20px!important}
+  .radar{padding:48px 5vw!important}
+  .radar-card{min-height:340px!important}
+  .feature{padding:46px 5vw!important;min-height:360px!important}
+  .feature h2,.library h2,.timeline h2{margin:32px 0 16px!important}
+  .stack article{padding:30px 34px!important}
+  .library{padding:48px 5vw!important}
+  .docs{margin-top:32px!important}
+  .timeline{padding:46px 5vw!important}
+  .years{margin-top:36px!important}
+  .routes>a{min-height:110px!important;padding-top:20px!important;padding-bottom:20px!important}
+
+  footer{padding:18px 4vw!important;gap:22px!important;font-size:12px!important}
+  footer .footer-brand img{width:36px!important;height:36px!important}
+}
