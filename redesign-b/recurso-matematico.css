@@ -6,7 +6,7 @@ body{background:#f4f1e9}
 .brand-name{font-size:12px}
 .brand-name small{font-size:8px;margin-top:3px}
 .top nav{font-size:11px;gap:16px}
-.top.has-search .header-search{display:inline-flex!important;align-items:center!important;justify-content:center!important;min-height:34px!important;padding:0 14px!important;border:1px solid #171717!important;border-radius:999px!important;background:#171717!important;color:#fff!important;font-size:10px!important;font-weight:900!important;letter-spacing:.08em!important;text-transform:uppercase!important;line-height:1!important}
+.top.has-search .header-search{display:inline-flex!important;align-items:center!important;justify-content:center!important;min-height:26px!important;padding:0 11px!important;border:1px solid #171717!important;border-radius:4px!important;background:#171717!important;color:#fff!important;font-size:9px!important;font-weight:900!important;letter-spacing:.07em!important;text-transform:uppercase!important;line-height:1!important}
 .top.has-search .header-search:hover,.top.has-search .header-search:focus-visible{background:#c81920!important;border-color:#c81920!important;color:#fff!important}
 
 .math-resource{min-height:70vh}
@@ -27,10 +27,10 @@ body{background:#f4f1e9}
 
 .resource-workspace{display:grid;grid-template-columns:minmax(0,1fr) 240px;gap:0;background:#fff;border-bottom:1px solid #171717;align-items:start}
 .resource-main-panel{padding:8px 20px 14px;min-width:0}
-.resource-panel-heading{display:block;margin:0 0 8px;text-align:center}
-.resource-panel-heading .eyebrow{display:block;margin:0 0 2px;font-size:8px;text-align:center}
-.resource-panel-heading h2{font-family:Georgia,serif;font-size:20px;font-weight:500;line-height:1.05;margin:0;text-align:center}
-.geogebra-shell{width:min(100%,680px);max-width:680px;margin:0 auto;background:#ece9e1;border:1px solid #a9a59c;border-radius:16px;overflow:hidden;display:flex;justify-content:center;box-shadow:0 4px 14px rgba(0,0,0,.08)}
+.resource-panel-heading{display:flex;justify-content:space-between;align-items:flex-end;margin:0 0 8px;text-align:left}
+.resource-panel-heading .eyebrow{display:block;margin:0;font-size:8px;text-align:left}
+.resource-panel-heading h2{font-family:Georgia,serif;font-size:20px;font-weight:500;line-height:1.05;margin:0;text-align:right}
+.geogebra-shell{width:min(100%,600px);max-width:600px;margin:0 auto;background:#ece9e1;border:1px solid #a9a59c;border-radius:16px;overflow:hidden;display:flex;justify-content:center;box-shadow:0 4px 14px rgba(0,0,0,.08)}
 .geogebra-frame{display:block;width:100%;max-width:none;height:auto;aspect-ratio:8/5;border:0;background:#fff}
 
 .resource-side-panel{border-left:1px solid #171717;background:#f4f1e9;padding:14px 14px 16px;display:flex;flex-direction:column;gap:14px}
@@ -45,13 +45,13 @@ body{background:#f4f1e9}
   .top nav{top:68px}
   .resource-workspace{grid-template-columns:minmax(0,1fr) 210px}
   .resource-side-panel{padding:13px 12px}
-  .geogebra-shell{width:min(100%,640px);max-width:640px}
+  .geogebra-shell{width:min(100%,570px);max-width:570px}
 }
 
 @media(max-width:900px){
   .resource-workspace{grid-template-columns:1fr}
   .resource-side-panel{border-left:0;border-top:1px solid #171717;display:grid;grid-template-columns:minmax(180px,250px) 1fr;align-items:start}
-  .geogebra-shell{width:min(100%,620px);max-width:620px}
+  .geogebra-shell{width:min(100%,540px);max-width:540px}
 }
 
 @media(max-width:800px){
@@ -59,7 +59,7 @@ body{background:#f4f1e9}
   .brand-logo{width:42px;height:42px}
   .brand-name{font-size:10px}
   .top nav{top:64px}
-  .top.has-search .header-search{min-height:32px!important;padding:0 11px!important;font-size:9px!important}
+  .top.has-search .header-search{min-height:26px!important;padding:0 9px!important;font-size:8px!important;border-radius:4px!important}
   .resource-hero{grid-template-columns:1fr}
   .resource-hero-copy{padding:14px 18px 10px}
   .resource-hero-copy h1{font-size:29px}
@@ -69,7 +69,7 @@ body{background:#f4f1e9}
   .resource-main-panel{padding:10px 12px 14px}
   .resource-panel-heading{margin-bottom:7px}
   .resource-panel-heading h2{font-size:19px}
-  .geogebra-shell{width:100%;max-width:620px;border-radius:12px}
+  .geogebra-shell{width:100%;max-width:540px;border-radius:12px}
   .geogebra-frame{height:auto;aspect-ratio:8/5}
   .resource-side-panel{grid-template-columns:1fr;padding:16px 18px}
   .resource-side-panel figure{max-width:330px}
