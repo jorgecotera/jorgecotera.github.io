@@ -288,3 +288,10 @@ if(geogebraFrame&&!document.querySelector('.geogebra-original-link')){
     document.querySelector('.resource-main-panel')?.appendChild(actions);
   }
 }
+
+// En Didáctica, carga el catálogo complementario de materiales del perfil GeoGebra.
+if(/didactica\.html$/i.test(location.pathname)){
+  const geogebraCatalog=document.createElement('script');
+  geogebraCatalog.src='geogebra-repo.js?v=20260913-9';
+  document.body.appendChild(geogebraCatalog);
+}
