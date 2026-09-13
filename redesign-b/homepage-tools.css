@@ -4,7 +4,7 @@
 .brand-name{font-size:12px}
 .brand-name small{font-size:8px;margin-top:3px}
 .top nav{gap:16px;font-size:11px}
-.top.has-search .header-search{padding:7px 9px;font-size:9px}
+.top.has-search .header-search{padding:7px 9px;font-size:9px;border-radius:999px}
 
 .hero{grid-template-columns:1.14fr .86fr;min-height:0}
 .hero-copy{padding:27px 4.5vw 25px 5.5vw}
@@ -12,10 +12,10 @@
 .hero h1{font-size:clamp(30px,3.05vw,46px);line-height:1.03;margin:11px 0 12px;max-width:690px}
 .hero .lead{font-size:14px;line-height:1.42;max-width:590px}
 .hero .actions{margin-top:16px;gap:18px;font-size:12px}
-.hero .primary{padding:9px 14px}
+.hero .primary{padding:9px 14px;border-radius:10px}
 
 /* La fotografía queda completa, algo más amplia y sin marco/fondo oscuro. */
-.photo-stage{height:406px;min-height:0;background:transparent}
+.photo-stage{height:406px;min-height:0;background:transparent;border-radius:18px;overflow:hidden;margin:10px 12px 10px 0}
 .photo-stage:before{width:9px;height:70px}
 .photo-shade{display:none}
 .slide{background:transparent;padding:4px 5px 50px;display:flex;align-items:center;justify-content:center;box-sizing:border-box}
@@ -24,10 +24,10 @@
 .photo-label{font-size:8px;color:#c81920;margin-bottom:3px;letter-spacing:.14em}
 .photo-caption strong{font-size:15px;line-height:1.1;max-width:350px;font-weight:500}
 .slider-controls{left:16px;right:16px;bottom:5px;gap:8px}
-.slider-controls button{width:25px;height:25px;color:#171717;border:1px solid rgba(23,23,23,.35);background:rgba(244,241,233,.92);font-size:11px}
+.slider-controls button{width:25px;height:25px;color:#171717;border:1px solid rgba(23,23,23,.35);background:rgba(244,241,233,.92);font-size:11px;border-radius:50%}
 .slider-controls button:hover{background:#171717;color:#fff;border-color:#171717}
 .slide-dots{gap:5px}
-.slide-dot{width:20px!important;height:3px!important;background:rgba(23,23,23,.24)!important}
+.slide-dot{width:20px!important;height:3px!important;background:rgba(23,23,23,.24)!important;border-radius:999px!important}
 .slide-dot.active{background:#c81920!important}
 
 /* Accesos rápidos: una sola familia visual, con AutoSINAÍ claramente diferenciado. */
@@ -66,14 +66,16 @@
 
 /* Radar compacto en portada; el desarrollo completo permanece en Enlaces. */
 #radar.radar{padding-top:44px;padding-bottom:44px}
-#radar .radar-card{min-height:330px}
+#radar .radar-card{min-height:330px;border-radius:14px}
 #radar .radar-image{height:120px}
 #radar .radar-copy{padding:17px}
 #radar .radar-card h3{font-size:19px;margin:11px 0 7px}
 #radar .radar-card p{font-size:12px;line-height:1.42;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
 #radar .radar-more{display:inline-block;margin-top:18px}
 
-
+/* Botones y contenedores principales con radios suaves. */
+.sena-cta,.primary,.archive-link,.read-link,.footer-top{border-radius:10px}
+.latest-article,.recent-card,.feature,.stack article,.library,.routes>a{border-radius:14px;overflow:hidden}
 
 @media(max-width:1000px){
   .hero-copy{padding-left:4vw;padding-right:4vw}
@@ -94,7 +96,7 @@
   .hero h1{font-size:clamp(28px,7.6vw,35px);margin:10px 0}
   .hero .lead{font-size:13.5px}
   .hero .actions{margin-top:14px}
-  .photo-stage{height:302px;min-height:302px}
+  .photo-stage{height:302px;min-height:302px;margin:0 10px 10px}
   .slide{padding:3px 4px 48px}
   .slide img{max-width:99%!important}
   .photo-caption{left:14px;right:14px;bottom:28px}
@@ -104,7 +106,7 @@
   .quick-access-copy .eyebrow{flex-basis:100%;margin:0 0 1px}
   .quick-links a,.autosinai-shortcut,.qr-shortcut{width:140px;min-width:140px;height:29px}
 }
-.sena-cta{display:inline-flex;align-items:center;justify-content:center;background:#f3c400;color:#171717;padding:16px 22px;border:2px solid #171717;font-weight:900;letter-spacing:.02em;white-space:nowrap}
+.sena-cta{display:inline-flex;align-items:center;justify-content:center;background:#f3c400;color:#171717;padding:16px 22px;border:2px solid #171717;font-weight:900;letter-spacing:.02em;white-space:nowrap;border-radius:10px}
 .sena-cta:hover{background:#c81920;color:#fff;border-color:#c81920}
 @media(max-width:800px){
   .hero .actions{flex-wrap:wrap}
