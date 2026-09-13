@@ -4,6 +4,7 @@
 .brand-name{font-size:12px}
 .brand-name small{font-size:8px;margin-top:3px}
 .top nav{gap:16px;font-size:11px}
+.top nav a strong{font:inherit;font-weight:inherit}
 .top.has-search .header-search{padding:7px 11px;font-size:9px;border-radius:999px}
 
 .hero{grid-template-columns:1.14fr .86fr;min-height:0}
