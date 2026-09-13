@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Visor de materiales GeoGebra del archivo didáctico de Jorge Alonso Cotera Guerra.">
+<title>Material GeoGebra - Jorge Alonso Cotera Guerra</title>
+<link rel="icon" href="../Logo.jpg" type="image/jpeg">
+<link rel="stylesheet" href="styles.css?v=20260913-8">
+<link rel="stylesheet" href="enhancements.css?v=20260913-8">
+<link rel="stylesheet" href="recurso-matematico.css?v=20260913-8">
+</head>
+<body>
+<header class="top">
+  <a class="brand" href="../index.html" aria-label="Volver al inicio">
+    <img class="brand-logo" src="../Logo.jpg" alt="Logotipo de Jorge Alonso Cotera Guerra">
+    <span class="brand-name">JORGE A. COTERA<small>Educación · Matemáticas · Cultura</small></span>
+  </a>
+  <button class="menu" aria-label="Abrir menú" aria-expanded="false">☰</button>
+  <nav aria-label="Navegación principal">
+    <a href="../">Inicio</a><a href="perfil.html">Perfil</a><a href="articulos.html">Publicaciones</a><a href="academia.html">Academia</a><a href="didactica.html" aria-current="page">Didáctica</a><a href="matematicas.html">Matemáticas</a><a href="archivo.html">Archivo</a>
+  </nav>
+</header>
+<main class="math-resource">
+<section class="resource-hero">
+  <div class="resource-hero-copy">
+    <p class="eyebrow" id="gg-category">REPOSITORIO GEOGEBRA</p>
+    <h1 id="gg-title">Material GeoGebra</h1>
+    <p class="resource-lead">Material del repositorio público de Jorge Cotera en GeoGebra.</p>
+    <div class="resource-actions"><a class="resource-primary" href="didactica.html">← Volver a Didáctica</a><a href="../index.html">Ir a la portada</a></div>
+  </div>
+  <aside class="resource-hero-meta" aria-label="Información del recurso"><span>REPOSITORIO MATEMÁTICO</span><strong>GeoGebra</strong><p>La actividad se carga dentro del sitio y conserva acceso directo a su publicación original.</p></aside>
+</section>
+<section class="resource-workspace" aria-labelledby="actividad-geogebra">
+  <div class="resource-main-panel">
+    <header class="resource-panel-heading"><p class="eyebrow">ACTIVIDAD</p><h2 id="actividad-geogebra">Actividad interactiva</h2></header>
+    <div class="geogebra-shell"><iframe id="gg-frame" class="geogebra-frame" scrolling="no" width="800" height="500" title="Actividad GeoGebra"></iframe></div>
+    <div class="resource-actions" style="justify-content:center;margin:6px auto 0;flex:0 0 auto"><a id="gg-original" class="resource-primary" target="_blank" rel="noopener noreferrer">Abrir original en GeoGebra ↗</a></div>
+  </div>
+  <aside class="resource-side-panel">
+    <div class="resource-side-copy"><p class="eyebrow">PERFIL GEOGEBRA</p><h2>Archivo de materiales</h2><p>Este visor incorpora al espacio didáctico materiales publicados en el perfil de GeoGebra de Jorge Cotera.</p></div>
+    <div class="resource-actions" style="margin-top:auto"><a class="resource-primary" href="https://www.geogebra.org/u/jorge+cotera" target="_blank" rel="noopener noreferrer">Ver perfil completo ↗</a></div>
+  </aside>
+</section>
+</main>
+<footer><div class="footer-brand"><img src="../Logo.jpg" alt="Logotipo"><strong>JORGE A. COTERA</strong></div><span>Educación · Matemáticas · Cultura · <a href="contacto.html">Contacto</a> · <a href="archivo.html">Archivo</a></span><a href="didactica.html">Volver a Didáctica →</a></footer>
+<script>
+const params=new URLSearchParams(location.search);
+const id=(params.get('id')||'').replace(/[^A-Za-z0-9]/g,'');
+const title=params.get('title')||'Material GeoGebra';
+const category=params.get('category')||'Repositorio GeoGebra';
+const safeId=id||'EBKspgDQ';
+document.title=`${title} - Jorge Alonso Cotera Guerra`;
+document.querySelector('#gg-title').textContent=title;
+document.querySelector('#gg-category').textContent=category.toUpperCase();
+const frame=document.querySelector('#gg-frame');
+frame.title=`Actividad GeoGebra: ${title}`;
+frame.src=`https://www.geogebra.org/material/iframe/id/${safeId}/width/800/height/500/border/888888/rc/false/ai/false/sdz/true/smb/false/stb/false/stbh/true/ld/false/sri/true/at/auto`;
+document.querySelector('#gg-original').href=`https://www.geogebra.org/m/${safeId}`;
+</script>
+<script src="app.js?v=20260913-8"></script>
+</body>
+</html>
