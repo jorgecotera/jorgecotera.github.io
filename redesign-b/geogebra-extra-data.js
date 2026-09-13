@@ -17,5 +17,12 @@ window.geogebraExtraMaterials = [
   {id:"bdfVmpnq",title:"Curva Paramétrica",category:"Curvas paramétricas"},
   {id:"TNnbxByG",title:"M.A.S Movimiento Armónico Simple",category:"Modelación y movimiento"},
   {id:"xQ5JqPnN",title:"Funciones cuadráticas y cúbicas 11° B",category:"Funciones"},
-  {id:"dfPd8E2e",title:"Función a trozos redefinida",category:"Funciones"}
+  {id:"dfPd8E2e",title:"Función a trozos redefinida",category:"Funciones"},
+  {id:"EBKspgDQ",title:"Modelación",category:"Modelación"},
+  {id:"ScFscyzD",title:"Aproximación al Limite I",category:"Límites"},
+  {id:"yQKY8pHN",title:"Recta y=ax+b",category:"Funciones lineales"},
+  {id:"kbMFtWe4",title:"Función a Trozo 2",category:"Funciones"},
+  {id:"BCCe35bj",title:"La Elipse con centro (h,k)",category:"Geometría analítica"},
+  {id:"VydFfksg",title:"Pendiente de una Recta a partir de Puntos",category:"Geometría analítica"},
+  {id:"B8xN4dX6",title:"Situaciones de variación lineal y cuadrática",category:"Modelación"}
 ];
