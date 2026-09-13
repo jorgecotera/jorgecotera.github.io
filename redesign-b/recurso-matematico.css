@@ -78,3 +78,28 @@ body{background:#f4f1e9}
   .math-resource+footer{padding:16px 18px;font-size:11px;min-height:0}
   .top nav a[aria-current="page"]:after{width:0}
 }
+
+/* Límites laterales: ajuste específico de escritorio. Aprovecha el área blanca sin sacar el pie de la primera pantalla. */
+@media(min-width:1081px){
+  body.resource-limites{min-height:100vh;display:flex;flex-direction:column}
+  body.resource-limites>.top{flex:0 0 44px;height:44px}
+  body.resource-limites .math-resource{flex:1 1 auto;display:flex;flex-direction:column;min-height:0}
+  body.resource-limites .resource-hero{flex:0 0 auto;grid-template-columns:minmax(0,1.76fr) minmax(165px,.24fr)}
+  body.resource-limites .resource-hero-copy{padding:5px 3vw}
+  body.resource-limites .resource-hero-copy h1{font-size:31px;margin:1px 0 2px}
+  body.resource-limites .resource-lead{font-size:11px;line-height:1.18}
+  body.resource-limites .resource-actions{margin-top:3px;font-size:9.5px}
+  body.resource-limites .resource-hero-meta{margin:3px 2vw 3px 0;padding:6px 9px}
+  body.resource-limites .resource-workspace{flex:1 1 auto;min-height:0;grid-template-columns:minmax(0,1fr) 180px;align-items:stretch}
+  body.resource-limites .resource-main-panel{display:flex;flex-direction:column;min-height:0;padding:6px 18px 10px}
+  body.resource-limites .resource-panel-heading{margin-bottom:6px}
+  body.resource-limites .geogebra-shell{width:min(590px,calc((100vh - 352px)*1.5946),calc(100% - 80px));max-width:none;aspect-ratio:590/370;margin:0 auto 10px}
+  body.resource-limites .geogebra-frame{aspect-ratio:590/370;height:auto}
+  body.resource-limites .resource-side-panel{height:100%;min-height:0;padding:8px 8px 9px;gap:7px;overflow:hidden}
+  body.resource-limites .resource-side-panel img{max-height:245px;object-fit:contain}
+  body.resource-limites .resource-side-panel figcaption{font-size:9px}
+  body.resource-limites .resource-side-copy h2{font-size:16px;margin:3px 0}
+  body.resource-limites .resource-side-copy p:last-child{font-size:10px;line-height:1.22}
+  body.resource-limites .math-resource+footer{flex:0 0 44px;min-height:44px;padding:7px 3vw;font-size:10.5px}
+  body.resource-limites .math-resource+footer .footer-brand img{width:28px;height:28px}
+}
