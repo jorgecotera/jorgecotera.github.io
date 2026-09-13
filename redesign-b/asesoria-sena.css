@@ -16,3 +16,38 @@ body{background:#f4f1e9}.sena-page{min-height:70vh}.sena-hero{display:grid;grid-
   .sena-page{padding-bottom:74px}
   .sena-mobile-cta{display:block;position:fixed;left:12px;right:12px;bottom:12px;z-index:40;background:#f3c400;color:#171717;border:2px solid #171717;padding:14px 18px;text-align:center;font-weight:900;box-shadow:0 8px 26px rgba(0,0,0,.24)}
 }
+
+/* Ajuste exclusivo de escritorio: misma densidad proporcional del resto del sitio, sin modificar tablet ni móvil. */
+@media(min-width:1081px){
+  .sena-page{min-height:0}
+  .sena-hero{grid-template-columns:minmax(0,1.55fr) minmax(300px,.45fr);min-height:0}
+  .sena-hero>div{padding:28px 5vw 24px}
+  .sena-hero .eyebrow{font-size:9px}
+  .sena-hero h1{font-size:clamp(36px,3.6vw,50px);line-height:1.01;margin:8px 0 12px;max-width:760px}
+  .sena-hero>div>p:not(.eyebrow){max-width:720px;font-size:14px;line-height:1.4}
+  .sena-primary{margin-top:14px;padding:9px 14px;font-size:11px;border-radius:7px}
+  .sena-hero aside{padding:24px 3vw;gap:7px}
+  .sena-hero aside span{font-size:9px}
+  .sena-hero aside strong{font-size:34px}
+  .sena-hero aside p{font-size:11px;line-height:1.35}
+
+  .sena-grid{grid-template-columns:minmax(0,1.62fr) minmax(280px,.38fr)}
+  .sena-terms{padding:30px 5vw 32px}
+  .sena-grid h2,.sena-request h2{font-size:28px;margin:7px 0 16px}
+  .sena-terms ol{gap:9px;font-size:12.5px;line-height:1.4}
+  .sena-payment{padding:28px 2.5vw}
+  .sena-payment>div{padding:11px 0;gap:4px}
+  .sena-payment>div strong{font-size:17px}
+  .sena-payment p{font-size:12px;line-height:1.4}
+  .sena-note{font-size:11px;padding:10px}
+
+  .sena-request{padding:34px 5vw 40px}
+  .sena-request header{margin-bottom:18px;max-width:760px}
+  .sena-request header>p:last-child{font-size:12.5px;line-height:1.4}
+  .sena-request form{gap:12px;max-width:980px}
+  .sena-request label{gap:6px;font-size:11px}
+  .sena-request input,.sena-request select,.sena-request textarea{padding:9px}
+  .sena-request textarea{min-height:88px}
+  .sena-form-actions button{padding:10px 15px;font-size:11px}
+  .sena-admin-note{padding:12px 5vw;font-size:11px}
+}
