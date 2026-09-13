@@ -6,9 +6,9 @@
 <meta name="description" content="Visor de materiales GeoGebra del archivo didáctico de Jorge Alonso Cotera Guerra.">
 <title>Material GeoGebra - Jorge Alonso Cotera Guerra</title>
 <link rel="icon" href="../Logo.jpg" type="image/jpeg">
-<link rel="stylesheet" href="styles.css?v=20260913-8">
-<link rel="stylesheet" href="enhancements.css?v=20260913-8">
-<link rel="stylesheet" href="recurso-matematico.css?v=20260913-8">
+<link rel="stylesheet" href="styles.css?v=20260913-9">
+<link rel="stylesheet" href="enhancements.css?v=20260913-9">
+<link rel="stylesheet" href="recurso-matematico.css?v=20260913-9">
 </head>
 <body>
 <header class="top">
@@ -35,7 +35,7 @@
   <div class="resource-main-panel">
     <header class="resource-panel-heading"><p class="eyebrow">ACTIVIDAD</p><h2 id="actividad-geogebra">Actividad interactiva</h2></header>
     <div class="geogebra-shell"><iframe id="gg-frame" class="geogebra-frame" scrolling="no" width="800" height="500" title="Actividad GeoGebra"></iframe></div>
-    <div class="resource-actions" style="justify-content:center;margin:6px auto 0;flex:0 0 auto"><a id="gg-original" class="resource-primary" target="_blank" rel="noopener noreferrer">Abrir original en GeoGebra ↗</a></div>
+    <div class="resource-actions" style="justify-content:center;margin:6px auto 0;flex:0 0 auto"><a id="gg-original" class="resource-primary geogebra-original-link" target="_blank" rel="noopener noreferrer">Abrir original en GeoGebra ↗</a></div>
   </div>
   <aside class="resource-side-panel">
     <div class="resource-side-copy"><p class="eyebrow">PERFIL GEOGEBRA</p><h2>Archivo de materiales</h2><p>Este visor incorpora al espacio didáctico materiales publicados en el perfil de GeoGebra de Jorge Cotera.</p></div>
@@ -58,6 +58,6 @@ frame.title=`Actividad GeoGebra: ${title}`;
 frame.src=`https://www.geogebra.org/material/iframe/id/${safeId}/width/800/height/500/border/888888/rc/false/ai/false/sdz/true/smb/false/stb/false/stbh/true/ld/false/sri/true/at/auto`;
 document.querySelector('#gg-original').href=`https://www.geogebra.org/m/${safeId}`;
 </script>
-<script src="app.js?v=20260913-8"></script>
+<script src="app.js?v=20260913-9"></script>
 </body>
 </html>
