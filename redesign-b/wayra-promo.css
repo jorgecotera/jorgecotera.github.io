@@ -9,7 +9,9 @@
   background:#171717;
   color:#fff;
   border-left:5px solid #f3c400;
+  border-radius:14px;
   box-shadow:0 5px 16px rgba(0,0,0,.12);
+  overflow:hidden;
 }
 
 .wayra-promo__mark{
@@ -20,7 +22,7 @@
   justify-content:center;
   overflow:hidden;
   border:1px solid rgba(255,255,255,.6);
-  border-radius:4px;
+  border-radius:10px;
   background:#fff url('wayra-logo-white.svg') center/contain no-repeat;
   box-shadow:0 2px 6px rgba(0,0,0,.22);
 }
@@ -54,7 +56,6 @@
   letter-spacing:.045em;
 }
 
-/* Mensaje comercial dinámico. El texto original permanece en el HTML para accesibilidad. */
 .wayra-promo__copy>span{
   position:relative;
   display:block;
@@ -83,23 +84,18 @@
   animation:wayraBenefit 16s ease-in-out infinite;
   will-change:opacity,transform;
 }
-.wayra-promo:hover .wayra-promo__copy>span::after{
-  animation-play-state:paused;
-}
+.wayra-promo:hover .wayra-promo__copy>span::after{animation-play-state:paused}
 
 @keyframes wayraBenefit{
   0%{content:"Crea pruebas con agilidad.";opacity:0;transform:translateX(-10px)}
   3%,20%{content:"Crea pruebas con agilidad.";opacity:1;transform:translateX(0)}
   24%{content:"Crea pruebas con agilidad.";opacity:0;transform:translateX(10px)}
-
   25%{content:"Organiza respuestas con facilidad.";opacity:0;transform:translateX(-10px)}
   28%,45%{content:"Organiza respuestas con facilidad.";opacity:1;transform:translateX(0)}
   49%{content:"Organiza respuestas con facilidad.";opacity:0;transform:translateX(10px)}
-
   50%{content:"Analiza resultados con claridad.";opacity:0;transform:translateX(-10px)}
   53%,70%{content:"Analiza resultados con claridad.";opacity:1;transform:translateX(0)}
   74%{content:"Analiza resultados con claridad.";opacity:0;transform:translateX(10px)}
-
   75%{content:"Genera informes para tomar mejores decisiones.";opacity:0;transform:translateX(-10px)}
   78%,95%{content:"Genera informes para tomar mejores decisiones.";opacity:1;transform:translateX(0)}
   100%{content:"Genera informes para tomar mejores decisiones.";opacity:0;transform:translateX(10px)}
@@ -115,17 +111,13 @@
   background:#fff;
   color:#171717;
   border:1px solid #fff;
+  border-radius:999px;
   font:900 10px/1 Arial,sans-serif;
   white-space:nowrap;
   transition:background .16s ease,color .16s ease,border-color .16s ease,transform .16s ease;
 }
 .wayra-promo__cta b{color:#c81920;font-size:13px}
-.wayra-promo__cta:hover{
-  background:#f3c400;
-  border-color:#f3c400;
-  color:#171717;
-  transform:translateY(-1px);
-}
+.wayra-promo__cta:hover{background:#f3c400;border-color:#f3c400;color:#171717;transform:translateY(-1px)}
 
 @media(max-width:1100px){
   .wayra-promo{grid-template-columns:68px minmax(0,1fr) auto;gap:10px;padding:9px 10px;min-height:92px}
