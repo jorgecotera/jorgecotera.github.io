@@ -1,6 +1,6 @@
 body{background:#f4f1e9}
 
-/* Recursos GeoGebra: encuadre compacto para que el recurso completo quepa al 100 % sin sacrificar legibilidad. */
+/* Recursos GeoGebra: base compartida. */
 .top{height:48px;padding-left:2vw;padding-right:2vw}
 .brand{gap:10px}
 .brand-logo{width:32px;height:32px}
@@ -79,27 +79,75 @@ body{background:#f4f1e9}
   .top nav a[aria-current="page"]:after{width:0}
 }
 
-/* Límites laterales: ajuste específico de escritorio. Aprovecha el área blanca sin sacar el pie de la primera pantalla. */
+/* Escritorio: la pagina completa usa el alto disponible y cada GeoGebra conserva su proporcion original. Tablet y movil quedan fuera de estas reglas. */
 @media(min-width:1081px){
-  body.resource-limites{min-height:100vh;display:flex;flex-direction:column}
-  body.resource-limites>.top{flex:0 0 44px;height:44px}
-  body.resource-limites .math-resource{flex:1 1 auto;display:flex;flex-direction:column;min-height:0}
-  body.resource-limites .resource-hero{flex:0 0 auto;grid-template-columns:minmax(0,1.76fr) minmax(165px,.24fr)}
-  body.resource-limites .resource-hero-copy{padding:5px 3vw}
-  body.resource-limites .resource-hero-copy h1{font-size:31px;margin:1px 0 2px}
-  body.resource-limites .resource-lead{font-size:11px;line-height:1.18}
-  body.resource-limites .resource-actions{margin-top:3px;font-size:9.5px}
-  body.resource-limites .resource-hero-meta{margin:3px 2vw 3px 0;padding:6px 9px}
-  body.resource-limites .resource-workspace{flex:1 1 auto;min-height:0;grid-template-columns:minmax(0,1fr) 180px;align-items:stretch}
-  body.resource-limites .resource-main-panel{display:flex;flex-direction:column;min-height:0;padding:6px 18px 10px}
-  body.resource-limites .resource-panel-heading{margin-bottom:6px}
-  body.resource-limites .geogebra-shell{width:min(590px,calc((100vh - 352px)*1.5946),calc(100% - 80px));max-width:none;aspect-ratio:590/370;margin:0 auto 10px}
-  body.resource-limites .geogebra-frame{aspect-ratio:590/370;height:auto}
-  body.resource-limites .resource-side-panel{height:100%;min-height:0;padding:8px 8px 9px;gap:7px;overflow:hidden}
-  body.resource-limites .resource-side-panel img{max-height:245px;object-fit:contain}
-  body.resource-limites .resource-side-panel figcaption{font-size:9px}
-  body.resource-limites .resource-side-copy h2{font-size:16px;margin:3px 0}
-  body.resource-limites .resource-side-copy p:last-child{font-size:10px;line-height:1.22}
-  body.resource-limites .math-resource+footer{flex:0 0 44px;min-height:44px;padding:7px 3vw;font-size:10.5px}
-  body.resource-limites .math-resource+footer .footer-brand img{width:28px;height:28px}
+  body{min-height:100vh;display:flex;flex-direction:column}
+  .top{flex:0 0 44px;height:44px!important;padding:0 2.5vw!important}
+  .brand-logo{width:32px!important;height:32px!important}
+  .brand-name{font-size:12px!important}
+  .brand-name small{font-size:8.5px!important}
+  .top nav{font-size:10.5px!important;gap:13px!important}
+  .top.has-search .header-search{min-height:24px!important;padding:0 9px!important;border-radius:5px!important;font-size:9px!important}
+  .top.has-search nav{margin-left:12px!important}
+
+  .math-resource{flex:1 1 auto;display:flex;flex-direction:column;min-height:0}
+  .resource-hero{flex:0 0 auto;grid-template-columns:minmax(0,1.76fr) minmax(165px,.24fr)}
+  .resource-hero-copy{padding:5px 3vw}
+  .resource-hero-copy .eyebrow{font-size:8px}
+  .resource-hero-copy h1{font-size:31px;margin:1px 0 2px}
+  .resource-lead{font-size:11px;line-height:1.18}
+  .resource-actions{margin-top:3px;font-size:9.5px}
+  .resource-hero-meta{margin:3px 2vw 3px 0;padding:6px 9px}
+  .resource-hero-meta span{font-size:7.5px}
+  .resource-hero-meta strong{font-size:19px}
+  .resource-hero-meta p{font-size:9.5px;line-height:1.16}
+
+  .resource-workspace{flex:1 1 auto;min-height:0;grid-template-columns:minmax(0,1fr) 180px;align-items:stretch}
+  .resource-main-panel{display:flex;flex-direction:column;min-height:0;padding:6px 18px 8px}
+  .resource-panel-heading{flex:0 0 auto;margin-bottom:5px}
+  .resource-panel-heading .eyebrow{font-size:8px}
+  .resource-panel-heading h2{font-size:18px}
+  .geogebra-shell{max-width:none;margin:0 auto 7px;border-radius:10px}
+  .geogebra-frame{height:auto}
+
+  .resource-side-panel{height:100%;min-height:0;padding:7px 8px 8px;gap:6px;overflow:hidden}
+  .resource-side-panel img{max-height:238px;object-fit:contain}
+  .resource-side-panel figcaption{font-size:9px;line-height:1.22}
+  .resource-side-copy h2{font-size:16px;margin:3px 0}
+  .resource-side-copy p:last-child{font-size:10px;line-height:1.2}
+
+  .math-resource+footer{flex:0 0 42px;min-height:42px!important;padding:6px 3vw!important;gap:14px!important;font-size:10.5px!important}
+  .math-resource+footer .footer-brand img{width:27px!important;height:27px!important}
+
+  /* 800 x 500: Pollo, Elipse, Parabola, Continuidad, Exponencial, Cubo, Curva normal y familias de funciones. */
+  .geogebra-shell:has(.geogebra-frame[src*="/width/800/height/500/"]){width:min(680px,calc((100vh - 285px)*1.6),calc(100% - 72px));aspect-ratio:8/5}
+  .geogebra-frame[src*="/width/800/height/500/"]{aspect-ratio:8/5}
+
+  /* Limites laterales: 590 x 370. */
+  .geogebra-shell:has(.geogebra-frame[src*="/width/590/height/370/"]){width:min(620px,calc((100vh - 285px)*1.5946),calc(100% - 72px));aspect-ratio:590/370}
+  .geogebra-frame[src*="/width/590/height/370/"]{aspect-ratio:590/370}
+
+  /* Polares: 800 x 403. */
+  .geogebra-shell:has(.geogebra-frame[src*="/width/800/height/403/"]){width:min(720px,calc((100vh - 285px)*1.9851),calc(100% - 72px));aspect-ratio:800/403}
+  .geogebra-frame[src*="/width/800/height/403/"]{aspect-ratio:800/403}
+
+  /* Vivienda: 1280 x 881. */
+  .geogebra-shell:has(.geogebra-frame[src*="/width/1280/height/881/"]){width:min(570px,calc((100vh - 285px)*1.4529),calc(100% - 72px));aspect-ratio:1280/881}
+  .geogebra-frame[src*="/width/1280/height/881/"]{aspect-ratio:1280/881}
+
+  /* Pitagoras 2: 753 x 550. */
+  .geogebra-shell:has(.geogebra-frame[src*="/width/753/height/550/"]){width:min(535px,calc((100vh - 285px)*1.3691),calc(100% - 72px));aspect-ratio:753/550}
+  .geogebra-frame[src*="/width/753/height/550/"]{aspect-ratio:753/550}
+
+  /* Pitagoras 3: 845 x 469. */
+  .geogebra-shell:has(.geogebra-frame[src*="/width/845/height/469/"]){width:min(700px,calc((100vh - 285px)*1.8017),calc(100% - 72px));aspect-ratio:845/469}
+  .geogebra-frame[src*="/width/845/height/469/"]{aspect-ratio:845/469}
+
+  /* Pitagoras 4: 846 x 471. */
+  .geogebra-shell:has(.geogebra-frame[src*="/width/846/height/471/"]){width:min(700px,calc((100vh - 285px)*1.7962),calc(100% - 72px));aspect-ratio:846/471}
+  .geogebra-frame[src*="/width/846/height/471/"]{aspect-ratio:846/471}
+
+  /* Pitagoras 1: 1280 x 631. */
+  .geogebra-shell:has(.geogebra-frame[src*="/width/1280/height/631/"]){width:min(760px,calc((100vh - 285px)*2.0285),calc(100% - 72px));aspect-ratio:1280/631}
+  .geogebra-frame[src*="/width/1280/height/631/"]{aspect-ratio:1280/631}
 }
