@@ -267,3 +267,24 @@ if(/archivo\.html$/i.test(location.pathname)){
   const historicalHome=document.querySelector('a.utility-card[href="../index.htm"]');
   if(historicalHome)historicalHome.href='../index-historico.htm';
 }
+
+// En cada recurso GeoGebra del archivo didáctico se añade un acceso directo al material original.
+const geogebraFrame=document.querySelector('.math-resource .geogebra-frame');
+if(geogebraFrame&&!document.querySelector('.geogebra-original-link')){
+  const source=geogebraFrame.getAttribute('src')||'';
+  const match=source.match(/\/material\/iframe\/id\/([^/]+)/i);
+  if(match?.[1]){
+    const actions=document.createElement('div');
+    actions.className='resource-actions geogebra-original-actions';
+    actions.style.justifyContent='center';
+    actions.style.margin='6px auto 0';
+    const link=document.createElement('a');
+    link.className='resource-primary geogebra-original-link';
+    link.href=`https://www.geogebra.org/m/${match[1]}`;
+    link.target='_blank';
+    link.rel='noopener noreferrer';
+    link.textContent='Abrir original en GeoGebra ↗';
+    actions.appendChild(link);
+    document.querySelector('.resource-main-panel')?.appendChild(actions);
+  }
+}
