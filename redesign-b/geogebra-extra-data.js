@@ -25,5 +25,7 @@ window.geogebraExtraMaterials = [
   {id:"BCCe35bj",title:"La Elipse con centro (h,k)",category:"Geometría analítica"},
   {id:"VydFfksg",title:"Pendiente de una Recta a partir de Puntos",category:"Geometría analítica"},
   {id:"aQzFKbaG",title:"Método de Newton-Raphson",category:"Métodos numéricos"},
-  {id:"cxCdQpc4",title:"Construcción de viviendas en terrenos inclinados",category:"Modelación"}
+  {id:"cxCdQpc4",title:"Construcción de viviendas en terrenos inclinados",category:"Modelación"},
+  {id:"gpZ7UrdD",title:"Caida de Pelota de Tenis",category:"Modelación y movimiento"},
+  {id:"umzjajyq",title:"Antiprisma de base cuadrada",category:"Geometría espacial"}
 ];
