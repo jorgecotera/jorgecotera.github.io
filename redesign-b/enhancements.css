@@ -163,11 +163,12 @@ main a:hover img,main figure:hover img,main article:hover img{transform:none!imp
   .hero .actions,.actions{margin-top:12px!important;gap:16px!important;font-size:12px!important}
   .hero .primary,.primary{padding:8px 14px!important;border-radius:7px!important}
   .sena-cta{padding:10px 18px!important;border-width:1px!important;border-radius:10px!important}
-  .photo-stage{height:340px!important;min-height:0!important;margin-top:8px!important;margin-bottom:8px!important}
-  .slide{padding-bottom:42px!important}
-  .photo-caption{bottom:25px!important}
+  /* Galería: la columna de la foto termina en la misma línea que la promo de Wayra y el pie queda bajo la imagen. */
+  .photo-stage{width:min(100%,440px)!important;justify-self:end!important;height:300px!important;min-height:0!important;margin-top:8px!important;margin-bottom:0!important}
+  .slide{padding-bottom:66px!important}
+  .photo-caption{bottom:30px!important;left:6px!important;right:6px!important}
   .photo-caption strong{font-size:16px!important;line-height:1.1!important}
-  .slider-controls{bottom:2px!important}
+  .slider-controls{bottom:2px!important;left:6px!important;right:6px!important}
   .quick-access{margin-top:2px!important;padding-top:4px!important;padding-bottom:6px!important;gap:5px!important}
   .quick-links a,.autosinai-shortcut,.qr-shortcut{height:27px!important;min-height:27px!important}
   .ticker{height:32px!important;font-size:9.5px!important}
