@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Herramienta interactiva del artículo ¿Mejoró Montelíbano? Resultados de Saber 11 de colegios oficiales frente a municipios del San Jorge, Córdoba y el país.">
+<title>Análisis Saber 11 · Montelíbano y el San Jorge</title>
+<link rel="stylesheet" href="styles.css?v=20261012-1">
+<link rel="stylesheet" href="enhancements.css?v=20260913-5">
+<link rel="stylesheet" href="analisis-saber11.css?v=20261012-1">
+<link rel="icon" href="../Logo.jpg" type="image/jpeg">
+</head>
+<body>
+<header class="top">
+  <a class="brand" href="../#inicio" aria-label="Ir al inicio">
+    <img class="brand-logo" src="../Logo.jpg" alt="Logotipo de Jorge Alonso Cotera Guerra">
+    <span class="brand-name">JORGE A. COTERA<small>Educación · Matemáticas · Cultura</small></span>
+  </a>
+  <button class="menu" aria-label="Abrir menú" aria-expanded="false">☰</button>
+  <nav aria-label="Navegación principal">
+    <a href="../">Inicio</a>
+    <a href="analisis-saber11.html">Análisis Saber 11</a>
+    <a href="analisis-saber11.html" aria-current="page">Análisis Saber 11</a>
+    <a href="asesoria-sena.html">Preparación SENA</a>
+    <a href="perfil.html">Perfil</a>
+    <a href="articulos.html">Publicaciones</a>
+    <a href="academia.html">Academia</a>
+    <a href="didactica.html">Didáctica</a>
+    <a href="matematicas.html">Matemáticas</a>
+    <a href="archivo.html">Archivo</a>
+    <a href="gestion-asesoria-sena.html" rel="nofollow">Gestión privada</a>
+  </nav>
+  <a class="tool-btn" href="analisis-saber11.html">Herramienta de análisis ↗</a>
+</header>
+
+<main class="sab">
+  <section class="sab-hero">
+    <p class="eyebrow">HERRAMIENTA · SABER 11 · CALENDARIO A</p>
+    <h1>¿Mejoró Montelíbano? Muévete entre los datos.</h1>
+    <p class="lead">Herramienta interactiva del artículo <em>¿Mejoró Montelíbano? Saber 11, comparaciones y la escuela pública del San Jorge</em>. Cambia los años, activa o desactiva series, edita los valores, mueve la proyección y observa cómo cambian las tendencias, las brechas y las correlaciones.</p>
+    <aside class="sab-aviso" role="note">
+      <strong>Lectura con cuidado.</strong> Son siete años comparables entre 2014 y 2024, con colegios oficiales en calendario A. El examen cambió en 2014 y no se unen las series de 2010–2013. Las proyecciones son extrapolaciones, no pronósticos. Cualquier cambio que edites aquí se recalcula, pero no corrige la falta de datos.
+    </aside>
+    <p class="aviso-js" id="aviso-js" hidden>Para ver las gráficas hace falta conexión a internet (Chart.js). Las tablas siguen disponibles.</p>
+  </section>
+
+  <section class="sab-panel" aria-labelledby="ctl-title">
+    <h2 id="ctl-title">1. Controles</h2>
+    <div class="ctl-grid">
+      <fieldset>
+        <legend>Series en la gráfica de niveles</legend>
+        <label><input type="checkbox" id="chk-mon"> Montelíbano</label>
+        <label><input type="checkbox" id="chk-dep"> Córdoba, oficiales</label>
+        <label><input type="checkbox" id="chk-nal"> Nacional, oficiales</label>
+        <label><input type="checkbox" id="chk-otros"> Promedio de los otros seis municipios</label>
+      </fieldset>
+      <fieldset>
+        <legend>Rango de años</legend>
+        <label>Desde <select id="sel-desde"></select></label>
+        <label>Hasta <select id="sel-hasta"></select></label>
+        <label>Escala
+          <select id="sel-escala">
+            <option value="1" selected>0 a 100 (artículo)</option>
+            <option value="5">0 a 500 (ICFES)</option>
+          </select>
+        </label>
+      </fieldset>
+      <fieldset>
+        <legend>Correlación con Montelíbano</legend>
+        <label>Ventana
+          <select id="sel-corr">
+            <option value="art">Artículo, 2005–2012 (n = 8)</option>
+            <option value="v1">Ventana 2010–2013 (n = 4)</option>
+            <option value="v2" selected>Ventana 2014–2024 (n = 7)</option>
+            <option value="cam">Cambios interanuales (n = 6)</option>
+          </select>
+        </label>
+      </fieldset>
+    </div>
+  </section>
+
+  <section class="sab-panel" aria-labelledby="niv-title">
+    <h2 id="niv-title">2. Niveles de puntaje</h2>
+    <p class="nota">Colegios oficiales, calendario A. Los años sin dato completo de Montelíbano (2018, 2020, 2021, 2023) aparecen como cortes en la línea.</p>
+    <div class="chart-box"><canvas id="g-niveles" role="img" aria-label="Gráfica de niveles de puntaje por año"></canvas></div>
+    <div class="scroll">
+      <table id="tabla-niveles" class="tab">
+        <thead><tr><th>Serie</th><th>2014</th><th>2015</th><th>2016</th><th>2017</th><th>2018</th><th>2019</th><th>2020</th><th>2021</th><th>2022</th><th>2023</th><th>2024</th><th>Promedio general</th></tr></thead>
+        <tbody></tbody>
+      </table>
+    </div>
+    <p class="cuidado"><strong>Cuidado con el promedio general.</strong> Promedia años con cobertura distinta: Montelíbano tiene 7 años y Córdoba y Nacional tienen más. Sirve como referencia de nivel, no como medida de desempeño. Los años de 2010–2013 no entran porque el examen tenía solo dos pruebas.</p>
+  </section>
+
+  <section class="sab-panel" aria-labelledby="ven-title">
+    <h2 id="ven-title">3. La ventaja frente a Córdoba y la tendencia</h2>
+    <p class="nota">Edita los valores de la tabla de la sección 7 y verás cómo se mueven la ventaja y la tendencia.</p>
+    <div class="chart-box"><canvas id="g-ventaja" role="img" aria-label="Gráfica de la ventaja de Montelíbano sobre Córdoba"></canvas></div>
+    <p id="gap-t" class="resultado"></p>
+    <div class="scroll">
+      <table id="tabla-brechas" class="tab">
+        <thead><tr><th>Brecha</th><th>2014</th><th>2015</th><th>2016</th><th>2017</th><th>2018</th><th>2019</th><th>2020</th><th>2021</th><th>2022</th><th>2023</th><th>2024</th><th>Promedio general</th></tr></thead>
+        <tbody></tbody>
+      </table>
+    </div>
+    <p class="cuidado"><strong>Cuidado con el promedio general.</strong> Es el promedio de las brechas de los años con dato. Oculta el cambio de dirección: la ventaja fue alta en 2014–2016 y casi nula en 2024. Úsalo con la tendencia, no en su lugar.</p>
+    <h3>Tendencias por serie</h3>
+    <div class="scroll">
+      <table id="tendencias" class="tab">
+        <thead><tr><th>Serie</th><th>Pendiente (puntos por año)</th><th>t</th><th>Significativa al 5 %</th></tr></thead>
+        <tbody></tbody>
+      </table>
+    </div>
+    <p class="cuidado">Siete observaciones con espaciado desigual y cobertura incompleta. La significancia es orientativa.</p>
+  </section>
+
+  <section class="sab-panel" aria-labelledby="proy-title">
+    <h2 id="proy-title">4. Proyección: mueve el escenario</h2>
+    <p class="nota">Elige un año y una pendiente supuesta para la ventaja. La pendiente observada es −0,16 puntos por año. Cambia el escenario y mira qué pasa con la ventaja.</p>
+    <div class="ctl-grid">
+      <fieldset>
+        <legend>Año de proyección</legend>
+        <label>Año: <strong id="proy-anio-val"></strong>
+          <input type="range" id="proy-anio" min="2025" max="2035" step="1">
+        </label>
+      </fieldset>
+      <fieldset>
+        <legend>Pendiente supuesta de la ventaja (puntos por año)</legend>
+        <label>Pendiente: <strong id="proy-pend-val"></strong>
+          <input type="range" id="proy-pend" min="-0.6" max="0.6" step="0.01">
+        </label>
+        <button type="button" id="proy-usar-obs" class="btn">Usar la pendiente observada</button>
+        <label><input type="checkbox" id="proy-banda" checked> Mostrar intervalo de predicción 95 %</label>
+      </fieldset>
+    </div>
+    <div class="chart-box"><canvas id="g-proyeccion" role="img" aria-label="Gráfica de la proyección de la ventaja"></canvas></div>
+    <p id="proy-texto" class="resultado"></p>
+    <p class="cuidado"><strong>Por qué no es un pronóstico.</strong> Con siete años, el intervalo es muy amplio y cubre valores de ventaja a favor y en contra de Montelíbano. Un escenario muestra consecuencias de un supuesto, no lo que va a pasar.</p>
+  </section>
+
+  <section class="sab-panel" aria-labelledby="pos-title">
+    <h2 id="pos-title">5. Posición entre los municipios</h2>
+    <p class="nota">Puesto de cada municipio en la ventana 2014–2024 (1 = mayor puntaje). Cuenta los años con dato disponibles.</p>
+    <div class="scroll">
+      <table id="tabla-posicion" class="tab">
+        <thead><tr id="tabla-posicion-head"></tr></thead>
+        <tbody></tbody>
+      </table>
+    </div>
+    <p class="cuidado"><strong>Cuidado con el promedio general.</strong> Es el puesto medio. Dos municipios pueden tener el mismo promedio de puesto con trayectorias muy distintas. Con 7 años, una posición puede cambiar por diferencias de décimas.</p>
+  </section>
+
+  <section class="sab-panel" aria-labelledby="cor-title">
+    <h2 id="cor-title">6. Correlaciones con Montelíbano</h2>
+    <p class="nota">Elige la ventana en el control de arriba. Las barras negras superan el umbral de significancia para el número de observaciones de esa ventana.</p>
+    <div class="chart-box"><canvas id="g-correlacion" role="img" aria-label="Correlaciones con Montelíbano"></canvas></div>
+    <p id="corr-umbral" class="resultado"></p>
+    <div class="scroll">
+      <table id="tabla-corr" class="tab">
+        <thead><tr><th>Municipio</th><th>Artículo 2005–2012 (n = 8)</th><th>Ventana 2010–2013 (n = 4)</th><th>Ventana 2014–2024 (n = 7)</th><th>Cambios 2014–2024 (n = 6)</th><th>Promedio general</th></tr></thead>
+        <tbody></tbody>
+      </table>
+    </div>
+    <p class="cuidado"><strong>Cuidado con el promedio general.</strong> Se calcula con la transformación z de Fisher, que es la forma correcta de promediar correlaciones. Mezcla ventanas de distinto tamaño y examen. Un valor alto no prueba causa común. Una correlación de 1,00 se trata como 0,995 para poder promediarla.</p>
+  </section>
+
+  <section class="sab-panel" aria-labelledby="sens-title">
+    <h2 id="sens-title">7. Sensibilidad y tabla de valores</h2>
+    <p class="nota">Correlación con Montelíbano según la fuente y el tipo de colegios (ventana 2014–2024, n = 7; con parciales, n = 9 u 8).</p>
+    <div class="scroll">
+      <table id="tabla-sens" class="tab">
+        <thead><tr><th>Municipio</th><th>Oficiales (principal)</th><th>Todos los colegios</th><th>Oficiales, 2022 y 2024 del archivo</th><th>Con parciales (todos)</th><th>Promedio general</th></tr></thead>
+        <tbody></tbody>
+      </table>
+    </div>
+    <p class="cuidado"><strong>Cuidado.</strong> La correlación cambia mucho según la fuente. Con los años parciales casi desaparece. Por eso el promedio general de esta tabla no debe leerse como un resultado único.</p>
+
+    <h3>Valores editables (Montelíbano, Córdoba y Nacional)</h3>
+    <p class="nota">Cambia cualquier valor. Las gráficas, las brechas, las tendencias y los promedios se recalculan. Los campos vacíos se tratan como sin dato.</p>
+    <div class="scroll">
+      <table id="tabla-editable" class="tab tab-edit">
+        <thead><tr><th>Año</th><th>Montelíbano</th><th>Córdoba oficial</th><th>Nacional oficial</th></tr></thead>
+        <tbody></tbody>
+      </table>
+    </div>
+    <button type="button" id="btn-restaurar" class="btn">Restaurar valores del artículo</button>
+  </section>
+
+  <section class="sab-panel" aria-labelledby="fuentes-title">
+    <h2 id="fuentes-title">8. Fuentes y límites</h2>
+    <ul class="fuentes">
+      <li>Microdatos de Saber 11 publicados en datos.gov.co (conjunto kgxf-xxbe), filtrados a Córdoba y calendario A. Validados contra los cuadros de ICFES con diferencias máximas de 0,13 puntos (escala 0 a 500).</li>
+      <li>Cuadros de salida Saber 11 de ICFES, hojas <em>prom_glob_dep</em> y <em>prom_glob_nal</em> (2021, 2022 y 2024), para Córdoba oficial y nacional oficial.</li>
+      <li>Archivo ICFES <em>Resultados Agregados 2024-2</em>, para Montelíbano y los otros municipios en 2024.</li>
+      <li>No hay datos completos de 2005–2009, 2018, 2020, 2021, 2023 ni 2025 para Montelíbano en las fuentes usadas.</li>
+      <li>El examen cambió en 2014. La serie 2010–2013 solo tiene matemáticas e inglés.</li>
+      <li>Las proyecciones son extrapolaciones con siete observaciones. No son pronósticos.</li>
+    </ul>
+    <p class="nota">Autor: Jorge Alonso Cotera Guerra · Montelíbano · Octubre de 2026.</p>
+  </section>
+</main>
+
+<footer>
+  <div class="footer-brand"><img src="../Logo.jpg" alt="Logotipo"><strong>JORGE A. COTERA</strong></div>
+  <span>Educación · Matemáticas · Cultura · <a href="contacto.html">Contacto</a> · <a href="archivo.html">Archivo</a> · <a href="gestion-asesoria-sena.html" rel="nofollow">Gestión privada</a></span>
+  <a class="footer-top" href="#">Volver arriba ↑</a>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+<script src="analisis-saber11.js?v=20261012-1"></script>
+</body>
+</html>
