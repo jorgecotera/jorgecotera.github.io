@@ -33,7 +33,7 @@ window.archiveLegacy = [
   {sortKey:"0000",year:null,displayDate:"Sin fecha indicada",category:"Pedagogía y Didáctica · Literatura y Política",title:"Calidad educativa o Buena Educación",subtitle:"También aparece en la sección Literatura y Política como «El Culebrón de la Calidad Educativa»",href:"../Calidad%20Educativa%20o%20Buena%20Educacion.pdf"},
   {sortKey:"0000",year:null,displayDate:"Sin fecha indicada",category:"Pedagogía y Didáctica",title:"Yo Maestro/Investigador",subtitle:"Notas",href:"../Tarea.pdf"},
   {sortKey:"0000",year:null,displayDate:"Sin fecha indicada",category:"Pedagogía y Didáctica",title:"Modelación",href:"../Modelacion.pdf"},
-  {sortKey:"0000",year:null,displayDate:"Sin fecha indicada",category:"Pedagogía y Didáctica",title:"Enseñanza y Pensamiento Espacial",href:"../Ensenanza%20y%20pensamiento.pdf"},
+  {sortKey:"0000",year:null,displayDate:"Sin fecha indicada",category:"Pedagogía y Didáctica",title:"Por qué enseñar pensamiento espacial",href:"../Ensenanza%20y%20pensamiento.pdf"},
   {sortKey:"0000",year:null,displayDate:"Sin fecha indicada",category:"Literatura y Política",title:"Diomedes Díaz",href:"../Diomedes%20Diaz.pdf"},
   {sortKey:"0000",year:null,displayDate:"Sin fecha indicada",category:"Literatura y Política",title:"Formato Único de Hoja de Vida",href:"../Hoja%20de%20Vida%20Formato%20unico-%20Jorge%20Cotera.pdf"},
   {sortKey:"0000",year:null,displayDate:"Sin fecha indicada",category:"Literatura y Política",title:"Cómo pensar en alternativas para un nuevo orden social",href:"../Como%20pensar%20en%20alternativas%20para%20un%20nuevo%20orden%20social%20en%20medio%20de%20Conflictos%20de%20Intereses.pdf",related:[{label:"Plegable en Calaméo",href:"https://en.calameo.com/read/002752003e0deafa6c82e"}]},

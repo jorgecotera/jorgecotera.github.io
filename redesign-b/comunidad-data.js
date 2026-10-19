@@ -34,7 +34,7 @@ const community2022 = [
   {year:2022,grade:"General",area:"Educación artística",type:"VIDEO",title:"Arte · Renacimiento",href:"https://m.youtube.com/watch?v=hJcvoDRdbJo",external:true},
   {year:2022,grade:"General",area:"Educación artística",type:"VIDEO",title:"Arte · Edad Moderna",href:"https://www.youtube.com/watch?v=6E2gGlK08JE",external:true},
   {year:2022,grade:"General",area:"Educación artística",type:"VIDEO",title:"Arte · Edad Contemporánea",href:"https://www.youtube.com/watch?v=FH1jNVFwfA0",external:true},
-  {year:2022,grade:"General",area:"Matemáticas · Geometría",type:"PDF",title:"Enseñanza y Pensamiento Espacial",href:"../Ensenanza%20y%20pensamiento.pdf"},
+  {year:2022,grade:"General",area:"Matemáticas · Geometría",type:"PDF",title:"Por qué enseñar pensamiento espacial",href:"../Ensenanza%20y%20pensamiento.pdf"},
   {year:2022,grade:"General",area:"Matemáticas · Álgebra",type:"PDF",title:"Taller 6 · Diferencia de Cubos",href:"../TALLER%206.pdf"},
   {year:2022,grade:"General",area:"Matemáticas · GeoGebra",type:"WEB",title:"Herramienta GeoGebra · Diferencia de Cuadrados",href:"https://acortar.link/1rKOmi",external:true},
   {year:2022,grade:"General",area:"Filosofía",type:"VIDEO",title:"La Caverna de Platón",href:"https://www.youtube.com/watch?v=-1Y9OqSJKCc&t=177s",external:true},
