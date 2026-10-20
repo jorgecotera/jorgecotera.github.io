@@ -3,7 +3,7 @@ window.archiveLegacy = [
   {sortKey:"2020",year:2020,displayDate:"2020",category:"Literatura y Política",title:"Ponencias - Foro Visión Montelíbano",href:"../d/ponencias-foro-vision-montelibano"},
   {sortKey:"2015-10",year:2015,displayDate:"Octubre de 2015",category:"Pedagogía y Didáctica",title:"Una Escuela Liberadora",href:"../d/una-escuela-liberadora",related:[{label:"Plegable en Calaméo",href:"https://en.calameo.com/read/002752003a1a01a61e0e8"}]},
   {sortKey:"2015-09-12",year:2015,displayDate:"12 de septiembre de 2015",category:"Literatura y Política",title:"La región no se muere",href:"../d/la-region-no-se-muere"},
-  {sortKey:"2013-10",year:2013,displayDate:"Octubre de 2013",category:"Pedagogía y Didáctica",title:"Buenas Prácticas Educativas",subtitle:"Entrevista",href:"../d/buenas-practicas-educativas"},
+  {sortKey:"2013-10",year:2013,displayDate:"Octubre de 2013",category:"Pedagogía y Didáctica",title:"Buenas Prácticas Educativas",subtitle:"Diálogo",href:"../d/buenas-practicas-educativas"},
   {sortKey:"2013-07",year:2013,displayDate:"Julio de 2013",category:"Pedagogía y Didáctica",title:"Pueblo de Mina, pueblo fantasma",href:"../d/pueblo-de-mina-pueblo-fantasma"},
   {sortKey:"2013-03",sourceOrder:2,year:2013,displayDate:"Marzo de 2013",category:"Literatura y Política",title:"Cónclave sin clave",href:"../d/conclave-sin-clave"},
   {sortKey:"2013-03",sourceOrder:1,year:2013,displayDate:"Marzo de 2013",category:"Literatura y Política",title:"Algunas ideas desde el Sur",href:"../d/algunas-ideas-desde-el-sur"},
