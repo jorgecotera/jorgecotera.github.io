@@ -13,7 +13,7 @@ window.siteContent = {
       displayDate: "12 de octubre de 2026",
       category: "Pedagogía y Didáctica",
       title: "¡Saber 11! ¿Ha mejorado Montelíbano?",
-      subtitle: "Un análisis parcial de los resultados de la prueba Saber 11, en el horizonte de la escuela pública en Montelíbano y del San Jorge",
+      subtitle: "Un análisis parcial de los resultados de la prueba Saber 11, en el horizonte de la escuela pública en Montelíbano",
       excerpt: "Un análisis de los promedios de Saber 11 en los colegios oficiales de Montelíbano entre 2014 y 2025, comparado con el departamento de Córdoba y los municipios vecinos del San Jorge, que distingue entre lo que los datos permiten afirmar y lo que todavía queda por mostrar.",
       href: "../Analisis%20Saber%2011%20-%20Montelibano%20y%20San%20Jorge.pdf",
       image: "../Icfes2016.jpg"
